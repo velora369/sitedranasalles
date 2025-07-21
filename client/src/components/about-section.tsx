@@ -7,7 +7,6 @@ export default function AboutSection() {
   const doctorImages = [
     "https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/07/whatsapp-image-2025-07-20-at-18.47.18.webp",
     "https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/07/whatsapp-image-2025-07-20-at-18.44.57.webp",
-    "https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/07/whatsapp-image-2025-07-20-at-18.46.39.webp",
     "https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/07/whatsapp-image-2025-07-20-at-18.45.56.webp"
   ];
 
@@ -74,54 +73,63 @@ export default function AboutSection() {
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="section-fade">
-            <div className="relative max-w-md mx-auto">
-              {/* Image Carousel */}
-              <div className="relative overflow-hidden rounded-2xl shadow-xl">
-                <div 
-                  className="flex transition-transform duration-500 ease-in-out"
-                  style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}
-                >
-                  {doctorImages.map((image, index) => (
-                    <img 
+            <div className="relative max-w-lg mx-auto">
+              {/* Modern Image Carousel */}
+              <div className="relative bg-white rounded-3xl shadow-2xl p-4 overflow-hidden">
+                <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
+                  <div 
+                    className="flex transition-transform duration-700 ease-out h-full"
+                    style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}
+                  >
+                    {doctorImages.map((image, index) => (
+                      <div key={index} className="w-full flex-shrink-0 h-full">
+                        <img 
+                          src={image} 
+                          alt={`Dra. Ana Carolina Salles - Foto ${index + 1}`} 
+                          className="w-full h-full object-contain bg-gradient-to-br from-gray-50 to-gray-100"
+                          loading="lazy"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                  
+                  {/* Modern Navigation Arrows */}
+                  <button
+                    onClick={goToPrevious}
+                    className="absolute left-3 top-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-sm hover:bg-white text-primary-green p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 border border-gray-200"
+                    aria-label="Imagem anterior"
+                  >
+                    <ChevronLeft className="w-5 h-5" />
+                  </button>
+                  <button
+                    onClick={goToNext}
+                    className="absolute right-3 top-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-sm hover:bg-white text-primary-green p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 border border-gray-200"
+                    aria-label="Próxima imagem"
+                  >
+                    <ChevronRight className="w-5 h-5" />
+                  </button>
+                </div>
+                
+                {/* Modern Dots Indicator */}
+                <div className="flex justify-center mt-4 space-x-3">
+                  {doctorImages.map((_, index) => (
+                    <button
                       key={index}
-                      src={image} 
-                      alt={`Dra. Ana Carolina Salles - Foto ${index + 1}`} 
-                      className="w-full h-[400px] object-cover flex-shrink-0"
+                      onClick={() => setCurrentImageIndex(index)}
+                      className={`transition-all duration-300 ${
+                        currentImageIndex === index 
+                          ? 'w-8 h-3 bg-gold-primary rounded-full' 
+                          : 'w-3 h-3 bg-gray-300 hover:bg-gold-light rounded-full'
+                      }`}
+                      aria-label={`Ir para imagem ${index + 1}`}
                     />
                   ))}
                 </div>
-                
-                {/* Navigation Arrows */}
-                <button
-                  onClick={goToPrevious}
-                  className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-300"
-                  aria-label="Imagem anterior"
-                >
-                  <ChevronLeft className="w-4 h-4" />
-                </button>
-                <button
-                  onClick={goToNext}
-                  className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-300"
-                  aria-label="Próxima imagem"
-                >
-                  <ChevronRight className="w-4 h-4" />
-                </button>
               </div>
               
-              {/* Dots Indicator */}
-              <div className="flex justify-center mt-4 space-x-2">
-                {doctorImages.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentImageIndex(index)}
-                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                      currentImageIndex === index 
-                        ? 'bg-gold-primary' 
-                        : 'bg-gray-300 hover:bg-gray-400'
-                    }`}
-                    aria-label={`Ir para imagem ${index + 1}`}
-                  />
-                ))}
+              {/* Image Counter */}
+              <div className="text-center mt-3 text-sm text-gray-medium font-montserrat">
+                {currentImageIndex + 1} de {doctorImages.length}
               </div>
             </div>
           </div>
