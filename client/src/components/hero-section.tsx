@@ -131,27 +131,7 @@ export default function HeroSection() {
               transition={{ delay: 0.8, duration: 0.8 }}
               className="relative z-10 p-8 bg-white/30 backdrop-blur-sm rounded-2xl border border-white/40 shadow-lg"
             >
-              <div className="text-center">
-                <motion.div
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  transition={{ delay: 1, duration: 0.6, type: "spring" }}
-                  className="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-primary-green to-gold-primary rounded-full flex items-center justify-center"
-                >
-                  <span className="text-white text-2xl font-bold">+</span>
-                </motion.div>
-                
-                
-                
-                <motion.p 
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 1.4, duration: 0.6 }}
-                  className="text-gray-600 text-sm"
-                >
-                  Oncologia Clínica Moderna
-                </motion.p>
-              </div>
+              
             </motion.div>
           </motion.div>
         </motion.div>
