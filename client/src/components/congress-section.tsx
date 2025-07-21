@@ -233,11 +233,11 @@ export default function CongressSection() {
       {/* Modal Moderno para visualização das imagens com descrição */}
       {selectedImage && (
         <div 
-          className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50 p-4"
+          className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50 p-2 sm:p-4"
           onClick={closeModal}
         >
           <div 
-            className="relative w-full max-w-6xl max-h-[95vh] bg-white rounded-2xl shadow-2xl overflow-hidden"
+            className="relative w-full max-w-6xl h-[95vh] sm:max-h-[95vh] bg-white rounded-lg sm:rounded-2xl shadow-2xl overflow-hidden flex flex-col"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Header com controles */}
@@ -254,9 +254,9 @@ export default function CongressSection() {
             </div>
 
             {/* Layout responsivo para desktop e mobile */}
-            <div className="flex flex-col lg:flex-row h-full">
-              {/* Container da imagem */}
-              <div className="relative flex-1 lg:flex-none lg:w-3/5 bg-gray-50 flex items-center justify-center min-h-[50vh] lg:min-h-[80vh]">
+            <div className="flex flex-col lg:flex-row flex-1 min-h-0">
+              {/* Container da imagem - otimizado para mobile */}
+              <div className="relative flex-shrink-0 lg:flex-1 lg:w-3/5 bg-gray-50 flex items-center justify-center h-[35vh] sm:h-[40vh] lg:h-full">
                 <img 
                   src={selectedImage.url} 
                   alt={selectedImage.title}
@@ -269,9 +269,9 @@ export default function CongressSection() {
                     e.stopPropagation();
                     navigateImage('prev');
                   }}
-                  className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white hover:text-gold-primary transition-all duration-300 bg-black/50 hover:bg-black/70 rounded-full p-3 backdrop-blur-sm"
+                  className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 text-white hover:text-gold-primary transition-all duration-300 bg-black/50 hover:bg-black/70 rounded-full p-2 sm:p-3 backdrop-blur-sm"
                 >
-                  <ChevronLeft className="w-6 h-6" />
+                  <ChevronLeft className="w-4 h-4 sm:w-6 sm:h-6" />
                 </button>
                 
                 <button 
@@ -279,28 +279,38 @@ export default function CongressSection() {
                     e.stopPropagation();
                     navigateImage('next');
                   }}
-                  className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white hover:text-gold-primary transition-all duration-300 bg-black/50 hover:bg-black/70 rounded-full p-3 backdrop-blur-sm"
+                  className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 text-white hover:text-gold-primary transition-all duration-300 bg-black/50 hover:bg-black/70 rounded-full p-2 sm:p-3 backdrop-blur-sm"
                 >
-                  <ChevronRight className="w-6 h-6" />
+                  <ChevronRight className="w-4 h-4 sm:w-6 sm:h-6" />
                 </button>
               </div>
 
-              {/* Painel de informações */}
-              <div className="flex-1 lg:w-2/5 bg-white flex flex-col">
-                <div className="p-6 lg:p-8 flex-1 overflow-y-auto">
+              {/* Painel de informações - garantindo espaço adequado no mobile */}
+              <div className="flex-1 lg:w-2/5 bg-white flex flex-col min-h-0 overflow-hidden">
+                <div className="p-4 sm:p-6 lg:p-8 flex-1 overflow-y-auto">
                   {/* Título */}
-                  <h3 className="font-playfair text-xl lg:text-2xl font-bold text-primary-green mb-4 leading-tight">
+                  <h3 className="font-playfair text-lg sm:text-xl lg:text-2xl font-bold text-primary-green mb-3 sm:mb-4 leading-tight">
                     {selectedImage.title}
                   </h3>
                   
                   {/* Divisor decorativo */}
-                  <div className="w-12 h-1 bg-gold-primary rounded-full mb-6"></div>
+                  <div className="w-8 sm:w-12 h-1 bg-gold-primary rounded-full mb-4 sm:mb-6"></div>
                   
-                  {/* Descrição */}
+                  {/* Descrição com scroll suave */}
                   <div className="prose prose-sm lg:prose-base max-w-none">
-                    <p className="text-gray-700 leading-relaxed whitespace-pre-line">
+                    <p className="text-gray-700 text-sm sm:text-base leading-relaxed whitespace-pre-line">
                       {selectedImage.description}
                     </p>
+                  </div>
+                  
+                  {/* Indicador visual de scroll no mobile */}
+                  <div className="block lg:hidden mt-4 text-center">
+                    <div className="inline-flex items-center text-xs text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
+                      <span>Role para ler mais</span>
+                      <svg className="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                      </svg>
+                    </div>
                   </div>
                 </div>
               </div>
