@@ -203,35 +203,53 @@ export default function CongressSection() {
 
       {/* Modal para visualização das imagens */}
       {selectedImage && (
-        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4">
-          <div className="relative max-w-4xl max-h-full">
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4"
+          onClick={closeModal}
+        >
+          <div 
+            className="relative max-w-4xl max-h-full"
+            onClick={(e) => e.stopPropagation()}
+          >
             <button 
               onClick={closeModal}
-              className="absolute top-4 right-4 text-white hover:text-gold-primary transition-colors z-10"
+              className="absolute top-4 right-4 text-white hover:text-gold-primary transition-colors z-10 bg-black bg-opacity-50 rounded-full p-2"
             >
-              <X className="w-8 h-8" />
+              <X className="w-6 h-6" />
             </button>
             
             <button 
-              onClick={() => navigateImage('prev')}
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white hover:text-gold-primary transition-colors z-10"
+              onClick={(e) => {
+                e.stopPropagation();
+                navigateImage('prev');
+              }}
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white hover:text-gold-primary transition-colors z-10 bg-black bg-opacity-50 rounded-full p-2"
             >
-              <ChevronLeft className="w-8 h-8" />
+              <ChevronLeft className="w-6 h-6" />
             </button>
             
             <button 
-              onClick={() => navigateImage('next')}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white hover:text-gold-primary transition-colors z-10"
+              onClick={(e) => {
+                e.stopPropagation();
+                navigateImage('next');
+              }}
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white hover:text-gold-primary transition-colors z-10 bg-black bg-opacity-50 rounded-full p-2"
             >
-              <ChevronRight className="w-8 h-8" />
+              <ChevronRight className="w-6 h-6" />
             </button>
             
             <div className="bg-white rounded-lg overflow-hidden">
-              <img 
-                src={selectedImage.url} 
-                alt={selectedImage.title}
-                className="w-full max-h-[70vh] object-contain"
-              />
+              <div className="relative">
+                <img 
+                  src={selectedImage.url} 
+                  alt={selectedImage.title}
+                  className="w-full max-h-[70vh] object-contain cursor-pointer"
+                  onClick={closeModal}
+                />
+                <div className="absolute top-4 left-4 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full text-sm">
+                  Clique para fechar
+                </div>
+              </div>
               <div className="p-6">
                 <h3 className="font-montserrat font-semibold text-primary-green mb-2 text-lg">
                   {selectedImage.title}
