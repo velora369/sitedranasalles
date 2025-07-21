@@ -66,13 +66,13 @@ export default function HeroSection() {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[70vh]"
         >
-          <div>
+          <div className="text-center lg:text-left px-4 lg:px-0">
             {/* Simple animated title */}
             <motion.h1 
               variants={fadeInUpVariants}
-              className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold text-primary-green mb-6 leading-tight"
+              className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary-green mb-4 sm:mb-6 leading-tight"
             >
               Dra. Ana Carolina Salles
             </motion.h1>
@@ -80,7 +80,7 @@ export default function HeroSection() {
             {/* Animated Subtitle */}
             <motion.h2 
               variants={fadeInUpVariants}
-              className="font-montserrat text-xl md:text-2xl text-gold-primary font-semibold mb-8"
+              className="font-montserrat text-lg sm:text-xl md:text-2xl text-gold-primary font-semibold mb-6 sm:mb-8 leading-relaxed"
             >
               Oncologista Clínica | Cuidado Incansável, Respeito e Paixão pela Vida
             </motion.h2>
@@ -88,7 +88,7 @@ export default function HeroSection() {
             {/* Animated Description */}
             <motion.p 
               variants={fadeInUpVariants}
-              className="text-lg text-gray-700 mb-10 leading-relaxed"
+              className="text-base sm:text-lg text-gray-700 mb-8 sm:mb-10 leading-relaxed max-w-2xl mx-auto lg:mx-0"
             >
               Bem-vindo(a) ao espaço digital da Dra. Ana Carolina Salles, uma oncologista clínica dedicada e apaixonada por sua missão. Com uma trajetória sólida e um compromisso inabalável com a ciência e o cuidado humanizado, oferece um atendimento personalizado, pautado nas mais recentes evidências científicas e no profundo respeito por cada paciente.
             </motion.p>
@@ -96,7 +96,7 @@ export default function HeroSection() {
             {/* Simple animated buttons */}
             <motion.div 
               variants={fadeInUpVariants}
-              className="flex flex-col sm:flex-row gap-4"
+              className="flex flex-col sm:flex-row gap-4 items-center lg:items-start"
             >
               <motion.button 
                 whileHover={{ scale: 1.05 }}
@@ -120,18 +120,34 @@ export default function HeroSection() {
             </motion.div>
           </div>
 
-          {/* Simple visual element */}
+          {/* Simple visual element - hidden on mobile for better responsiveness */}
           <motion.div 
             variants={fadeInUpVariants}
-            className="lg:text-right relative"
+            className="hidden lg:flex lg:text-right relative justify-center items-center"
           >
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.8 }}
-              className="relative z-10 p-8 bg-white/30 backdrop-blur-sm rounded-2xl border border-white/40 shadow-lg"
+              className="relative z-10 p-8 bg-white/30 backdrop-blur-sm rounded-2xl border border-white/40 shadow-lg text-center"
             >
+              <motion.div
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ delay: 1, duration: 0.6, type: "spring" }}
+                className="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-primary-green to-gold-primary rounded-full flex items-center justify-center"
+              >
+                <span className="text-white text-2xl font-bold">+</span>
+              </motion.div>
               
+              <motion.p 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1.4, duration: 0.6 }}
+                className="text-gray-600 text-sm"
+              >
+                Oncologia Clínica Moderna
+              </motion.p>
             </motion.div>
           </motion.div>
         </motion.div>
