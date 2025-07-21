@@ -303,15 +303,7 @@ export default function CongressSection() {
                     </p>
                   </div>
                   
-                  {/* Indicador visual de scroll no mobile */}
-                  <div className="block lg:hidden mt-4 text-center">
-                    <div className="inline-flex items-center text-xs text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
-                      <span>Role para ler mais</span>
-                      <svg className="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                      </svg>
-                    </div>
-                  </div>
+                  
                 </div>
               </div>
             </div>
