@@ -1,4 +1,4 @@
-import { MessageCircle } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function WhatsAppButton() {
   const openWhatsApp = () => {
@@ -13,7 +13,7 @@ export default function WhatsAppButton() {
       className="whatsapp-float bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transform hover:scale-110 transition-all duration-300"
       aria-label="Entrar em contato via WhatsApp"
     >
-      <MessageCircle className="w-6 h-6" />
+      <FaWhatsapp className="w-6 h-6" />
     </button>
   );
 }
