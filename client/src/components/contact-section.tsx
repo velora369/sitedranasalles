@@ -73,209 +73,195 @@ Mensagem: ${formData.message}`;
   };
 
   return (
-    <section id="contact" className="py-20 px-4 bg-white">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16 section-fade">
-          <h2 className="font-playfair text-3xl md:text-4xl font-bold text-primary-green mb-6">
+    <section id="contact" className="py-16 md:py-24 px-4 bg-gray-50">
+      <div className="max-w-6xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-12 md:mb-16 section-fade">
+          <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl font-bold text-primary-green mb-4">
             Agende Sua Consulta
           </h2>
-          <div className="w-24 h-1 bg-gold-primary mx-auto rounded-full mb-6"></div>
-          <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            Entre em contato para agendar sua consulta personalizada. Estamos aqui para oferecer o melhor cuidado oncológico.
+          <div className="w-16 h-1 bg-gold-primary mx-auto rounded-full mb-6"></div>
+          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            Entre em contato e receba cuidado oncológico personalizado e humanizado
           </p>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Information */}
-          <div className="section-fade">
-            <h3 className="font-montserrat font-bold text-2xl text-primary-green mb-8">Informações de Contato</h3>
-            
-            <div className="space-y-6">
-              <div className="flex items-start">
-                <div className="bg-gold-primary p-3 rounded-lg mr-4 mt-1">
-                  <MapPin className="w-5 h-5 text-white" />
-                </div>
-                <div className="flex-1">
-                  <h4 className="font-montserrat font-semibold text-primary-green mb-4">Onde Atuo</h4>
-                  
-                  {/* Hospital DF Star */}
-                  <div className="mb-4 p-4 bg-gray-50 rounded-xl border border-gray-200 hover:border-gold-primary transition-all duration-300 group">
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center">
-                        <Building2 className="w-4 h-4 text-primary-green mr-2" />
-                        <span className="font-montserrat font-medium text-primary-green">Hospital DF Star</span>
-                      </div>
-                      <a 
-                        href="https://share.google.com/WgPaKcD3TARcZy9h2" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="flex items-center text-gold-primary hover:text-primary-green transition-colors duration-300"
-                      >
-                        <span className="text-sm mr-1">Ver no Maps</span>
-                        <ExternalLink className="w-4 h-4" />
-                      </a>
-                    </div>
-                    <p className="text-gray-600 text-sm mt-2">Clique para ver a localização no Google Maps</p>
+        {/* Main Content */}
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12">
+          {/* Contact Information - Minimalistic */}
+          <div className="lg:col-span-2 section-fade">
+            <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
+              <h3 className="font-montserrat font-bold text-xl text-primary-green mb-6">Informações de Contato</h3>
+              
+              <div className="space-y-6">
+                {/* WhatsApp */}
+                <div className="flex items-center group hover:translate-x-1 transition-transform duration-300">
+                  <div className="bg-gold-primary/10 p-3 rounded-xl mr-4">
+                    <Phone className="w-5 h-5 text-gold-primary" />
                   </div>
-
-                  {/* OHB - Oncologia D'or */}
-                  <div className="p-4 bg-gray-50 rounded-xl border border-gray-200 hover:border-gold-primary transition-all duration-300 group">
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center">
-                        <Building2 className="w-4 h-4 text-primary-green mr-2" />
-                        <span className="font-montserrat font-medium text-primary-green">OHB - Oncologia D'or</span>
-                      </div>
-                      <a 
-                        href="https://share.google.com/rb2PjR4ro8Qs5MC0y" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="flex items-center text-gold-primary hover:text-primary-green transition-colors duration-300"
-                      >
-                        <span className="text-sm mr-1">Ver no Maps</span>
-                        <ExternalLink className="w-4 h-4" />
-                      </a>
-                    </div>
-                    <p className="text-gray-600 text-sm mt-2">Quinto Andar - Clique para ver a localização</p>
+                  <div>
+                    <p className="font-montserrat font-semibold text-primary-green">WhatsApp</p>
+                    <p className="text-gray-600 text-sm">(61) 99294-7671</p>
                   </div>
-                  
-                  <p className="text-gray-700 mt-4 text-sm">Brasília, DF</p>
                 </div>
-              </div>
-              
-              <div className="flex items-start">
-                <div className="bg-gold-primary p-3 rounded-lg mr-4 mt-1">
-                  <Phone className="w-5 h-5 text-white" />
+                
+                {/* Instagram */}
+                <div className="flex items-center group hover:translate-x-1 transition-transform duration-300">
+                  <div className="bg-gold-primary/10 p-3 rounded-xl mr-4">
+                    <Mail className="w-5 h-5 text-gold-primary" />
+                  </div>
+                  <div>
+                    <p className="font-montserrat font-semibold text-primary-green">Instagram</p>
+                    <p className="text-gray-600 text-sm">@anacarolinasallesoncologia</p>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="font-montserrat font-semibold text-primary-green mb-2">WhatsApp</h4>
-                  <p className="text-gray-700">(61) 99294-7671</p>
-                  <p className="text-gray-medium text-sm">Resposta rápida via WhatsApp</p>
+                
+                {/* Location */}
+                <div className="flex items-start group hover:translate-x-1 transition-transform duration-300">
+                  <div className="bg-gold-primary/10 p-3 rounded-xl mr-4 mt-1">
+                    <MapPin className="w-5 h-5 text-gold-primary" />
+                  </div>
+                  <div>
+                    <p className="font-montserrat font-semibold text-primary-green mb-2">Onde Atuo</p>
+                    <div className="space-y-2 text-sm text-gray-600">
+                      <div>
+                        <a href="https://share.google.com/WgPaKcD3TARcZy9h2" target="_blank" rel="noopener noreferrer" 
+                           className="flex items-center hover:text-gold-primary transition-colors">
+                          <Building2 className="w-3 h-3 mr-2" />
+                          Hospital DF Star
+                          <ExternalLink className="w-3 h-3 ml-1" />
+                        </a>
+                      </div>
+                      <div>
+                        <a href="https://share.google.com/rb2PjR4ro8Qs5MC0y" target="_blank" rel="noopener noreferrer"
+                           className="flex items-center hover:text-gold-primary transition-colors">
+                          <Building2 className="w-3 h-3 mr-2" />
+                          OHB - Oncologia D'or
+                          <ExternalLink className="w-3 h-3 ml-1" />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              
-              <div className="flex items-start">
-                <div className="bg-gold-primary p-3 rounded-lg mr-4 mt-1">
-                  <Mail className="w-5 h-5 text-white" />
-                </div>
-                <div>
-                  <h4 className="font-montserrat font-semibold text-primary-green mb-2">Instagram</h4>
-                  <p className="text-gray-700">@anacarolinasallesoncologia</p>
-                  <p className="text-gray-medium text-sm">Acompanhe nas redes sociais</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start">
-                <div className="bg-gold-primary p-3 rounded-lg mr-4 mt-1">
-                  <Clock className="w-5 h-5 text-white" />
-                </div>
-                <div>
-                  <h4 className="font-montserrat font-semibold text-primary-green mb-2">Horário de Atendimento</h4>
-                  <p className="text-gray-700">Consultório de segunda a sexta-feira</p>
-                  <p className="text-gray-medium text-sm">Agendamento com hora marcada</p>
+                
+                {/* Hours */}
+                <div className="flex items-center group hover:translate-x-1 transition-transform duration-300">
+                  <div className="bg-gold-primary/10 p-3 rounded-xl mr-4">
+                    <Clock className="w-5 h-5 text-gold-primary" />
+                  </div>
+                  <div>
+                    <p className="font-montserrat font-semibold text-primary-green">Atendimento</p>
+                    <p className="text-gray-600 text-sm">Segunda a sexta-feira</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           
           {/* Contact Form */}
-          <div className="section-fade">
-            <h3 className="font-montserrat font-bold text-2xl text-primary-green mb-8">Envie uma Mensagem</h3>
-            
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="lg:col-span-3 section-fade">
+            <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
+              <h3 className="font-montserrat font-bold text-xl text-primary-green mb-6">Envie uma Mensagem</h3>
+              
+              <form onSubmit={handleSubmit} className="space-y-5">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="name" className="block font-montserrat font-medium text-gray-700 mb-2">Nome Completo *</label>
+                    <input 
+                      type="text" 
+                      id="name" 
+                      name="name" 
+                      required 
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-gold-primary/20 focus:border-gold-primary transition-all duration-300 bg-gray-50 hover:bg-white"
+                      placeholder="Seu nome completo"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="phone" className="block font-montserrat font-medium text-gray-700 mb-2">Telefone *</label>
+                    <input 
+                      type="tel" 
+                      id="phone" 
+                      name="phone" 
+                      required 
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-gold-primary/20 focus:border-gold-primary transition-all duration-300 bg-gray-50 hover:bg-white"
+                      placeholder="(00) 00000-0000"
+                    />
+                  </div>
+                </div>
+                
                 <div>
-                  <label htmlFor="name" className="block font-montserrat font-medium text-primary-green mb-2">Nome Completo *</label>
+                  <label htmlFor="email" className="block font-montserrat font-medium text-gray-700 mb-2">E-mail *</label>
                   <input 
-                    type="text" 
-                    id="name" 
-                    name="name" 
+                    type="email" 
+                    id="email" 
+                    name="email" 
                     required 
-                    value={formData.name}
+                    value={formData.email}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-gold-primary focus:border-transparent transition-all duration-300"
+                    className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-gold-primary/20 focus:border-gold-primary transition-all duration-300 bg-gray-50 hover:bg-white"
+                    placeholder="seu@email.com"
                   />
                 </div>
+                
                 <div>
-                  <label htmlFor="phone" className="block font-montserrat font-medium text-primary-green mb-2">Telefone *</label>
-                  <input 
-                    type="tel" 
-                    id="phone" 
-                    name="phone" 
-                    required 
-                    value={formData.phone}
+                  <label htmlFor="subject" className="block font-montserrat font-medium text-gray-700 mb-2">Assunto</label>
+                  <select 
+                    id="subject" 
+                    name="subject" 
+                    value={formData.subject}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-gold-primary focus:border-transparent transition-all duration-300"
+                    className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-gold-primary/20 focus:border-gold-primary transition-all duration-300 bg-gray-50 hover:bg-white"
+                  >
+                    <option value="">Selecione um assunto</option>
+                    <option value="consulta">Agendamento de Consulta</option>
+                    <option value="informacoes">Informações sobre Tratamento</option>
+                    <option value="segunda-opiniao">Segunda Opinião Médica</option>
+                    <option value="outros">Outros</option>
+                  </select>
+                </div>
+                
+                <div>
+                  <label htmlFor="message" className="block font-montserrat font-medium text-gray-700 mb-2">Mensagem *</label>
+                  <textarea 
+                    id="message" 
+                    name="message" 
+                    rows={4} 
+                    required 
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-gold-primary/20 focus:border-gold-primary transition-all duration-300 bg-gray-50 hover:bg-white resize-none" 
+                    placeholder="Descreva brevemente o motivo do seu contato..."
                   />
                 </div>
-              </div>
-              
-              <div>
-                <label htmlFor="email" className="block font-montserrat font-medium text-primary-green mb-2">E-mail *</label>
-                <input 
-                  type="email" 
-                  id="email" 
-                  name="email" 
-                  required 
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-gold-primary focus:border-transparent transition-all duration-300"
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="subject" className="block font-montserrat font-medium text-primary-green mb-2">Assunto</label>
-                <select 
-                  id="subject" 
-                  name="subject" 
-                  value={formData.subject}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-gold-primary focus:border-transparent transition-all duration-300"
+                
+                <div className="flex items-start gap-3">
+                  <input 
+                    type="checkbox" 
+                    id="privacy" 
+                    name="privacy" 
+                    required 
+                    checked={formData.privacy}
+                    onChange={handleInputChange}
+                    className="w-4 h-4 text-gold-primary border-gray-300 rounded focus:ring-gold-primary mt-0.5"
+                  />
+                  <label htmlFor="privacy" className="text-sm text-gray-600 leading-5">
+                    Concordo com o uso das informações para contato conforme a política de privacidade *
+                  </label>
+                </div>
+                
+                <button 
+                  type="submit" 
+                  className="w-full py-4 bg-primary-green text-white font-montserrat font-semibold rounded-xl hover:bg-secondary-green transform hover:-translate-y-0.5 transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
-                  <option value="">Selecione um assunto</option>
-                  <option value="consulta">Agendamento de Consulta</option>
-                  <option value="informacoes">Informações sobre Tratamento</option>
-                  <option value="segunda-opiniao">Segunda Opinião Médica</option>
-                  <option value="outros">Outros</option>
-                </select>
-              </div>
-              
-              <div>
-                <label htmlFor="message" className="block font-montserrat font-medium text-primary-green mb-2">Mensagem *</label>
-                <textarea 
-                  id="message" 
-                  name="message" 
-                  rows={5} 
-                  required 
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-gold-primary focus:border-transparent transition-all duration-300" 
-                  placeholder="Descreva brevemente o motivo do seu contato..."
-                />
-              </div>
-              
-              <div className="flex items-center">
-                <input 
-                  type="checkbox" 
-                  id="privacy" 
-                  name="privacy" 
-                  required 
-                  checked={formData.privacy}
-                  onChange={handleInputChange}
-                  className="w-4 h-4 text-gold-primary border-gray-300 rounded focus:ring-gold-primary"
-                />
-                <label htmlFor="privacy" className="ml-2 text-sm text-gray-700">
-                  Concordo com o uso das informações para contato conforme a política de privacidade *
-                </label>
-              </div>
-              
-              <button 
-                type="submit" 
-                className="w-full py-4 bg-primary-green text-white font-montserrat font-semibold rounded-xl hover:bg-secondary-green transform hover:scale-105 transition-all duration-300 shadow-lg"
-              >
-                <Send className="w-5 h-5 inline mr-3" />
-                Enviar Mensagem
-              </button>
-            </form>
+                  <Send className="w-5 h-5 inline mr-2" />
+                  Enviar Mensagem
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
