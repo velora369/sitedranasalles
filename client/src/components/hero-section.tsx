@@ -162,15 +162,7 @@ export default function HeroSection() {
                   className="w-80 h-80 sm:w-96 sm:h-96 md:w-[28rem] md:h-[28rem] lg:w-[32rem] lg:h-[32rem] xl:w-[36rem] xl:h-[36rem] object-cover rounded-xl shadow-lg"
                 />
                 
-                {/* Floating accent */}
-                <motion.div
-                  initial={{ opacity: 0, x: 20, y: -20 }}
-                  animate={{ opacity: 1, x: 0, y: 0 }}
-                  transition={{ delay: 1.4, duration: 0.6 }}
-                  className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-primary-green to-gold-primary rounded-full flex items-center justify-center shadow-lg"
-                >
-                  <span className="text-white text-xl font-bold">+</span>
-                </motion.div>
+                
               </motion.div>
             </motion.div>
           </motion.div>
