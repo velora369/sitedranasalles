@@ -162,6 +162,7 @@ Mensagem: ${formData.message}`;
                   <div>
                     <p className="font-montserrat font-semibold text-primary-green">Atendimento</p>
                     <p className="text-gray-600 text-sm">Segunda a sexta-feira</p>
+                    <p className="text-gray-600 text-sm">Horário comercial - 8h às 18h</p>
                   </div>
                 </div>
               </div>
