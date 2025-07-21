@@ -104,9 +104,9 @@ export default function CongressSection() {
             </p>
           </div>
           
-          {/* Grid principal 2x2 para os 4 congressos mais importantes */}
-          <div className="grid grid-cols-2 gap-6 md:gap-8 mb-12">
-            {congressImages.slice(0, 4).map((image, index) => (
+          {/* Grid principal 2x3 para os 6 congressos principais */}
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 lg:gap-8 mb-12">
+            {congressImages.slice(0, 6).map((image, index) => (
               <div 
                 key={index} 
                 className="bg-white rounded-2xl shadow-lg hover-lift section-fade cursor-pointer overflow-hidden group"
@@ -120,8 +120,8 @@ export default function CongressSection() {
                     loading="lazy"
                   />
                 </div>
-                <div className="p-3 md:p-6">
-                  <h3 className="font-montserrat font-semibold text-primary-green mb-2 text-sm md:text-lg line-clamp-2">
+                <div className="p-3 md:p-4 lg:p-6">
+                  <h3 className="font-montserrat font-semibold text-primary-green mb-2 text-xs md:text-sm lg:text-lg line-clamp-2">
                     {image.title}
                   </h3>
                   <p className="text-gray-medium text-xs md:text-sm line-clamp-2 md:line-clamp-3">
@@ -133,13 +133,13 @@ export default function CongressSection() {
           </div>
 
           {/* Grid secundário para as demais imagens (se houver) */}
-          {congressImages.length > 4 && (
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-              {congressImages.slice(4).map((image, index) => (
+          {congressImages.length > 6 && (
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-12">
+              {congressImages.slice(6).map((image, index) => (
                 <div 
-                  key={index + 4} 
+                  key={index + 6} 
                   className="bg-white rounded-xl shadow-md hover-lift section-fade cursor-pointer overflow-hidden group"
-                  onClick={() => openModal(image, index + 4)}
+                  onClick={() => openModal(image, index + 6)}
                 >
                   <div className="aspect-square overflow-hidden">
                     <img 
