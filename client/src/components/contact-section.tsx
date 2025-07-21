@@ -45,8 +45,11 @@ export default function ContactSection() {
       return;
     }
 
-    // Create WhatsApp message
-    const whatsappMessage = `Olá! Meu nome é ${formData.name}, meu email é ${formData.email}, meu telefone é ${formData.phone}. ${formData.message}`;
+    // Create WhatsApp message with structured format
+    const whatsappMessage = `Nome: ${formData.name}
+Email: ${formData.email}
+Assunto: ${formData.subject || 'Não informado'}
+Mensagem: ${formData.message}`;
     const whatsappUrl = `https://wa.me/5561992947671?text=${encodeURIComponent(whatsappMessage)}`;
     
     // Open WhatsApp
