@@ -104,15 +104,15 @@ export default function CongressSection() {
             </p>
           </div>
           
-          {/* Grid principal 2x2 para as primeiras 4 imagens mais importantes */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          {/* Grid principal 2x2 para os 4 congressos mais importantes */}
+          <div className="grid grid-cols-2 gap-6 md:gap-8 mb-12">
             {congressImages.slice(0, 4).map((image, index) => (
               <div 
                 key={index} 
                 className="bg-white rounded-2xl shadow-lg hover-lift section-fade cursor-pointer overflow-hidden group"
                 onClick={() => openModal(image, index)}
               >
-                <div className="aspect-video overflow-hidden">
+                <div className="aspect-square md:aspect-video overflow-hidden">
                   <img 
                     src={image.url} 
                     alt={image.title}
@@ -120,11 +120,11 @@ export default function CongressSection() {
                     loading="lazy"
                   />
                 </div>
-                <div className="p-6">
-                  <h3 className="font-montserrat font-semibold text-primary-green mb-3 text-lg">
+                <div className="p-3 md:p-6">
+                  <h3 className="font-montserrat font-semibold text-primary-green mb-2 text-sm md:text-lg line-clamp-2">
                     {image.title}
                   </h3>
-                  <p className="text-gray-medium text-sm">
+                  <p className="text-gray-medium text-xs md:text-sm line-clamp-2 md:line-clamp-3">
                     {image.description}
                   </p>
                 </div>
@@ -132,33 +132,35 @@ export default function CongressSection() {
             ))}
           </div>
 
-          {/* Grid secundário para as demais imagens */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {congressImages.slice(4).map((image, index) => (
-              <div 
-                key={index + 4} 
-                className="bg-white rounded-xl shadow-md hover-lift section-fade cursor-pointer overflow-hidden group"
-                onClick={() => openModal(image, index + 4)}
-              >
-                <div className="aspect-square overflow-hidden">
-                  <img 
-                    src={image.url} 
-                    alt={image.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    loading="lazy"
-                  />
+          {/* Grid secundário para as demais imagens (se houver) */}
+          {congressImages.length > 4 && (
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              {congressImages.slice(4).map((image, index) => (
+                <div 
+                  key={index + 4} 
+                  className="bg-white rounded-xl shadow-md hover-lift section-fade cursor-pointer overflow-hidden group"
+                  onClick={() => openModal(image, index + 4)}
+                >
+                  <div className="aspect-square overflow-hidden">
+                    <img 
+                      src={image.url} 
+                      alt={image.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="p-3">
+                    <h3 className="font-montserrat font-semibold text-primary-green mb-1 text-xs line-clamp-2">
+                      {image.title}
+                    </h3>
+                    <p className="text-gray-medium text-xs line-clamp-2">
+                      {image.description}
+                    </p>
+                  </div>
                 </div>
-                <div className="p-3">
-                  <h3 className="font-montserrat font-semibold text-primary-green mb-1 text-xs line-clamp-2">
-                    {image.title}
-                  </h3>
-                  <p className="text-gray-medium text-xs line-clamp-2">
-                    {image.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
 
           {/* Seção da Equipe */}
           <div className="mt-20 text-center section-fade">
