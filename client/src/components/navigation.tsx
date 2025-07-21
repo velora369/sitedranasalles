@@ -45,9 +45,13 @@ export default function Navigation() {
           <div className="flex-shrink-0">
             <button 
               onClick={() => scrollToSection('home')}
-              className="font-playfair text-xl font-bold text-primary-green hover:text-gold-primary transition-colors"
+              className="flex items-center hover:opacity-80 transition-opacity duration-300"
             >
-              Dra. Ana Carolina Salles
+              <img 
+                src="https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/07/design-sem-nome-6-1.webp" 
+                alt="Logo Dra. Ana Carolina Salles" 
+                className="w-12 h-12 rounded-full object-cover border-2 border-gold-primary"
+              />
             </button>
           </div>
           
