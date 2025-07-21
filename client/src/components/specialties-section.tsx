@@ -60,7 +60,7 @@ export default function SpecialtiesSection() {
           {expertise.map((area, index) => {
             const Icon = area.icon;
             return (
-              <div key={index} className="text-center section-fade hover-lift">
+              <div key={index} className="text-center section-fade">
                 <div className="gold-gradient p-6 rounded-2xl mb-4 mx-auto w-20 h-20 flex items-center justify-center">
                   <Icon className="w-8 h-8 text-white icon-bounce" />
                 </div>
@@ -76,7 +76,7 @@ export default function SpecialtiesSection() {
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
-              <div key={index} className="bg-gray-light p-8 rounded-2xl hover-lift section-fade">
+              <div key={index} className="bg-gray-light p-8 rounded-2xl card-hover-rounded section-fade">
                 <div className="bg-primary-green p-4 rounded-xl w-16 h-16 flex items-center justify-center mb-6">
                   <Icon className="w-6 h-6 text-white" />
                 </div>

@@ -135,11 +135,25 @@
   
   .hover-lift {
     transition: all 0.3s ease;
+    border-radius: inherit;
   }
   
   .hover-lift:hover {
     transform: translateY(-4px);
     box-shadow: 0 10px 25px rgba(27, 67, 50, 0.15);
+    border-radius: inherit;
+  }
+  
+  .card-hover-rounded {
+    transition: all 0.3s ease;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+  
+  .card-hover-rounded:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(27, 67, 50, 0.15);
+    border-radius: 1rem;
   }
   
   .hero-gradient {
