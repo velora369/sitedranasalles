@@ -18,52 +18,52 @@ export default function CongressSection() {
     {
       url: "https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/07/whatsapp-image-2025-07-20-at-18.48.54.webp",
       title: "Congresso Brasileiro de Mastologia - 2025",
-      description: "Participação no principal evento brasileiro de mastologia"
+      description: "Participação no maior evento científico de mastologia do Brasil, reunindo os principais especialistas do país para discutir as mais recentes inovações em diagnóstico e tratamento do câncer de mama. A Dra. Ana Carolina acompanha as últimas tendências em terapias personalizadas e cirurgias reconstrutivas."
     },
     {
       url: "https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/07/whatsapp-image-2025-07-20-at-18.49.39.webp",
-      title: "Congresso Americano de Oncologia Clínica 2025",
-      description: "ASCO 2025 - O mais importante congresso mundial de oncologia"
+      title: "ASCO 2025 - Congresso Americano de Oncologia",
+      description: "Presença no mais prestigioso congresso mundial de oncologia, realizado anualmente nos Estados Unidos. O ASCO reúne mais de 40.000 especialistas globalmente e apresenta os avanços mais revolucionários em tratamentos oncológicos. A participação da Dra. Ana Carolina garante acesso às terapias mais inovadoras para seus pacientes."
     },
     {
       url: "https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/07/whatsapp-image-2025-07-20-at-18.50.38.webp",
-      title: "Evento no Congresso Brasileiro de Mastologia para pacientes",
-      description: "Atividades de educação e conscientização para pacientes"
+      title: "Palestra Educativa para Pacientes - Mastologia",
+      description: "Atividade de educação médica voltada para pacientes e familiares durante o Congresso Brasileiro de Mastologia. A Dra. Ana Carolina participou ativamente na conscientização sobre prevenção, diagnóstico precoce e opções de tratamento, demonstrando seu compromisso com o cuidado humanizado e educativo."
     },
     {
       url: "https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/07/whatsapp-image-2025-07-20-at-18.51.46.webp",
-      title: "Oncologistas da Rede D'or de todo o Brasil",
-      description: "Equipe da Rede D'or no Congresso Americano de Oncologia, ASCO 2025"
+      title: "Equipe Rede D'Or no ASCO 2025",
+      description: "Representação da excelência médica brasileira no maior congresso mundial de oncologia. A participação em grupo da equipe Rede D'Or demonstra o compromisso institucional com a atualização científica contínua e o intercâmbio de conhecimentos com especialistas internacionais de renome."
     },
     {
       url: "https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/07/whatsapp-image-2025-07-20-at-18.53.45.webp",
       title: "SABCS 2024 - San Antonio, EUA",
-      description: "Participação no Principal Congresso de Câncer de Mama no mundo"
+      description: "Participação no San Antonio Breast Cancer Symposium, considerado o congresso mais importante do mundo exclusivamente dedicado ao câncer de mama. Realizado no Texas, o SABCS apresenta anualmente os estudos mais revolucionários que definem os protocolos globais de tratamento. A presença da Dra. Ana Carolina assegura tratamentos de padrão internacional."
     },
     {
       url: "https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/07/whatsapp-image-2025-07-20-at-18.55.40.webp",
-      title: "Corrida do Outubro Rosa Rede D'or 2024",
-      description: "Evento de conscientização sobre o câncer de mama"
+      title: "Corrida Outubro Rosa Rede D'Or 2024",
+      description: "Participação ativa na campanha de conscientização sobre o câncer de mama promovida pela Rede D'Or. Este evento esportivo e educativo mobilizou centenas de pessoas em prol da prevenção e diagnóstico precoce, demonstrando o engajamento da Dra. Ana Carolina com ações comunitárias de saúde pública."
     },
     {
       url: "https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/07/whatsapp-image-2025-07-20-at-18.56.33.webp",
-      title: "Palestra para Pacientes Outubro Rosa",
-      description: "Atividade educativa durante a campanha Outubro Rosa"
+      title: "Palestra Outubro Rosa para Pacientes",
+      description: "Atividade educativa especializada durante a campanha Outubro Rosa, focada em esclarecer dúvidas sobre prevenção, autoexame e tratamentos disponíveis. A Dra. Ana Carolina conduziu sessões informativas que beneficiaram dezenas de mulheres, reforçando a importância da medicina preventiva e do acompanhamento médico regular."
     },
     {
       url: "https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/07/whatsapp-image-2025-07-20-at-18.57.38.webp",
       title: "Reunião Científica de Tumores Ginecológicos",
-      description: "Discussão de casos e atualizações científicas"
+      description: "Participação em encontro científico multidisciplinar focado em cânceres ginecológicos. Estas reuniões especializadas reúnem oncologistas, ginecologistas e cirurgiões para discussão de casos complexos e protocolos de tratamento. A presença da Dra. Ana Carolina reflete sua expertise em tumores femininos e abordagem multidisciplinar."
     },
     {
       url: "https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/07/whatsapp-image-2025-07-20-at-18.58.48.webp",
-      title: "Mama Star - DF Star",
-      description: "Evento científico realizado no DF Star, com excelentes especialistas"
+      title: "Mama Star - Evento Científico DF Star",
+      description: "Participação no simpósio científico sobre câncer de mama realizado no Hospital DF Star, reunindo especialistas regionais e nacionais. Este evento de alto nível técnico promove a troca de experiências entre profissionais e a discussão de casos clínicos complexos, fortalecendo a rede de cuidados oncológicos em Brasília."
     },
     {
       url: "https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/07/whatsapp-image-2025-07-20-at-19.09.05.webp",
-      title: "Equipe de Oncologia Rede D'Or no ASCO 2024",
-      description: "Congresso Americano de Oncologia em 2024"
+      title: "Equipe Rede D'Or no ASCO 2024",
+      description: "Representação da medicina brasileira no ASCO 2024, demonstrando o compromisso contínuo com a excelência científica. A participação anual no maior congresso mundial de oncologia garante que os pacientes da Dra. Ana Carolina tenham acesso aos protocolos mais atualizados e às terapias mais promissoras disponíveis globalmente."
     }
   ];
 
