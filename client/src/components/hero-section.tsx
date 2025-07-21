@@ -141,14 +141,7 @@ export default function HeroSection() {
                   <span className="text-white text-2xl font-bold">+</span>
                 </motion.div>
                 
-                <motion.h3 
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 1.2, duration: 0.6 }}
-                  className="font-montserrat font-semibold text-primary-green mb-2"
-                >
-                  Cuidado Especializado
-                </motion.h3>
+                
                 
                 <motion.p 
                   initial={{ opacity: 0 }}
