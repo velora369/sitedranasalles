@@ -1,6 +1,16 @@
-import { GraduationCap, Stethoscope, Award, Dna, Building2 } from "lucide-react";
+import { useState, useEffect } from "react";
+import { GraduationCap, Stethoscope, Award, Dna, Building2, ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function AboutSection() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const doctorImages = [
+    "https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/07/whatsapp-image-2025-07-20-at-18.47.18.webp",
+    "https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/07/whatsapp-image-2025-07-20-at-18.44.57.webp",
+    "https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/07/whatsapp-image-2025-07-20-at-18.46.39.webp",
+    "https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/07/whatsapp-image-2025-07-20-at-18.45.56.webp"
+  ];
+
   const credentials = [
     {
       icon: GraduationCap,
@@ -29,6 +39,29 @@ export default function AboutSection() {
     }
   ];
 
+  // Auto-rotate images every 3 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => 
+        (prevIndex + 1) % doctorImages.length
+      );
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [doctorImages.length]);
+
+  const goToPrevious = () => {
+    setCurrentImageIndex((prevIndex) => 
+      prevIndex === 0 ? doctorImages.length - 1 : prevIndex - 1
+    );
+  };
+
+  const goToNext = () => {
+    setCurrentImageIndex((prevIndex) => 
+      (prevIndex + 1) % doctorImages.length
+    );
+  };
+
   return (
     <section id="about" className="py-20 px-4 bg-gray-light">
       <div className="max-w-7xl mx-auto">
@@ -41,11 +74,56 @@ export default function AboutSection() {
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="section-fade">
-            <img 
-              src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=1000" 
-              alt="Dra. Ana Carolina Salles - Retrato profissional" 
-              className="rounded-2xl shadow-xl w-full max-w-md mx-auto"
-            />
+            <div className="relative max-w-md mx-auto">
+              {/* Image Carousel */}
+              <div className="relative overflow-hidden rounded-2xl shadow-xl">
+                <div 
+                  className="flex transition-transform duration-500 ease-in-out"
+                  style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}
+                >
+                  {doctorImages.map((image, index) => (
+                    <img 
+                      key={index}
+                      src={image} 
+                      alt={`Dra. Ana Carolina Salles - Foto ${index + 1}`} 
+                      className="w-full h-[400px] object-cover flex-shrink-0"
+                    />
+                  ))}
+                </div>
+                
+                {/* Navigation Arrows */}
+                <button
+                  onClick={goToPrevious}
+                  className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-300"
+                  aria-label="Imagem anterior"
+                >
+                  <ChevronLeft className="w-4 h-4" />
+                </button>
+                <button
+                  onClick={goToNext}
+                  className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-300"
+                  aria-label="Próxima imagem"
+                >
+                  <ChevronRight className="w-4 h-4" />
+                </button>
+              </div>
+              
+              {/* Dots Indicator */}
+              <div className="flex justify-center mt-4 space-x-2">
+                {doctorImages.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentImageIndex(index)}
+                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                      currentImageIndex === index 
+                        ? 'bg-gold-primary' 
+                        : 'bg-gray-300 hover:bg-gray-400'
+                    }`}
+                    aria-label={`Ir para imagem ${index + 1}`}
+                  />
+                ))}
+              </div>
+            </div>
           </div>
           <div className="section-fade">
             <p className="text-lg text-gray-700 mb-8 leading-relaxed">
