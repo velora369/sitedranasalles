@@ -140,14 +140,14 @@ export default function HeroSection() {
                 <span className="text-white text-2xl font-bold">+</span>
               </motion.div>
               
-              <motion.p 
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+              <motion.img 
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 1.4, duration: 0.6 }}
-                className="text-gray-600 text-sm"
-              >
-                Oncologia Clínica Moderna
-              </motion.p>
+                src="https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/07/whatsapp-image-2025-07-20-at-18.45.28.webp"
+                alt="Dra. Ana Carolina Salles"
+                className="w-32 h-32 object-cover rounded-full mx-auto border-4 border-white shadow-lg"
+              />
             </motion.div>
           </motion.div>
         </motion.div>
