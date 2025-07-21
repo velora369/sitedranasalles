@@ -156,11 +156,11 @@ export default function SpecialtiesSection() {
                 <div className="flex flex-col sm:flex-row gap-3 mt-8">
                   <button
                     onClick={() => {
+                      const specialtyTitle = expertise[selectedExpertise].title;
+                      const message = `Olá! Gostaria de marcar uma consulta com a Dra. Ana Carolina Salles sobre ${specialtyTitle}.`;
+                      const whatsappUrl = `https://wa.me/5561992947671?text=${encodeURIComponent(message)}`;
+                      window.open(whatsappUrl, '_blank');
                       setSelectedExpertise(null);
-                      const contactSection = document.getElementById('contact');
-                      if (contactSection) {
-                        contactSection.scrollIntoView({ behavior: 'smooth' });
-                      }
                     }}
                     className="px-6 py-3 bg-primary-green text-white font-montserrat font-semibold rounded-xl hover:bg-secondary-green transition-colors duration-300"
                   >
