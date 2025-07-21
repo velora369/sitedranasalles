@@ -208,7 +208,7 @@ export default function CongressSection() {
           onClick={closeModal}
         >
           <div 
-            className="relative max-w-4xl max-h-full"
+            className="relative w-full max-w-6xl h-full max-h-[95vh] flex flex-col"
             onClick={(e) => e.stopPropagation()}
           >
             <button 
@@ -238,19 +238,20 @@ export default function CongressSection() {
               <ChevronRight className="w-6 h-6" />
             </button>
             
-            <div className="bg-white rounded-lg overflow-hidden">
-              <div className="relative">
+            <div className="bg-white rounded-lg overflow-hidden flex flex-col h-full">
+              <div className="relative flex-1 flex items-center justify-center bg-gray-50">
                 <img 
                   src={selectedImage.url} 
                   alt={selectedImage.title}
-                  className="w-full max-h-[70vh] object-contain cursor-pointer"
+                  className="max-w-full max-h-full object-contain cursor-pointer"
                   onClick={closeModal}
+                  style={{ maxHeight: 'calc(95vh - 200px)' }}
                 />
                 <div className="absolute top-4 left-4 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full text-sm">
                   Clique para fechar
                 </div>
               </div>
-              <div className="p-6">
+              <div className="p-6 flex-shrink-0">
                 <h3 className="font-montserrat font-semibold text-primary-green mb-2 text-lg">
                   {selectedImage.title}
                 </h3>
