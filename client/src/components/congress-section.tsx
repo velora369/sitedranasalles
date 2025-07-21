@@ -199,28 +199,28 @@ export default function CongressSection() {
               Uma parte especial da equipe querida de trabalho no dia a dia: Felissa e Marcos
             </p>
             
-            <div className="flex justify-center">
+            <div className="flex justify-center px-4">
               <div 
-                className="bg-white rounded-2xl shadow-lg hover-lift cursor-pointer overflow-hidden group max-w-md"
+                className="bg-white rounded-2xl shadow-lg hover-lift cursor-pointer overflow-hidden group w-full max-w-sm sm:max-w-md lg:max-w-lg"
                 onClick={() => openModal({
                   url: "https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/07/whatsapp-image-2025-07-20-at-19.02.00.webp",
                   title: "Equipe da Dra. Ana - Felissa e Marcos",
                   description: "Nossa equipe querida de trabalho no dia a dia"
                 }, congressImages.length)}
               >
-                <div className="aspect-video overflow-hidden">
+                <div className="relative">
                   <img 
                     src="https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/07/whatsapp-image-2025-07-20-at-19.02.00.webp" 
                     alt="Equipe da Dra. Ana - Felissa e Marcos"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-auto object-contain group-hover:scale-[1.02] transition-transform duration-300"
                     loading="lazy"
                   />
                 </div>
-                <div className="p-6">
-                  <h4 className="font-montserrat font-semibold text-primary-green mb-2">
+                <div className="p-4 sm:p-6">
+                  <h4 className="font-montserrat font-semibold text-primary-green mb-2 text-center">
                     Felissa e Marcos
                   </h4>
-                  <p className="text-gray-medium text-sm">
+                  <p className="text-gray-medium text-sm text-center">
                     Nossa equipe querida de trabalho no dia a dia
                   </p>
                 </div>
