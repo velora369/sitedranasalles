@@ -120,34 +120,58 @@ export default function HeroSection() {
             </motion.div>
           </div>
 
-          {/* Simple visual element - hidden on mobile for better responsiveness */}
+          {/* Hero Image Section - Modern and Responsive */}
           <motion.div 
             variants={fadeInUpVariants}
-            className="hidden lg:flex lg:text-right relative justify-center items-center"
+            className="flex justify-center lg:justify-end items-center mt-8 lg:mt-0"
           >
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8, duration: 0.8 }}
-              className="relative z-10 p-8 bg-white/30 backdrop-blur-sm rounded-2xl border border-white/40 shadow-lg text-center"
+              initial={{ opacity: 0, scale: 0.9, y: 30 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ delay: 0.6, duration: 0.8, ease: "easeOut" }}
+              className="relative"
             >
+              {/* Background decorative elements */}
+              <motion.div
+                initial={{ scale: 0, rotate: -180 }}
+                animate={{ scale: 1, rotate: 0 }}
+                transition={{ delay: 1, duration: 1, ease: "easeOut" }}
+                className="absolute -inset-4 bg-gradient-to-br from-primary-green/20 to-gold-primary/20 rounded-3xl blur-xl"
+              />
+              
               <motion.div
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
-                transition={{ delay: 1, duration: 0.6, type: "spring" }}
-                className="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-primary-green to-gold-primary rounded-full flex items-center justify-center"
-              >
-                <span className="text-white text-2xl font-bold">+</span>
-              </motion.div>
-              
-              <motion.img 
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 1.4, duration: 0.6 }}
-                src="https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/07/whatsapp-image-2025-07-20-at-18.45.28.webp"
-                alt="Dra. Ana Carolina Salles"
-                className="w-32 h-32 object-cover rounded-full mx-auto border-4 border-white shadow-lg"
+                transition={{ delay: 1.2, duration: 0.8, type: "spring" }}
+                className="absolute -inset-2 bg-gradient-to-br from-primary-green to-gold-primary rounded-2xl opacity-20"
               />
+              
+              {/* Main image container */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.8, duration: 0.6 }}
+                className="relative bg-white p-2 rounded-2xl shadow-2xl"
+              >
+                <motion.img 
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 1, duration: 0.8, ease: "easeOut" }}
+                  src="https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/07/whatsapp-image-2025-07-20-at-18.45.28.webp"
+                  alt="Dra. Ana Carolina Salles - Oncologista Clínica"
+                  className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 object-cover rounded-xl shadow-lg"
+                />
+                
+                {/* Floating accent */}
+                <motion.div
+                  initial={{ opacity: 0, x: 20, y: -20 }}
+                  animate={{ opacity: 1, x: 0, y: 0 }}
+                  transition={{ delay: 1.4, duration: 0.6 }}
+                  className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-primary-green to-gold-primary rounded-full flex items-center justify-center shadow-lg"
+                >
+                  <span className="text-white text-xl font-bold">+</span>
+                </motion.div>
+              </motion.div>
             </motion.div>
           </motion.div>
         </motion.div>
