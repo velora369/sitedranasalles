@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Send, ExternalLink, Building2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 export default function ContactSection() {
@@ -92,11 +92,50 @@ export default function ContactSection() {
                 <div className="bg-gold-primary p-3 rounded-lg mr-4 mt-1">
                   <MapPin className="w-5 h-5 text-white" />
                 </div>
-                <div>
-                  <h4 className="font-montserrat font-semibold text-primary-green mb-2">Localização</h4>
-                  <p className="text-gray-700">Hospital DF Star</p>
-                  <p className="text-gray-700">OHB - Oncologia D'or - Quinto Andar</p>
-                  <p className="text-gray-700">Brasília, DF</p>
+                <div className="flex-1">
+                  <h4 className="font-montserrat font-semibold text-primary-green mb-4">Onde Atuo</h4>
+                  
+                  {/* Hospital DF Star */}
+                  <div className="mb-4 p-4 bg-gray-50 rounded-xl border border-gray-200 hover:border-gold-primary transition-all duration-300 group">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center">
+                        <Building2 className="w-4 h-4 text-primary-green mr-2" />
+                        <span className="font-montserrat font-medium text-primary-green">Hospital DF Star</span>
+                      </div>
+                      <a 
+                        href="https://share.google.com/WgPaKcD3TARcZy9h2" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="flex items-center text-gold-primary hover:text-primary-green transition-colors duration-300"
+                      >
+                        <span className="text-sm mr-1">Ver no Maps</span>
+                        <ExternalLink className="w-4 h-4" />
+                      </a>
+                    </div>
+                    <p className="text-gray-600 text-sm mt-2">Clique para ver a localização no Google Maps</p>
+                  </div>
+
+                  {/* OHB - Oncologia D'or */}
+                  <div className="p-4 bg-gray-50 rounded-xl border border-gray-200 hover:border-gold-primary transition-all duration-300 group">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center">
+                        <Building2 className="w-4 h-4 text-primary-green mr-2" />
+                        <span className="font-montserrat font-medium text-primary-green">OHB - Oncologia D'or</span>
+                      </div>
+                      <a 
+                        href="https://share.google.com/rb2PjR4ro8Qs5MC0y" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="flex items-center text-gold-primary hover:text-primary-green transition-colors duration-300"
+                      >
+                        <span className="text-sm mr-1">Ver no Maps</span>
+                        <ExternalLink className="w-4 h-4" />
+                      </a>
+                    </div>
+                    <p className="text-gray-600 text-sm mt-2">Quinto Andar - Clique para ver a localização</p>
+                  </div>
+                  
+                  <p className="text-gray-700 mt-4 text-sm">📍 Brasília, DF</p>
                 </div>
               </div>
               
