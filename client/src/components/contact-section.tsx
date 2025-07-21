@@ -135,7 +135,7 @@ Mensagem: ${formData.message}`;
                     <p className="font-montserrat font-semibold text-primary-green mb-2">Onde Atuo</p>
                     <div className="space-y-2 text-sm text-gray-600">
                       <div>
-                        <a href="https://share.google.com/WgPaKcD3TARcZy9h2" target="_blank" rel="noopener noreferrer" 
+                        <a href="https://maps.app.goo.gl/c3pL4edDkEfdashP7" target="_blank" rel="noopener noreferrer" 
                            className="flex items-center hover:text-gold-primary transition-colors">
                           <Building2 className="w-3 h-3 mr-2" />
                           Hospital DF Star
@@ -143,7 +143,7 @@ Mensagem: ${formData.message}`;
                         </a>
                       </div>
                       <div>
-                        <a href="https://share.google.com/rb2PjR4ro8Qs5MC0y" target="_blank" rel="noopener noreferrer"
+                        <a href="https://maps.app.goo.gl/uGf4MKb2eb9RtQZz5" target="_blank" rel="noopener noreferrer"
                            className="flex items-center hover:text-gold-primary transition-colors">
                           <Building2 className="w-3 h-3 mr-2" />
                           OHB - Oncologia D'or
