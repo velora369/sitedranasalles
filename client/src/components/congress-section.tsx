@@ -104,56 +104,79 @@ export default function CongressSection() {
             </p>
           </div>
           
-          {/* Grid principal 2x3 para os 6 congressos principais */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 lg:gap-8 mb-12">
+          {/* Grid principal responsivo e moderno */}
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8 mb-12">
             {congressImages.slice(0, 6).map((image, index) => (
               <div 
                 key={index} 
-                className="bg-white rounded-2xl shadow-lg hover-lift section-fade cursor-pointer overflow-hidden group"
+                className="bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:border-gold-primary/20 section-fade cursor-pointer overflow-hidden group transition-all duration-500"
                 onClick={() => openModal(image, index)}
               >
-                <div className="aspect-square md:aspect-video overflow-hidden">
+                {/* Imagem com overlay gradiente para melhor legibilidade */}
+                <div className="relative aspect-[4/3] overflow-hidden">
                   <img 
                     src={image.url} 
                     alt={image.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     loading="lazy"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  
+                  {/* Título sobreposto na imagem ao hover */}
+                  <div className="absolute bottom-4 left-4 right-4 transform translate-y-2 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                    <h3 className="font-montserrat font-bold text-white text-sm md:text-base line-clamp-2 drop-shadow-lg">
+                      {image.title}
+                    </h3>
+                  </div>
                 </div>
-                <div className="p-3 md:p-4 lg:p-6">
-                  <h3 className="font-montserrat font-semibold text-primary-green mb-2 text-xs md:text-sm lg:text-lg line-clamp-2">
+                
+                {/* Conteúdo com melhor espaçamento */}
+                <div className="p-5 md:p-6">
+                  <h3 className="font-montserrat font-semibold text-primary-green mb-3 text-sm md:text-base line-clamp-2 group-hover:text-gold-primary transition-colors duration-300">
                     {image.title}
                   </h3>
-                  <p className="text-gray-medium text-xs md:text-sm line-clamp-2 md:line-clamp-3">
+                  <p className="text-gray-600 text-xs md:text-sm leading-relaxed line-clamp-4 md:line-clamp-5">
                     {image.description}
                   </p>
+                  
+                  {/* Indicador de mais informações */}
+                  <div className="mt-4 flex items-center text-gold-primary text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span>Clique para ver mais</span>
+                    <svg className="w-3 h-3 ml-1 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
 
-          {/* Grid secundário para as demais imagens (se houver) */}
+          {/* Grid secundário moderno para as demais imagens */}
           {congressImages.length > 6 && (
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6 mb-12">
               {congressImages.slice(6).map((image, index) => (
                 <div 
                   key={index + 6} 
-                  className="bg-white rounded-xl shadow-md hover-lift section-fade cursor-pointer overflow-hidden group"
+                  className="bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-lg hover:border-gold-primary/20 section-fade cursor-pointer overflow-hidden group transition-all duration-400"
                   onClick={() => openModal(image, index + 6)}
                 >
-                  <div className="aspect-square overflow-hidden">
+                  {/* Imagem com melhor proporção */}
+                  <div className="relative aspect-[3/2] overflow-hidden">
                     <img 
                       src={image.url} 
                       alt={image.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       loading="lazy"
                     />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
-                  <div className="p-3">
-                    <h3 className="font-montserrat font-semibold text-primary-green mb-1 text-xs line-clamp-2">
+                  
+                  {/* Conteúdo compacto mas legível */}
+                  <div className="p-4">
+                    <h3 className="font-montserrat font-semibold text-primary-green mb-2 text-xs md:text-sm line-clamp-2 group-hover:text-gold-primary transition-colors duration-300">
                       {image.title}
                     </h3>
-                    <p className="text-gray-medium text-xs line-clamp-2">
+                    <p className="text-gray-600 text-xs leading-relaxed line-clamp-3">
                       {image.description}
                     </p>
                   </div>
