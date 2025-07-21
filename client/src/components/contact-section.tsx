@@ -95,26 +95,36 @@ Mensagem: ${formData.message}`;
               
               <div className="space-y-6">
                 {/* WhatsApp */}
-                <div className="flex items-center group hover:translate-x-1 transition-transform duration-300">
-                  <div className="bg-gold-primary/10 p-3 rounded-xl mr-4">
+                <a 
+                  href="https://wa.me/5561992947671?text=Olá%20gostaria%20de%20marcar%20uma%20consulta%20com%20a%20Dra.%20Ana%20Carolina%20Salles"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center group hover:translate-x-1 transition-transform duration-300 cursor-pointer"
+                >
+                  <div className="bg-gold-primary/10 p-3 rounded-xl mr-4 group-hover:bg-gold-primary/20 transition-colors duration-300">
                     <Phone className="w-5 h-5 text-gold-primary" />
                   </div>
                   <div>
-                    <p className="font-montserrat font-semibold text-primary-green">WhatsApp</p>
+                    <p className="font-montserrat font-semibold text-primary-green group-hover:text-gold-primary transition-colors duration-300">WhatsApp</p>
                     <p className="text-gray-600 text-sm">(61) 99294-7671</p>
                   </div>
-                </div>
+                </a>
                 
                 {/* Instagram */}
-                <div className="flex items-center group hover:translate-x-1 transition-transform duration-300">
-                  <div className="bg-gold-primary/10 p-3 rounded-xl mr-4">
+                <a 
+                  href="https://www.instagram.com/anacarolinasallesoncologia?igsh=MTk3NWJ5bjY3MGRnOQ=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center group hover:translate-x-1 transition-transform duration-300 cursor-pointer"
+                >
+                  <div className="bg-gold-primary/10 p-3 rounded-xl mr-4 group-hover:bg-gold-primary/20 transition-colors duration-300">
                     <Mail className="w-5 h-5 text-gold-primary" />
                   </div>
                   <div>
-                    <p className="font-montserrat font-semibold text-primary-green">Instagram</p>
+                    <p className="font-montserrat font-semibold text-primary-green group-hover:text-gold-primary transition-colors duration-300">Instagram</p>
                     <p className="text-gray-600 text-sm">@anacarolinasallesoncologia</p>
                   </div>
-                </div>
+                </a>
                 
                 {/* Location */}
                 <div className="flex items-start group hover:translate-x-1 transition-transform duration-300">
