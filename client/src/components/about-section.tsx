@@ -1,4 +1,4 @@
-import { GraduationCap, Stethoscope, Award, Dna, Bus } from "lucide-react";
+import { GraduationCap, Stethoscope, Award, Dna, Building2 } from "lucide-react";
 
 export default function AboutSection() {
   const credentials = [
@@ -23,7 +23,7 @@ export default function AboutSection() {
       description: "Ciências Genômicas e Biotecnologia - UCB (2013-2014)"
     },
     {
-      icon: Bus,
+      icon: Building2,
       title: "Pós-Graduação",
       description: "Gestão em Saúde - Hospital Albert Einstein (2021)"
     }
