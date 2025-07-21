@@ -66,7 +66,7 @@ export default function HeroSection() {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[70vh]"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[80vh]"
         >
           <div className="text-center lg:text-left px-4 lg:px-0">
             {/* Simple animated title */}
@@ -159,7 +159,7 @@ export default function HeroSection() {
                   transition={{ delay: 1, duration: 0.8, ease: "easeOut" }}
                   src="https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/07/whatsapp-image-2025-07-20-at-18.45.28.webp"
                   alt="Dra. Ana Carolina Salles - Oncologista Clínica"
-                  className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 object-cover rounded-xl shadow-lg"
+                  className="w-80 h-80 sm:w-96 sm:h-96 md:w-[28rem] md:h-[28rem] lg:w-[32rem] lg:h-[32rem] xl:w-[36rem] xl:h-[36rem] object-cover rounded-xl shadow-lg"
                 />
                 
                 {/* Floating accent */}
