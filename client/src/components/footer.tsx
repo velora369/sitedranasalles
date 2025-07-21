@@ -95,9 +95,7 @@ export default function Footer() {
               <p>
                 (61) 99294-7671
               </p>
-              <p>
-                @anacarolinasallesoogia
-              </p>
+              <p>@anacarolinasallesoncologia</p>
               <p>
                 Hospital DF Star, Brasília - DF
               </p>
