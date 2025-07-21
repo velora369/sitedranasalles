@@ -135,7 +135,7 @@ export default function ContactSection() {
                     <p className="text-gray-600 text-sm mt-2">Quinto Andar - Clique para ver a localização</p>
                   </div>
                   
-                  <p className="text-gray-700 mt-4 text-sm">📍 Brasília, DF</p>
+                  <p className="text-gray-700 mt-4 text-sm">Brasília, DF</p>
                 </div>
               </div>
               

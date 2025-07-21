@@ -234,13 +234,11 @@ export default function HeroSection() {
               <motion.button 
                 variants={buttonVariants}
                 whileHover={{ 
-                  scale: 1.05,
-                  backgroundColor: "var(--gold-primary)",
-                  color: "white"
+                  scale: 1.05
                 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={scrollToAbout}
-                className="inline-flex items-center justify-center px-8 py-4 border-2 border-gold-primary text-gold-primary font-montserrat font-semibold rounded-xl transition-all duration-300"
+                className="inline-flex items-center justify-center px-8 py-4 border-2 border-gold-primary text-gold-primary font-montserrat font-semibold rounded-xl hover:bg-gold-primary hover:text-white transition-all duration-300"
               >
                 <motion.div
                   initial={{ scale: 0 }}

@@ -96,15 +96,12 @@ export default function Footer() {
             <h4 className="font-montserrat font-semibold text-lg mb-4">Contato</h4>
             <div className="space-y-2 text-gray-300">
               <p>
-                <span className="inline-block w-5">📱</span>
                 (61) 99294-7671
               </p>
               <p>
-                <span className="inline-block w-5">📷</span>
                 @anacarolinasallesoogia
               </p>
               <p>
-                <span className="inline-block w-5">📍</span>
                 Hospital DF Star, Brasília - DF
               </p>
             </div>
