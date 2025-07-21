@@ -113,11 +113,15 @@ export default function CongressSection() {
                 onClick={() => openModal(image, index)}
               >
                 {/* Imagem com overlay gradiente para melhor legibilidade */}
-                <div className="relative aspect-[4/3] overflow-hidden">
+                <div className={`relative overflow-hidden ${
+                  image.title.includes('SABCS 2024') ? 'aspect-[3/4]' : 'aspect-[4/3]'
+                }`}>
                   <img 
                     src={image.url} 
                     alt={image.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    className={`w-full h-full group-hover:scale-105 transition-transform duration-700 ${
+                      image.title.includes('SABCS 2024') ? 'object-cover object-center' : 'object-cover'
+                    }`}
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
