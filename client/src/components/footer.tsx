@@ -19,7 +19,13 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="font-playfair text-2xl font-bold mb-4">Dra. Ana Carolina Salles</h3>
+            <div className="flex items-center mb-4">
+              <img 
+                src="https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/07/design-sem-nome-6-1.webp" 
+                alt="Logo Dra. Ana Carolina Salles" 
+                className="w-16 h-16 rounded-full object-cover border-2 border-gold-primary"
+              />
+            </div>
             <p className="text-gray-300 mb-4">
               Oncologista Clínica dedicada ao cuidado humanizado e à excelência no tratamento oncológico.
             </p>
