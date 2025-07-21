@@ -119,8 +119,8 @@ export default function CongressSection() {
                   <img 
                     src={image.url} 
                     alt={image.title}
-                    className={`w-full h-full group-hover:scale-105 transition-transform duration-700 ${
-                      image.title.includes('SABCS 2024') ? 'object-cover object-center' : 'object-cover'
+                    className={`w-full h-full group-hover:scale-[1.02] transition-transform duration-700 ${
+                      image.title.includes('SABCS 2024') ? 'object-contain bg-gray-50' : 'object-contain bg-gray-50'
                     }`}
                     loading="lazy"
                   />
@@ -169,7 +169,7 @@ export default function CongressSection() {
                     <img 
                       src={image.url} 
                       alt={image.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-contain bg-gray-50 group-hover:scale-[1.02] transition-transform duration-500"
                       loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
