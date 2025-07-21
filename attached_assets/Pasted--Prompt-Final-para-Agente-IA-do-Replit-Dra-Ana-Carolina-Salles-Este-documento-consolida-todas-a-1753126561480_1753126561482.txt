@@ -1,0 +1,449 @@
+# Prompt Final para Agente IA do Replit - Dra. Ana Carolina Salles
+
+Este documento consolida todas as informações e diretrizes para a criação do site da Dra. Ana Carolina Salles. O Replit AI deve atuar como um desenvolvedor web autônomo, interpretando estas instruções para construir um site completo, funcional e esteticamente alinhado com a identidade profissional da Dra. Ana Carolina.
+
+**ATENÇÃO CRÍTICA:** O site deve ser construído como uma **LANDING PAGE ÚNICA**, onde todas as seções são dispostas sequencialmente uma abaixo da outra na mesma página. NÃO devem ser criadas páginas HTML separadas para cada seção (ex: `sobre.html`, `especialidades.html`, etc.). A navegação do menu principal deve rolar suavemente para a seção correspondente na mesma página.
+
+## 1. Contexto e Propósito
+
+Este site estabelece-se como a plataforma digital central da Dra. Ana Carolina Salles, Oncologista Clínica, projetado para transcender a mera apresentação de serviços. Ele visa consolidar sua presença como uma referência em oncologia, oferecendo um ambiente digital que reflete a excelência clínica, a dedicação humanizada e o compromisso inabalável com a saúde e o bem-estar do paciente. Através de uma interface intuitiva e conteúdo informativo, o portal busca não apenas informar, mas também inspirar confiança e facilitar o acesso a um cuidado oncológico de vanguarda, pautado na ciência e na empatia, solidificando a conexão entre a expertise médica e a jornada de cada indivíduo.
+
+**Público-Alvo:** Pacientes com suspeita ou diagnóstico de câncer, com foco especial em Tumores malignos femininos (câncer de mama e cânceres ginecológicos), além de câncer de pele ou de cabeça e pescoço.
+
+É crucial que o Replit AI compreenda que todas as informações necessárias para a construção do site estão contidas exclusivamente neste prompt. Não há contexto externo, histórico de conversas ou acesso a imagens fora do que será explicitamente descrito ou referenciado aqui. A clareza e a especificidade são primordiais para minimizar iterações e garantir que o resultado final esteja perfeitamente alinhado com as expectativas.
+
+O site deve ser responsivo, otimizado para diferentes dispositivos (desktop, tablet, mobile) e focar na usabilidade e na experiência do usuário. A estética visual deve ser moderna e profissional, refletindo a identidade da Dra. Ana Carolina Salles.
+
+## 2. Tarefa
+
+A tarefa principal do Replit AI é construir um site completo e funcional, seguindo as especificações detalhadas nas seções subsequentes. Isso inclui a criação da estrutura HTML, estilização CSS, implementação de funcionalidades interativas com JavaScript e a integração de quaisquer elementos visuais ou de conteúdo necessários. O Replit AI deve gerar o código-fonte completo do site, pronto para ser implantado.
+
+Especificamente, o Replit AI deve:
+
+- Gerar o código HTML semântico para todas as seções do site, dispostas em uma única página.
+
+- Aplicar estilos CSS para garantir o design visual e a responsividade em diferentes tamanhos de tela.
+
+- Implementar interatividade e lógica de frontend usando JavaScript, conforme as funcionalidades descritas.
+
+- Integrar todo o conteúdo textual e visual (imagens, ícones) que será fornecido ou referenciado.
+
+- Garantir que o site seja otimizado para performance e acessibilidade.
+
+- O resultado final deve ser um conjunto de arquivos (HTML, CSS, JS, assets) que compõem o site de landing page.
+
+## 3. Diretrizes e Funcionalidades Detalhadas
+
+### 3.1. Estrutura do Site (Formato Landing Page)
+
+O site deve ser uma **única página** com as seguintes seções, dispostas sequencialmente de cima para baixo. O menu de navegação deve rolar a página para a seção correspondente:
+
+1. **Seção Inicial (Hero):** Uma introdução impactante à Dra. Ana Carolina Salles, destacando sua especialidade e o diferencial de seu atendimento. Esta seção deve capturar a atenção do visitante e incluir uma clara chamada para ação.
+
+1. **Seção Sobre:** Detalhes concisos sobre a trajetória profissional, formação acadêmica e a filosofia de cuidado da Dra. Ana Carolina Salles, transmitindo sua paixão pela oncologia.
+
+1. **Seção Especialidades:** Um detalhamento das áreas de atuação e dos principais serviços oferecidos, apresentados de forma clara e acessível para o público leigo.
+
+1. **Seção Participações em Congressos e Atividades Científicas:** Uma galeria visualmente atraente para exibir fotos e, futuramente, descrições das participações da Dra. Ana Carolina Salles em eventos científicos e atividades acadêmicas, reforçando sua atualização e engajamento com a comunidade médica.
+
+1. **Seção Depoimentos:** Um espaço dedicado a compartilhar as experiências e o feedback de pacientes, construindo confiança e validando a qualidade do atendimento. Inicialmente, esta seção será estruturada para inclusão futura de conteúdo.
+
+1. **Seção Blog (Preview na Landing Page com Link para Página Dedicada):** Uma seção de prévia na landing page, apresentando os artigos mais recentes do blog. Incluirá um botão "Ver Mais" que direcionará para uma **página HTML separada e exclusiva para o blog** (`blog.html`), projetada com um layout profissional e funcional.
+
+1. **Seção Atendimento/Contato:** Informações essenciais para contato, incluindo meios de comunicação, horários de atendimento e a localização dos consultórios, facilitando o agendamento de consultas.
+
+### 3.2. Conteúdo Textual por Seção
+
+#### 3.2.1. Seção Inicial (Hero)
+
+**Título Principal:** Dra. Ana Carolina Salles
+**Subtítulo:** Oncologista Clínica | Cuidado Incansável, Respeito e Paixão pela Vida.
+
+**Parágrafo Introdutório:**
+Bem-vindo(a) ao espaço digital da Dra. Ana Carolina Salles, uma oncologista clínica dedicada e apaixonada por sua missão. Com uma trajetória sólida e um compromisso inabalável com a ciência e o cuidado humanizado, a Dra. Ana Carolina oferece um atendimento personalizado, pautado nas mais recentes evidências científicas e no profundo respeito por cada paciente. Sua incansável busca por conhecimento e sua rede de apoio multidisciplinar garantem um acompanhamento completo, desde o diagnóstico até o seguimento pós-tratamento, proporcionando segurança e acolhimento em cada etapa da jornada.
+
+**Call-to-Action:** Agende sua consulta personalizada e dê o primeiro passo em direção a um cuidado de excelência. [Botão: Entrar em Contato]
+
+#### 3.2.2. Seção Sobre a Dra. Ana Carolina Salles
+
+**Título:** Uma Trajetória de Dedicação e Excelência em Oncologia
+
+**Mini-Bio Detalhada:**
+
+A Dra. Ana Carolina Salles é uma oncologista clínica com uma paixão inabalável pela medicina e um compromisso profundo com seus pacientes. Sua jornada acadêmica e profissional é marcada pela busca contínua por conhecimento e aprimoramento:
+
+- **Graduação em Medicina:** Universidade Católica de Brasília (2002-2008)
+
+- **Residência em Clínica Médica:** (2009-2010)
+
+- **Oncologista Clínica:** Pelo Hospital de Base do Distrito Federal (2013)
+
+- **Mestrado:** Em Ciências Genômicas e Biotecnologia pela Universidade Católica de Brasília (2013-2014)
+
+- **Pós-Graduação:** Em Gestão em Saúde pelo Hospital Albert Einstein (2021)
+
+Como membro associada da SBOC, ASCO e ESMO, a Dra. Ana Carolina mantém-se atualizada com as inovações globais na oncologia. Sua intensa participação em eventos científicos, inclusive como idealizadora e coordenadora, reflete seu engajamento com a comunidade médica. Além disso, realizou cursos observacionais e preceptorias internacionais em renomados centros como Gustave Roussy (Paris), Dana Farber (Boston) e Oklahoma Cancer Center (Oklahoma), com foco em tumores femininos, câncer de mama, tumores ginecológicos e câncer de cabeça e pescoço.
+
+Atualmente, a Dra. Ana Carolina Salles atua como oncologista clínica na Oncologia D'or, com consultório nos Hospitais DF Star e OHB - Oncologia D'or - Quinto Andar, em Brasília. Sua prática é fundamentada na empatia, na ciência e na construção de uma rede de apoio robusta para cada paciente.
+
+#### 3.2.3. Seção Especialidades e Serviços
+
+**Título:** Cuidado Especializado em Oncologia Clínica
+
+**Áreas de Atuação/Especialidade:**
+
+A Dra. Ana Carolina Salles é especializada no tratamento de diversos tipos de câncer, com foco em:
+
+- Oncologia Clínica Geral
+
+- Tumores Femininos (Câncer de Mama e Cânceres Ginecológicos)
+
+- Cânceres de Cabeça e Pescoço
+
+- Tumores Malignos de Pele
+
+**3 Principais Serviços e Diferencial Competitivo:**
+
+1. **Consulta Clínica Personalizada e Baseada em Evidências:** A Dra. Ana Carolina oferece um atendimento individualizado, onde cada caso é analisado com profundidade e as decisões de tratamento são pautadas nas mais recentes evidências científicas. O paciente tem acesso a uma rede de apoio de outros profissionais altamente especializados, garantindo uma abordagem integrada e completa.
+
+1. **Orientação Abrangente desde o Diagnóstico:** Diante de uma suspeita de tumor maligno, a Dra. Ana Carolina orienta o paciente em relação aos exames de imagem, biópsia, patologia e a necessidade de realização de PET-CT. Se o diagnóstico de câncer for confirmado, ela indica o tratamento adequado, sempre com base nas melhores práticas e na ciência.
+
+1. **Acompanhamento Contínuo e Integrado:** Como oncologista clínica, a Dra. Ana Carolina cuida de todo o tratamento sistêmico (quimioterapia, imunoterapia, hormonioterapia) e acompanha o paciente após o término do tratamento, na fase de seguimento. Além disso, se houver necessidade de cirurgia, ela referencia para profissionais capacitados e competentes, assegurando a continuidade e a qualidade do cuidado.
+
+**Principal Problema Resolvido:**
+
+A Dra. Ana Carolina Salles oferece uma solução completa para pacientes com suspeita ou diagnóstico de câncer, orientando desde os exames necessários para um diagnóstico assertivo até o cuidado de todo o tratamento sistêmico e o seguimento pós-tratamento. Ela é a ponte para um cuidado oncológico integrado e humanizado.
+
+#### 3.2.4. Nova Seção: Participações em Congressos e Atividades Científicas
+
+**Título da Seção:** Participações em Congressos e Atividades Científicas
+
+Esta seção deve ser projetada para exibir fotos e, futuramente, descrições das participações da Dra. Ana Carolina Salles em eventos científicos. O Replit AI deve criar a estrutura visual para uma galeria de imagens responsiva e elegante, que possa ser facilmente atualizada com as fotos que serão enviadas posteriormente. O design deve ser minimalista e focar na apresentação das imagens de forma clara e profissional.
+
+#### 3.2.5. Seção Depoimentos
+
+**Título:** O Que Nossos Pacientes Dizem
+
+**Descrição:** Este espaço será dedicado a compartilhar as experiências e o feedback de pacientes que foram cuidados pela Dra. Ana Carolina Salles, reforçando a confiança e a qualidade do atendimento. (Inicialmente vazio, com espaço para inclusão futura de relatos que evidenciem o cuidado humanizado e a excelência profissional).
+
+#### 3.2.6. Seção Blog (Preview na Landing Page e Página Dedicada)
+
+**Título:** Blog: Informações Importantes para Todo Paciente Oncológico
+
+**Descrição (Preview na Landing Page):** Um espaço dedicado a artigos, notícias e informações relevantes sobre oncologia, tratamento, prevenção e bem-estar para pacientes e seus familiares. O conteúdo será alimentado regularmente pela Dra. Ana Carolina Salles, oferecendo insights valiosos e atualizações sobre o universo oncológico.
+
+Na landing page, esta seção deve apresentar um preview dos artigos mais recentes (ex: 2 ou 3 cards de preview) com um botão "Ver Mais" que redireciona para a **página exclusiva do blog (****`blog.html`****)**.
+
+**Página Exclusiva do Blog (****`blog.html`****):**
+
+Esta página deve ter o layout e a funcionalidade de um blog real, com um design clean e profissional para impressionar o visitante. O conteúdo deve ser organizado nas seguintes seções iniciais:
+
+- **Título da Página:** Blog da Dra. Ana Carolina Salles
+
+- **Primeira Seção:**
+  - **Título:** Informações Importantes a Todo Paciente Oncológico
+  - **Conteúdo:** (Espaço reservado para o texto que será fornecido posteriormente. O Replit AI deve criar a estrutura para este conteúdo, garantindo que seja facilmente atualizável e apresentável.)
+
+- **Segunda Seção:**
+  - **Título:** Direitos dos Pacientes Oncológicos
+  - **Conteúdo:** (Espaço reservado para o texto que será fornecido posteriormente. O Replit AI deve criar a estrutura para este conteúdo, assegurando clareza e acessibilidade.)
+
+O Replit AI deve criar a estrutura de HTML e CSS para estas seções, garantindo que estejam prontas para receber o conteúdo textual assim que for disponibilizado. A navegação entre os artigos (futuros) deve ser intuitiva, simulando um blog funcional e informativo.
+
+#### 3.2.7. Seção Atendimento/Contato
+
+**Título:** Agende Sua Consulta
+
+**Informações de Contato:**
+
+- **WhatsApp:** 61 99294 7671
+
+- **Rede Social:** Instagram: @anacarolinasallesoogia
+
+**Horários de Atendimento:**
+
+- Consultório de segunda a sexta-feira.
+
+**Localização:**
+
+- Atualmente, a Dra. Ana Carolina Salles atua como oncologista clínica na Oncologia D'or, com consultório nos Hospitais DF Star e OHB - Oncologia D'or - Quinto Andar, em Brasília.
+
+## 4. Design Visual e UI/UX
+
+**Paleta de Cores:**
+
+*   **Verde Escuro Principal:** #1B4332 (para títulos, botões principais, header) - Transmite seriedade e conexão com a natureza.
+*   **Verde Escuro Secundário:** #2D5A47 (para hover states e variações) - Oferece dinamismo e profundidade.
+*   **Dourado Principal:** #D4AF37 (para destaques, ícones, subtítulos) - Simboliza excelência e distinção.
+*   **Dourado Claro:** #F4E4BC (para backgrounds sutis e hover effects) - Adiciona um toque de leveza e sofisticação.
+*   **Branco:** #FFFFFF (background principal) - Garante clareza, amplitude e foco no conteúdo.
+*   **Preto:** #1A1A1A (texto principal) - Proporciona alta legibilidade e contraste.
+*   **Cinza Claro:** #F8F9FA (backgrounds alternativos) - Cria transições suaves e hierarquia visual.
+*   **Cinza Médio:** #6C757D (texto secundário) - Ideal para informações complementares, mantendo a harmonia.
+
+**Estilo Visual Geral:**
+
+*   **Layout:** Visualmente limpo, minimalista e elegante, com inspiração em tendências de design moderno suave, utilizando espaços em branco de forma inteligente.
+*   **Elementos Visuais:** Arredondados, com sombras suaves, texturas leves e gradientes discretos.
+*   **Tipografia:** Fonte principal contemporânea, elegante e MODERNA. Contraste forte entre títulos e textos para criar hierarquia visual clara. Fontes alternativas podem ser utilizadas para chamadas ou destaques importantes.
+    *   **Fontes Recomendadas:** "Playfair Display" (Google Fonts) para títulos, "Montserrat" (Google Fonts) para subtítulos e navegação, "Open Sans" (Google Fonts) para texto corpo.
+    *   **Hierarquia Tipográfica:** H1 (48px/36px), H2 (36px/28px), H3 (24px/20px), Parágrafo (16px/14px), Navegação (16px) - Assegura a legibilidade e a organização visual do conteúdo.
+*   **Ícones:** Desenvolver ícones com aparência moderna e estilizada, seguindo o conceito moderno do projeto. Cada ícone deve ser exclusivo, relacionado ao conteúdo do site, com pequenos movimentos ou reações (hover animations, microinterações). Estilo sugerido para os ícones: glassmorphism, low poly futurista ou high-tech brilhante, dependendo da proposta visual. A paleta de cores dos ícones deve ser harmonizada com a identidade visual da marca.
+*   **Emoticons Exclusivos Personalizados:** Criação de ícones únicos no estilo gráfico do site. As cores dos ícones devem ser obrigatoriamente baseadas na paleta da logo/marca. O estilo deve ser suave e consistente: sem excesso de brilho, mantendo o tom moderno e minimalista. **NÃO USAR EMOJIS/EMOTICONS DE MANEIRA ALGUMA, SOMENTE ÍCONES RESPONSIVOS AO SITE.**
+*   **Imagens:** As imagens fornecidas pela Dra. Ana Carolina Salles devem ser integradas de forma harmoniosa, com um tratamento visual que se alinhe ao estilo clean e profissional. Priorizar fotos de alta qualidade que transmitam confiança, humanidade e empatia.
+*   **Espaçamento:** Utilizar bastante espaço em branco para criar uma sensação de leveza, facilitar a leitura e guiar o olhar do usuário pelo conteúdo.
+*   **Responsividade:** O layout deve se adaptar perfeitamente a todos os tamanhos de tela (desktop, tablet, mobile), garantindo uma experiência de usuário consistente, agradável e funcional em qualquer dispositivo.
+*   **Tom Visual:** O site deve transmitir inovação, confiança, proteção e alta qualidade. A mistura de modernidade com um toque de futurismo sutil deve resultar em um visual impressionante sem ser “pesado”.
+
+## 5. Considerações Técnicas e Funcionalidades
+
+### 5.1. Estrutura de Arquivos e Organização
+
+O Replit AI deve criar a seguinte estrutura de arquivos para o projeto:
+
+```
+projeto-dra-ana-carolina/
+├── index.html         (A landing page principal)
+├── blog.html          (Página exclusiva para o blog)
+├── css/
+│   ├── style.css
+│   └── responsive.css
+├── js/
+│   └── main.js
+├── images/
+│   ├── logo.png
+│   ├── dra-ana-foto.jpg
+│   └── outros-assets/
+└── README.md
+```
+
+### 5.2. Especificações de Layout e Componentes
+
+#### 5.2.1. Header/Cabeçalho
+
+O cabeçalho deve ser fixo no topo da página e conter:
+
+- **Logo:** Posicionado à esquerda, com o nome "Dra. Ana Carolina Salles" em tipografia elegante
+
+- **Menu de Navegação:** Horizontal, centralizado ou à direita, com os seguintes itens (links âncora para as seções da landing page, exceto Blog):
+  - Home (rolar para o topo da página)
+  - Sobre
+  - Especialidades
+  - Congressos (nova seção)
+  - Depoimentos
+  - Blog (link para `blog.html`)
+  - Contato
+
+- **Cores:** Fundo branco com sombra sutil, texto em verde escuro, detalhes em dourado
+
+- **Responsividade:** Menu hambúrguer para dispositivos móveis
+
+#### 5.2.2. Seção Hero (Página Inicial)
+
+- **Layout:** Duas colunas - texto à esquerda, imagem da doutora à direita
+
+- **Título Principal:** "Dra. Ana Carolina Salles" em fonte grande e elegante (verde escuro)
+
+- **Subtítulo:** "Oncologista Clínica | Cuidado Incansável, Respeito e Paixão pela Vida" (dourado)
+
+- **Parágrafo Introdutório:** Texto em preto sobre fundo branco
+
+- **Call-to-Action:** Botão em verde escuro com texto branco "Entrar em Contato"
+
+- **Efeitos:** Animações suaves de entrada dos elementos
+
+#### 5.2.3. Seções de Conteúdo (Geral)
+
+Cada seção da landing page deve seguir um padrão visual consistente:
+
+- **Títulos de Seção:** Verde escuro, fonte serifada, tamanho grande
+
+- **Subtítulos:** Dourado, fonte sans-serif, tamanho médio
+
+- **Texto Corpo:** Preto, fonte sans-serif legível, espaçamento adequado
+
+- **Espaçamento:** Margens generosas entre seções (mínimo 80px)
+
+- **Containers:** Largura máxima de 1200px, centralizados
+
+#### 5.2.4. Cards e Elementos Visuais
+
+- **Cards de Especialidades:** Fundo branco, borda sutil, sombra leve, ícones dourados
+
+- **Hover Effects:** Elevação suave e mudança de cor nos botões e cards
+
+- **Ícones:** Minimalistas, em dourado ou verde escuro
+
+- **Linhas Divisórias:** Douradas, sutis, para separar seções
+
+#### 5.2.5. Footer/Rodapé
+
+- **Fundo:** Verde escuro
+
+- **Texto:** Branco
+
+- **Conteúdo:** Informações de contato, links para redes sociais, copyright
+
+- **Layout:** Três colunas em desktop, empilhadas em mobile.
+
+### 5.3. Interatividade e Animações
+
+*   **Navegação e Experiência de Usuário (UX):** Crie uma navegação ultra fluida, com menus intuitivos e transições suaves entre seções. A experiência de usuário deve ser natural, sem pontos de fricção, focada em minimizar cliques desnecessários. Implementar barra de navegação sticky e âncoras internas para navegação fluida entre tópicos.
+*   **Elementos Animados e Interações Suaves:** Aplicar animações de entrada suaves (fade in, slide up) entre seções e cards. Botões com microinterações (hover changes, soft scaling, subtle glow). Pequenas transições e efeitos de interação para deixar a navegação mais envolvente.
+*   **Micro-interações:**
+    *   **Botão de Contato:** Pulso sutil para chamar atenção.
+    *   **Ícones:** Rotação ou escala leve no hover.
+    *   **Menu Mobile:** Animação suave de abertura/fechamento.
+
+### 5.4. Responsividade Específica
+
+#### 5.4.1. Breakpoints
+
+- **Desktop:** 1200px+
+
+- **Tablet:** 768px - 1199px
+
+- **Mobile:** 320px - 767px
+
+#### 5.4.2. Adaptações por Dispositivo
+
+**Desktop:**
+
+- Layout de duas colunas na seção hero
+
+- Menu horizontal completo
+
+- Cards em grid de 3 colunas
+
+**Tablet:**
+
+- Layout de uma coluna na seção hero
+
+- Menu horizontal compacto
+
+- Cards em grid de 2 colunas
+
+**Mobile:**
+
+- Layout vertical completo
+
+- Menu hambúrguer
+
+- Cards em coluna única
+
+### 5.5. Otimização e Performance
+
+*   **Responsividade e Performance:** Design 100% responsivo para celulares, tablets e desktops. Garanta que a velocidade de carregamento seja otimizada sem sacrificar qualidade visual (uso de imagens e assets otimizados). Layout adaptativo para telas menores, reorganizando elementos de forma estratégica para preservar a estética e a funcionalidade.
+*   **Imagens:**
+    *   **Formato:** WebP com fallback para JPEG
+    *   **Compressão:** Máximo 85% de qualidade
+    *   **Lazy Loading:** Para imagens abaixo da dobra
+    *   **Responsive Images:** Diferentes tamanhos para diferentes dispositivos
+*   **CSS e JavaScript:**
+    *   **Minificação:** CSS e JS minificados para produção
+    *   **Critical CSS:** CSS crítico inline para faster rendering
+    *   **Async Loading:** JavaScript não-crítico carregado de forma assíncrona
+*   **Otimização de Código:** Código limpo, responsivo e adaptado para CELULAR E SEO básico (otimizações de título, alt texts em imagens). Se possível, utilizar SVGs ou assets vetoriais para otimizar a performance.
+
+### 5.6. Acessibilidade (WCAG 2.1)
+
+#### 5.6.1. Contraste de Cores
+
+- **Texto Principal:** Contraste mínimo de 4.5:1 com o fundo
+
+- **Texto Grande:** Contraste mínimo de 3:1 com o fundo
+
+- **Elementos Interativos:** Contraste adequado em todos os estados
+
+#### 5.6.2. Navegação
+
+- **Foco Visível:** Outline claro em elementos focáveis
+
+- **Navegação por Teclado:** Todos os elementos interativos acessíveis via teclado
+
+- **Skip Links:** Link para pular para o conteúdo principal
+
+#### 5.6.3. Semântica
+
+- **HTML Semântico:** Uso correto de tags header, nav, main, section, article, footer
+
+- **Alt Text:** Descrições adequadas para todas as imagens
+
+- **ARIA Labels:** Quando necessário para clarificar funcionalidades
+
+### 5.7. Funcionalidades Específicas
+
+#### 5.7.1. Formulário de Contato (Visual)
+
+- **Campos:** Nome, Email, Telefone, Mensagem
+
+- **Estilo:** Bordas sutis, foco em verde escuro, labels flutuantes
+
+- **Botão:** Verde escuro com hover effect
+
+- **Redirecionamento:** Ao clicar em "Enviar", redirecionar para WhatsApp com mensagem com as informacoes informadas pré-preenchidas e o lead só enviara a mensagem. Exemplo: o lead colocou as informacoes ali entao a mensagem deve ficar como: Olá meu nome é X, meu email é Y, e [mensagem que o lead escreveu no box]. 
+
+#### 5.7.2. Integração com Redes Sociais
+
+- **Links Sociais:** Instagram: @anacarolinasallesoogia
+
+- **Ícones:** Dourados, com hover effect
+
+- **Posicionamento:** Header e footer
+
+#### 5.7.3. WhatsApp Integration
+
+- **Botão Flutuante:** Canto inferior direito, verde WhatsApp
+
+- **Link Direto:** wa.me/5561992947671
+
+- **Mensagem Pré-definida:** "Olá! Gostaria de agendar uma consulta com a Dra. Ana Carolina Salles."
+
+## 6. Restrições e Observações Importantes
+
+- **Sem Backend:** O site deve ser puramente frontend. Não é necessária a implementação de qualquer tipo de backend, banco de dados ou autenticação de usuários nesta fase, otimizando o processo de desenvolvimento e implantação.
+
+- **Sem Formulários Ativos:** Formulários de contato ou agendamento devem ser apenas visuais, direcionando o usuário para o WhatsApp. 
+
+- **Conteúdo do Blog:** O conteúdo textual para as seções "Informações Importantes a Todo Paciente Oncológico" e "Direitos dos Pacientes Oncológicos" será fornecido posteriormente. O Replit AI deve criar apenas a estrutura para recebê-los, garantindo flexibilidade para futuras atualizações.
+
+- **Imagens de Congressos:** As fotos para a seção "Participações em Congressos e Atividades Científicas" serão fornecidas posteriormente. O Replit AI deve criar a estrutura da galeria, permitindo a fácil inserção de conteúdo visual.
+
+- **Idioma:** Todo o conteúdo deve estar em português brasileiro, assegurando a comunicação eficaz com o público-alvo.
+
+- **Tom de Voz:** Profissional, acolhedor, confiável e humano, refletindo a abordagem da Dra. Ana Carolina Salles no cuidado com seus pacientes.
+
+- **Foco:** Transmitir expertise médica, cuidado personalizado e esperança, elementos cruciais na jornada oncológica.
+
+-   **Evitar:** Linguagem excessivamente técnica, promessas irreais ou elementos que possam gerar ansiedade, mantendo a clareza e a ética na comunicação. **NÃO USAR EMOJIS/EMOTICONS DE MANEIRA ALGUMA, SOMENTE ÍCONES RESPONSIVOS AO SITE.**
+
+## 7. Resumo Executivo para o Replit AI
+
+**Projeto:** Site profissional para Dra. Ana Carolina Salles, Oncologista Clínica
+
+**Objetivo:** Criar uma presença digital que reflita a expertise, o cuidado humanizado e a excelência no atendimento oncológico da doutora, através de uma landing page única e uma página dedicada ao blog.
+
+**Estilo Visual:** Clássico/Minimalista com paleta de cores em verde escuro, branco e dourado.
+
+**Público-Alvo:** Pacientes com suspeita ou diagnóstico de câncer, especialmente tumores femininos.
+
+**Funcionalidades Principais:**
+
+- Landing page responsiva com seções: Hero, Sobre, Especialidades, Congressos, Depoimentos, Blog (preview), Contato.
+
+- Página exclusiva para o Blog com seções de conteúdo inicial.
+
+- Integração com WhatsApp para agendamentos.
+
+- Design elegante e profissional.
+
+- Otimizado para conversão de visitantes em pacientes.
+
+**Diferencial:** Transmitir a paixão, o cuidado incansável e a base científica sólida que caracterizam o trabalho da Dra. Ana Carolina Salles.
+
+**Resultado Esperado:** Um site que sirva como cartão de visitas digital, gerando confiança e facilitando o primeiro contato entre a doutora e seus futuros pacientes, com um design claro, sério e minimalista.
+
+---
+
+**Este prompt foi desenvolvido seguindo os princípios CLEAR (Conciso, Lógico, Explícito, Adaptável, Reflexivo) e contém todas as informações necessárias para que o Replit AI possa criar um site excepcional para a Dra. Ana Carolina Salles, sem necessidade de contexto externo ou informações adicionais**
+

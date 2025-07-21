@@ -1,0 +1,63 @@
+Paleta de Cores:
+
+•
+Verde Escuro Principal: #1B4332 (para títulos, botões principais, header) - Transmite seriedade e conexão com a natureza.
+
+•
+Verde Escuro Secundário: #2D5A47 (para hover states e variações) - Oferece dinamismo e profundidade.
+
+•
+Dourado Principal: #D4AF37 (para destaques, ícones, subtítulos) - Simboliza excelência e distinção.
+
+•
+Dourado Claro: #F4E4BC (para backgrounds sutis e hover effects) - Adiciona um toque de leveza e sofisticação.
+
+•
+Branco: #FFFFFF (background principal) - Garante clareza, amplitude e foco no conteúdo.
+
+•
+Preto: #1A1A1A (texto principal) - Proporciona alta legibilidade e contraste.
+
+•
+Cinza Claro: #F8F9FA (backgrounds alternativos) - Cria transições suaves e hierarquia visual.
+
+•
+Cinza Médio: #6C757D (texto secundário) - Ideal para informações complementares, mantendo a harmonia.
+
+Estilo Visual Geral:
+
+•
+Layout: Visualmente limpo, minimalista e elegante, com inspiração em tendências de design moderno suave, utilizando espaços em branco de forma inteligente.
+
+•
+Elementos Visuais: Arredondados, com sombras suaves, texturas leves e gradientes discretos.
+
+•
+Tipografia: Fonte principal contemporânea, elegante e MODERNA. Contraste forte entre títulos e textos para criar hierarquia visual clara. Fontes alternativas podem ser utilizadas para chamadas ou destaques importantes.
+
+•
+Fontes Recomendadas: "Playfair Display" (Google Fonts) para títulos, "Montserrat" (Google Fonts) para subtítulos e navegação, "Open Sans" (Google Fonts) para texto corpo.
+
+•
+Hierarquia Tipográfica: H1 (48px/36px), H2 (36px/28px), H3 (24px/20px), Parágrafo (16px/14px), Navegação (16px) - Assegura a legibilidade e a organização visual do conteúdo.
+
+
+
+•
+Ícones: Desenvolver ícones com aparência moderna e estilizada, seguindo o conceito moderno do projeto. Cada ícone deve ser exclusivo, relacionado ao conteúdo do site, com pequenos movimentos ou reações (hover animations, microinterações). Estilo sugerido para os ícones: glassmorphism, low poly futurista ou high-tech brilhante, dependendo da proposta visual. A paleta de cores dos ícones deve ser harmonizada com a identidade visual da marca.
+
+•
+Emoticons Exclusivos Personalizados: Criação de ícones únicos no estilo gráfico do site. As cores dos ícones devem ser obrigatoriamente baseadas na paleta da logo/marca. O estilo deve ser suave e consistente: sem excesso de brilho, mantendo o tom moderno e minimalista. NÃO USAR EMOJIS/EMOTICONS DE MANEIRA ALGUMA, SOMENTE ÍCONES RESPONSIVOS AO SITE.
+
+•
+Imagens: As imagens fornecidas pela Dra. Ana Carolina Salles devem ser integradas de forma harmoniosa, com um tratamento visual que se alinhe ao estilo clean e profissional. Priorizar fotos de alta qualidade que transmitam confiança, humanidade e empatia.
+
+•
+Espaçamento: Utilizar bastante espaço em branco para criar uma sensação de leveza, facilitar a leitura e guiar o olhar do usuário pelo conteúdo.
+
+•
+Responsividade: O layout deve se adaptar perfeitamente a todos os tamanhos de tela (desktop, tablet, mobile), garantindo uma experiência de usuário consistente, agradável e funcional em qualquer dispositivo.
+
+•
+Tom Visual: O site deve transmitir inovação, confiança, proteção e alta qualidade. A mistura de modernidade com um toque de futurismo sutil deve resultar em um visual impressionante sem ser “pesado”.
+
