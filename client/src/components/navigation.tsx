@@ -41,8 +41,9 @@ export default function Navigation() {
       isScrolled ? 'bg-primary-green shadow-lg' : 'bg-primary-green/95 backdrop-blur-sm'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <div className="flex-shrink-0">
+        <div className="flex items-center h-16 relative">
+          {/* Logo - positioned absolutely on the left */}
+          <div className="absolute left-0 flex-shrink-0">
             <button 
               onClick={() => scrollToSection('home')}
               className="flex items-center hover:opacity-80 transition-opacity duration-300"
@@ -55,8 +56,9 @@ export default function Navigation() {
             </button>
           </div>
           
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+          {/* Centered navigation menu */}
+          <div className="hidden md:block flex-1">
+            <div className="flex justify-center items-baseline space-x-8">
               {navItems.map((item) => (
                 <button
                   key={item.id}
@@ -75,7 +77,8 @@ export default function Navigation() {
             </div>
           </div>
           
-          <div className="md:hidden">
+          {/* Mobile menu button - positioned absolutely on the right */}
+          <div className="md:hidden absolute right-0">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="text-white hover:text-gold-primary focus:outline-none"
