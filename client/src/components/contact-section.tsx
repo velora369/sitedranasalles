@@ -156,7 +156,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-montserrat font-semibold text-primary-green mb-2">Instagram</h4>
-                  <p className="text-gray-700">@anacarolinasallesoogia</p>
+                  <p className="text-gray-700">@anacarolinasallesoncologia</p>
                   <p className="text-gray-medium text-sm">Acompanhe nas redes sociais</p>
                 </div>
               </div>
