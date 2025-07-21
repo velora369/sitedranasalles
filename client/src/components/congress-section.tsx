@@ -104,12 +104,41 @@ export default function CongressSection() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {congressImages.map((image, index) => (
+          {/* Grid principal 2x2 para as primeiras 4 imagens mais importantes */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            {congressImages.slice(0, 4).map((image, index) => (
               <div 
                 key={index} 
                 className="bg-white rounded-2xl shadow-lg hover-lift section-fade cursor-pointer overflow-hidden group"
                 onClick={() => openModal(image, index)}
+              >
+                <div className="aspect-video overflow-hidden">
+                  <img 
+                    src={image.url} 
+                    alt={image.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="font-montserrat font-semibold text-primary-green mb-3 text-lg">
+                    {image.title}
+                  </h3>
+                  <p className="text-gray-medium text-sm">
+                    {image.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Grid secundário para as demais imagens */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {congressImages.slice(4).map((image, index) => (
+              <div 
+                key={index + 4} 
+                className="bg-white rounded-xl shadow-md hover-lift section-fade cursor-pointer overflow-hidden group"
+                onClick={() => openModal(image, index + 4)}
               >
                 <div className="aspect-square overflow-hidden">
                   <img 
@@ -119,11 +148,11 @@ export default function CongressSection() {
                     loading="lazy"
                   />
                 </div>
-                <div className="p-4">
-                  <h3 className="font-montserrat font-semibold text-primary-green mb-2 text-sm line-clamp-2">
+                <div className="p-3">
+                  <h3 className="font-montserrat font-semibold text-primary-green mb-1 text-xs line-clamp-2">
                     {image.title}
                   </h3>
-                  <p className="text-gray-medium text-xs line-clamp-3">
+                  <p className="text-gray-medium text-xs line-clamp-2">
                     {image.description}
                   </p>
                 </div>
