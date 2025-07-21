@@ -231,42 +231,7 @@
     }
   }
 
-  .hero-gradient-animated {
-    background: linear-gradient(
-      45deg,
-      var(--gray-light) 0%,
-      hsl(0, 0%, 100%) 25%,
-      var(--gold-light) 50%,
-      hsl(0, 0%, 100%) 75%,
-      var(--gray-light) 100%
-    );
-    background-size: 400% 400%;
-    animation: gradient-shift 8s ease infinite;
-  }
 
-  @keyframes gradient-shift {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-  }
-
-  .text-shimmer {
-    background: linear-gradient(
-      90deg,
-      var(--primary-green) 25%,
-      var(--gold-primary) 50%,
-      var(--primary-green) 75%
-    );
-    background-size: 200% 100%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: shimmer 3s ease-in-out infinite;
-  }
-
-  @keyframes shimmer {
-    0%, 100% { background-position: -200% 0; }
-    50% { background-position: 200% 0; }
-  }
 
   .hero-card-entrance {
     animation: card-entrance 1.2s ease-out forwards;
