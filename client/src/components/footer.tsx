@@ -25,7 +25,7 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4">
               <a 
-                href="https://instagram.com/anacarolinasallesoogia" 
+                href="https://www.instagram.com/anacarolinasallesoncologia?igsh=MTk3NWJ5bjY3MGRnOQ==" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="text-gold-primary hover:text-gold-light transition-colors duration-300"
