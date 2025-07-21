@@ -1,5 +1,6 @@
 import { Link } from "wouter";
-import { Instagram, Linkedin, Facebook } from "lucide-react";
+import { Instagram } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function Footer() {
   const scrollToSection = (sectionId: string) => {
@@ -32,16 +33,12 @@ export default function Footer() {
                 <Instagram className="w-6 h-6" />
               </a>
               <a 
-                href="#" 
+                href="https://wa.me/5561992947671" 
+                target="_blank" 
+                rel="noopener noreferrer" 
                 className="text-gold-primary hover:text-gold-light transition-colors duration-300"
               >
-                <Linkedin className="w-6 h-6" />
-              </a>
-              <a 
-                href="#" 
-                className="text-gold-primary hover:text-gold-light transition-colors duration-300"
-              >
-                <Facebook className="w-6 h-6" />
+                <FaWhatsapp className="w-6 h-6" />
               </a>
             </div>
           </div>
