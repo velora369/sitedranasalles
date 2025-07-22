@@ -290,8 +290,8 @@ Converse sempre com seu médico sobre o melhor programa de prevenção para seu 
     author: "Dra. Ana Carolina Salles",
     readingTime: 7,
     publishedAt: new Date("2025-07-18T09:15:00Z"),
-    imageUrl: "https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/07/medico-examinando-paciente.webp",
-    isPublished: true,
+    imageUrl: null,
+    isPublished: false,
   }
 ];
 
