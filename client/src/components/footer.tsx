@@ -105,6 +105,9 @@ export default function Footer() {
               <p>
                 Hospital DF Star, Brasília - DF
               </p>
+              <p>
+                OHB - Oncologia D'or
+              </p>
             </div>
           </div>
         </div>
