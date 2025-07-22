@@ -6,7 +6,7 @@ import { ptBR } from "date-fns/locale";
 import type { BlogPost } from "@shared/schema";
 
 export default function BlogPreviewSection() {
-  const { data: posts, isLoading } = useQuery<BlogPost[]>({
+  const { data: posts, isLoading, error } = useQuery<BlogPost[]>({
     queryKey: ["/api/blog/posts"],
   });
 
