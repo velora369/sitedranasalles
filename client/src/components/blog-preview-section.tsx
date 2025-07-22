@@ -14,7 +14,7 @@ export default function BlogPreviewSection() {
       author: "Dra. Ana Carolina Salles",
       readingTime: 8,
       publishedAt: new Date("2025-07-22T10:00:00Z"),
-      imageUrl: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=300&fit=crop&crop=center",
+      imageUrl: "https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/07/medica-centro-de-recuperacao-covid-segurando-as-maos-de-um-paciente-idoso.webp",
       isPublished: true,
     },
     {
@@ -25,7 +25,7 @@ export default function BlogPreviewSection() {
       author: "Dra. Ana Carolina Salles",
       readingTime: 6,
       publishedAt: new Date("2025-07-20T14:30:00Z"),
-      imageUrl: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=300&fit=crop&crop=center",
+      imageUrl: "https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/07/mao-com-pena-preencher-um-documento.webp",
       isPublished: true,
     },
     {
