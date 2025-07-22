@@ -159,7 +159,7 @@ export default function HeroSection() {
                   transition={{ delay: 1, duration: 0.8, ease: "easeOut" }}
                   src="https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/07/whatsapp-image-2025-07-20-at-18.45.56.webp"
                   alt="Dra. Ana Carolina Salles - Oncologista Clínica"
-                  className="w-80 h-80 sm:w-96 sm:h-96 md:w-[28rem] md:h-[28rem] lg:w-[32rem] lg:h-[32rem] xl:w-[36rem] xl:h-[36rem] object-cover rounded-xl shadow-lg"
+                  className="w-80 sm:w-96 md:w-[28rem] lg:w-[32rem] xl:w-[36rem] max-w-full h-auto object-contain rounded-xl shadow-lg"
                 />
                 
                 
