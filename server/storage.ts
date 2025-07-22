@@ -254,7 +254,7 @@ O Instituto Oncoguia e outras instituições de apoio oferecem informações atu
       author: "Dra. Ana Carolina Salles",
       readingTime: 6,
       publishedAt: new Date("2025-07-22T14:00:00Z"),
-      imageUrl: null,
+      imageUrl: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
       isPublished: true,
     };
 
