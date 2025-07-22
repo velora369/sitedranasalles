@@ -1,28 +1,48 @@
 import { Link } from "wouter";
-import { useQuery } from "@tanstack/react-query";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
 import { format } from "date-fns";
 import { ptBR } from "date-fns/locale";
-import type { BlogPost } from "@shared/schema";
 
 export default function BlogPreviewSection() {
-  const { data: posts, isLoading, error } = useQuery<BlogPost[]>({
-    queryKey: ["/api/blog/posts"],
-  });
-
-  // Debug logging
-  console.log("Blog Preview Debug:", { posts, isLoading, error, postsLength: posts?.length });
-
-  // Show first 3 posts or fallback to placeholders if no posts
-  const displayPosts = posts?.slice(0, 3) || [];
-  
-  const placeholderArticles = [
+  // Posts estáticos para simulação do blog
+  const posts = [
     {
-      title: "Prevenção e Detecção Precoce",
-      description: "Dicas importantes sobre prevenção, detecção precoce e cuidados durante o tratamento.",
-      isPlaceholder: true
+      id: 1,
+      title: "Informações Importantes para Todo Paciente Oncológico",
+      slug: "informacoes-importantes-paciente-oncologico",
+      excerpt: "O diagnóstico de câncer gera muitas dúvidas e incertezas. Conhecer a doença, suas implicações e opções de tratamento oferece as ferramentas necessárias para que o paciente assuma um papel ativo em sua jornada.",
+      author: "Dra. Ana Carolina Salles",
+      readingTime: 8,
+      publishedAt: new Date("2025-07-22T10:00:00Z"),
+      imageUrl: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=300&fit=crop&crop=center",
+      isPublished: true,
+    },
+    {
+      id: 2,
+      title: "Direitos dos Pacientes Oncológicos: Conheça e Exija!",
+      slug: "direitos-pacientes-oncologicos",
+      excerpt: "Para pacientes oncológicos, conhecer seus direitos é tão fundamental quanto o tratamento médico. A informação confiável é uma ferramenta poderosa para garantir acesso a todos os benefícios que a lei oferece.",
+      author: "Dra. Ana Carolina Salles",
+      readingTime: 6,
+      publishedAt: new Date("2025-07-20T14:30:00Z"),
+      imageUrl: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=300&fit=crop&crop=center",
+      isPublished: true,
+    },
+    {
+      id: 3,
+      title: "Nutrição Durante o Tratamento Oncológico",
+      slug: "nutricao-tratamento-oncologico",
+      excerpt: "A alimentação adequada durante o tratamento oncológico é fundamental para manter a força, reduzir efeitos colaterais e acelerar a recuperação.",
+      author: "Dra. Ana Carolina Salles",
+      readingTime: 5,
+      publishedAt: new Date("2025-07-18T09:15:00Z"),
+      imageUrl: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=400&h=300&fit=crop&crop=center",
+      isPublished: true,
     }
   ];
+
+  // Mostra os primeiros 3 posts
+  const displayPosts = posts.slice(0, 3);
 
   return (
     <section id="blog" className="py-20 px-4 bg-gray-light">
@@ -37,15 +57,9 @@ export default function BlogPreviewSection() {
           </p>
         </div>
         
-        {isLoading ? (
-          <div className="text-center py-16">
-            <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-primary-green mx-auto mb-4"></div>
-            <p className="text-gray-600">Carregando artigos...</p>
-          </div>
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            {/* Real blog posts */}
-            {displayPosts.map((post) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          {/* Posts do blog */}
+          {displayPosts.map((post) => (
               <Link key={post.id} href={`/blog/${post.slug}`}>
                 <article className="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift section-fade transition-all duration-300 h-full">
                   {/* Post Cover Image */}
@@ -91,25 +105,7 @@ export default function BlogPreviewSection() {
                 </article>
               </Link>
             ))}
-            
-            {/* Placeholder articles if we have less than 3 posts */}
-            {displayPosts.length < 3 && placeholderArticles.slice(0, 3 - displayPosts.length).map((article, index) => (
-              <article key={`placeholder-${index}`} className="bg-white rounded-2xl shadow-lg overflow-hidden section-fade opacity-75">
-                <div className="w-full h-48 bg-gradient-to-r from-gray-100 to-gray-200"></div>
-                
-                <div className="p-6">
-                  <h3 className="font-montserrat font-bold text-xl text-primary-green mb-3">
-                    {article.title}
-                  </h3>
-                  <p className="text-gray-700 mb-4">
-                    {article.description}
-                  </p>
-                  <span className="text-gold-primary font-montserrat font-semibold text-sm">Em desenvolvimento</span>
-                </div>
-              </article>
-            ))}
-          </div>
-        )}
+        </div>
         
         <div className="text-center section-fade">
           <Link 
@@ -117,7 +113,7 @@ export default function BlogPreviewSection() {
             className="inline-flex items-center justify-center px-8 py-4 bg-primary-green text-white font-montserrat font-semibold rounded-xl hover:bg-secondary-green transform hover:scale-105 transition-all duration-300 shadow-lg"
           >
             <ArrowRight className="w-5 h-5 mr-3" />
-            {posts && posts.length > 3 ? 'Ver Todos os Artigos' : 'Visitar o Blog'}
+            {posts.length > 3 ? 'Ver Todos os Artigos' : 'Visitar o Blog'}
           </Link>
         </div>
       </div>
