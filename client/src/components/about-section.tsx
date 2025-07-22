@@ -6,7 +6,6 @@ export default function AboutSection() {
 
   const doctorImages = [
     "https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/07/whatsapp-image-2025-07-20-at-18.47.18.webp",
-    "https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/07/whatsapp-image-2025-07-20-at-18.44.57.webp",
     "https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/07/whatsapp-image-2025-07-20-at-18.47.18-1.webp"
   ];
 
