@@ -305,7 +305,7 @@ export function getPostBySlug(slug: string): StaticBlogPost | undefined {
   return blogPosts.find(post => post.slug === slug && post.isPublished);
 }
 
-// Função para obter posts para preview (limitado)
+// Função para obter posts para preview (limitado) - inclui posts publicados e não publicados
 export function getPreviewPosts(limit: number = 3): StaticBlogPost[] {
-  return getPublishedPosts().slice(0, limit);
+  return blogPosts.slice(0, limit);
 }
