@@ -2,47 +2,11 @@ import { Link } from "wouter";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
 import { format } from "date-fns";
 import { ptBR } from "date-fns/locale";
+import { getPreviewPosts } from "@/data/blog-posts";
 
 export default function BlogPreviewSection() {
-  // Posts estáticos para simulação do blog
-  const posts = [
-    {
-      id: 1,
-      title: "Informações Importantes para Todo Paciente Oncológico",
-      slug: "informacoes-importantes-paciente-oncologico",
-      excerpt: "O diagnóstico de câncer gera muitas dúvidas e incertezas. Conhecer a doença, suas implicações e opções de tratamento oferece as ferramentas necessárias para que o paciente assuma um papel ativo em sua jornada.",
-      author: "Dra. Ana Carolina Salles",
-      readingTime: 8,
-      publishedAt: new Date("2025-07-22T10:00:00Z"),
-      imageUrl: "https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/07/medica-centro-de-recuperacao-covid-segurando-as-maos-de-um-paciente-idoso.webp",
-      isPublished: true,
-    },
-    {
-      id: 2,
-      title: "Direitos dos Pacientes Oncológicos: Conheça e Exija!",
-      slug: "direitos-pacientes-oncologicos",
-      excerpt: "Para pacientes oncológicos, conhecer seus direitos é tão fundamental quanto o tratamento médico. A informação confiável é uma ferramenta poderosa para garantir acesso a todos os benefícios que a lei oferece.",
-      author: "Dra. Ana Carolina Salles",
-      readingTime: 6,
-      publishedAt: new Date("2025-07-20T14:30:00Z"),
-      imageUrl: "https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/07/mao-com-pena-preencher-um-documento.webp",
-      isPublished: true,
-    },
-    {
-      id: 3,
-      title: "Prevenção e Detecção Precoce",
-      slug: "prevencao-deteccao-precoce",
-      excerpt: "Dicas importantes sobre prevenção, detecção precoce e cuidados durante o tratamento.",
-      author: "Dra. Ana Carolina Salles",
-      readingTime: 0,
-      publishedAt: new Date("2025-07-18T09:15:00Z"),
-      imageUrl: null,
-      isPublished: false,
-    }
-  ];
-
-  // Mostra os primeiros 3 posts
-  const displayPosts = posts.slice(0, 3);
+  // Obtém os posts para preview (primeiros 3 posts publicados)
+  const displayPosts = getPreviewPosts(3);
 
   return (
     <section id="blog" className="py-20 px-4 bg-gray-light">
@@ -129,7 +93,7 @@ export default function BlogPreviewSection() {
             className="inline-flex items-center justify-center px-8 py-4 bg-primary-green text-white font-montserrat font-semibold rounded-xl hover:bg-secondary-green transform hover:scale-105 transition-all duration-300 shadow-lg"
           >
             <ArrowRight className="w-5 h-5 mr-3" />
-            {posts.length > 3 ? 'Ver Todos os Artigos' : 'Visitar o Blog'}
+            Ver Todos os Artigos
           </Link>
         </div>
       </div>

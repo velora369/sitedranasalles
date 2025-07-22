@@ -8,6 +8,22 @@ This is a full-stack web application for Dr. Ana Carolina Salles, a Clinical Onc
 
 Preferred communication style: Simple, everyday language.
 
+## Recent Changes (July 22, 2025)
+
+### Blog System Conversion to Static Data
+- **Problem Solved**: User reported blog page not loading posts and individual articles showing "article not found" errors
+- **Root Cause**: React Query API calls failing to retrieve blog data from backend
+- **Solution Implemented**: 
+  - Created `client/src/data/blog-posts.ts` with complete static blog data
+  - Removed TanStack Query dependencies from blog components
+  - Updated all blog-related components to use static data imports
+  - Maintained all existing blog functionality (list view, individual posts, preview section)
+- **Components Modified**:
+  - `client/src/pages/blog.tsx` - Main blog listing page
+  - `client/src/pages/blog-post.tsx` - Individual post view page  
+  - `client/src/components/blog-preview-section.tsx` - Homepage blog preview
+- **Benefits**: Blog now works completely offline, no API dependencies, faster loading times
+
 ## System Architecture
 
 The application follows a modern full-stack architecture with clear separation of concerns:
@@ -53,11 +69,18 @@ The application follows a modern full-stack architecture with clear separation o
 
 ## Data Flow
 
-### Client-Server Communication
-1. **Static Assets**: Served through Vite development server or Express static middleware
-2. **API Requests**: RESTful communication between React frontend and Express backend
-3. **Database Queries**: Drizzle ORM handles type-safe database operations
-4. **State Management**: TanStack Query manages server state with caching and synchronization
+### Blog Architecture (Updated: July 22, 2025)
+**Note**: Blog system converted from dynamic API-based to static data architecture per user requirements.
+
+1. **Static Blog Data**: All blog posts stored in `client/src/data/blog-posts.ts` as static TypeScript objects
+2. **No API Dependencies**: Blog functionality completely independent of backend APIs
+3. **Static Assets**: Served through Vite development server or Express static middleware
+4. **Client-Only Rendering**: Blog posts rendered directly from imported static data
+
+### Legacy Client-Server Communication (Non-Blog Features)
+1. **API Requests**: RESTful communication between React frontend and Express backend (for non-blog features)
+2. **Database Queries**: Drizzle ORM handles type-safe database operations (currently unused)
+3. **State Management**: TanStack Query removed from blog components, static data used instead
 
 ### Page Structure (Landing Page Sections)
 1. **Hero Section**: Introduction and call-to-action

@@ -1,14 +1,11 @@
 import { Link } from "wouter";
-import { useQuery } from "@tanstack/react-query";
 import { ArrowLeft, Calendar, User, Clock } from "lucide-react";
 import { format } from "date-fns";
 import { ptBR } from "date-fns/locale";
-import type { BlogPost } from "@shared/schema";
+import { getPublishedPosts } from "@/data/blog-posts";
 
 export default function Blog() {
-  const { data: posts, isLoading } = useQuery<BlogPost[]>({
-    queryKey: ["/api/blog/posts"],
-  });
+  const posts = getPublishedPosts();
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
@@ -41,13 +38,7 @@ export default function Blog() {
             </div>
           </div>
 
-          {/* Loading State */}
-          {isLoading && (
-            <div className="text-center py-16">
-              <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-primary-green mx-auto mb-4"></div>
-              <p className="text-gray-600">Carregando artigos...</p>
-            </div>
-          )}
+
 
           {/* Blog Posts Grid */}
           {posts && posts.length > 0 && (

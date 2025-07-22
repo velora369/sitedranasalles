@@ -1,30 +1,15 @@
 import { useParams, Link } from "wouter";
-import { useQuery } from "@tanstack/react-query";
 import { ArrowLeft, Calendar, User, Clock } from "lucide-react";
 import { format } from "date-fns";
 import { ptBR } from "date-fns/locale";
-import type { BlogPost } from "@shared/schema";
+import { getPostBySlug } from "@/data/blog-posts";
 
 export default function BlogPost() {
   const { slug } = useParams();
   
-  const { data: post, isLoading, error } = useQuery<BlogPost>({
-    queryKey: ["/api/blog/posts", slug],
-    enabled: !!slug,
-  });
+  const post = slug ? getPostBySlug(slug) : undefined;
 
-  if (isLoading) {
-    return (
-      <div className="min-h-screen bg-white flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-primary-green mx-auto mb-4"></div>
-          <p className="text-gray-600">Carregando artigo...</p>
-        </div>
-      </div>
-    );
-  }
-
-  if (error || !post) {
+  if (!post) {
     return (
       <div className="min-h-screen bg-white flex items-center justify-center">
         <div className="text-center">
