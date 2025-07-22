@@ -13,6 +13,14 @@ export default function BlogPreviewSection() {
   // Show first 3 posts or fallback to placeholders if no posts
   const displayPosts = posts?.slice(0, 3) || [];
   
+  console.log('Blog Preview Debug:', {
+    posts,
+    isLoading,
+    error,
+    displayPosts,
+    displayPostsLength: displayPosts.length
+  });
+  
   const placeholderArticles = [
     {
       title: "Prevenção e Detecção Precoce",
@@ -41,6 +49,12 @@ export default function BlogPreviewSection() {
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            {/* Debug info */}
+            <div className="col-span-full text-center p-4 bg-yellow-100 border border-yellow-300 rounded">
+              <p>Debug: Posts count: {displayPosts.length}</p>
+              <p>Posts: {displayPosts.map(p => p.title).join(', ')}</p>
+            </div>
+            
             {/* Real blog posts */}
             {displayPosts.map((post) => (
               <Link key={post.id} href={`/blog/${post.slug}`}>
@@ -64,7 +78,16 @@ export default function BlogPreviewSection() {
                   <div className="p-6 flex flex-col h-full">
                     <div className="flex items-center text-gray-500 text-sm mb-3">
                       <Calendar className="w-4 h-4 mr-2" />
-                      <span>{format(new Date(post.publishedAt), "dd 'de' MMM", { locale: ptBR })}</span>
+                      <span>
+                        {(() => {
+                          try {
+                            return format(new Date(post.publishedAt), "dd 'de' MMM", { locale: ptBR });
+                          } catch (error) {
+                            console.error('Date formatting error:', error, 'for date:', post.publishedAt);
+                            return new Date(post.publishedAt).toLocaleDateString('pt-BR');
+                          }
+                        })()}
+                      </span>
                       <Clock className="w-4 h-4 ml-4 mr-2" />
                       <span>{post.readingTime} min</span>
                     </div>
