@@ -154,7 +154,7 @@ Quando o câncer não pode mais ser curado ou controlado, o foco do cuidado se v
       author: "Dra. Ana Carolina Salles",
       readingTime: 8,
       publishedAt: new Date("2025-07-22T10:00:00Z"),
-      imageUrl: null,
+      imageUrl: "https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/07/medica-centro-de-recuperacao-covid-segurando-as-maos-de-um-paciente-idoso.webp",
       isPublished: true,
     };
 
@@ -254,7 +254,7 @@ O Instituto Oncoguia e outras instituições de apoio oferecem informações atu
       author: "Dra. Ana Carolina Salles",
       readingTime: 6,
       publishedAt: new Date("2025-07-22T14:00:00Z"),
-      imageUrl: null,
+      imageUrl: "https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/07/mao-com-pena-preencher-um-documento.webp",
       isPublished: true,
     };
 

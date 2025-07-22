@@ -45,13 +45,23 @@ export default function BlogPreviewSection() {
             {displayPosts.map((post) => (
               <Link key={post.id} href={`/blog/${post.slug}`}>
                 <article className="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift section-fade transition-all duration-300 h-full">
-                  {/* Image placeholder */}
-                  <div className="w-full h-48 bg-gradient-to-r from-gray-200 to-gray-300 flex items-center justify-center">
-                    <div className="text-center text-gray-500">
-                      <div className="text-3xl mb-2">📄</div>
-                      <p className="text-sm">Imagem em breve</p>
+                  {/* Post Cover Image */}
+                  {post.imageUrl ? (
+                    <div className="w-full h-48 overflow-hidden">
+                      <img 
+                        src={post.imageUrl} 
+                        alt={post.title}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
-                  </div>
+                  ) : (
+                    <div className="w-full h-48 bg-gradient-to-r from-gray-200 to-gray-300 flex items-center justify-center">
+                      <div className="text-center text-gray-500">
+                        <div className="text-3xl mb-2">📄</div>
+                        <p className="text-sm">Imagem em breve</p>
+                      </div>
+                    </div>
+                  )}
                   
                   <div className="p-6 flex flex-col h-full">
                     <div className="flex items-center text-gray-500 text-sm mb-3">

@@ -74,13 +74,23 @@ export default function Blog() {
                     {post.excerpt}
                   </p>
 
-                  {/* Image placeholder */}
-                  <div className="w-full h-48 md:h-64 bg-gradient-to-r from-gray-200 to-gray-300 rounded-xl mb-6 flex items-center justify-center">
-                    <div className="text-center text-gray-500">
-                      <div className="text-4xl mb-2">📄</div>
-                      <p className="text-sm">Imagem será adicionada em breve</p>
+                  {/* Post Cover Image */}
+                  {post.imageUrl ? (
+                    <div className="w-full h-48 md:h-64 rounded-xl mb-6 overflow-hidden">
+                      <img 
+                        src={post.imageUrl} 
+                        alt={post.title}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
-                  </div>
+                  ) : (
+                    <div className="w-full h-48 md:h-64 bg-gradient-to-r from-gray-200 to-gray-300 rounded-xl mb-6 flex items-center justify-center">
+                      <div className="text-center text-gray-500">
+                        <div className="text-4xl mb-2">📄</div>
+                        <p className="text-sm">Imagem será adicionada em breve</p>
+                      </div>
+                    </div>
+                  )}
                   
                   <Link 
                     href={`/blog/${post.slug}`}
