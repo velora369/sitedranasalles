@@ -6,9 +6,12 @@ import { ptBR } from "date-fns/locale";
 import type { BlogPost } from "@shared/schema";
 
 export default function BlogPreviewSection() {
-  const { data: posts, isLoading } = useQuery<BlogPost[]>({
+  const { data: posts, isLoading, error } = useQuery<BlogPost[]>({
     queryKey: ["/api/blog/posts"],
   });
+
+  // Debug logging
+  console.log("Blog Preview Debug:", { posts, isLoading, error, postsLength: posts?.length });
 
   // Show first 3 posts or fallback to placeholders if no posts
   const displayPosts = posts?.slice(0, 3) || [];
