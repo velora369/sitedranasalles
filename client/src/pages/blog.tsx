@@ -1,7 +1,14 @@
 import { Link } from "wouter";
+import { useQuery } from "@tanstack/react-query";
 import { ArrowLeft, Calendar, User, Clock } from "lucide-react";
+import { format } from "date-fns";
+import { ptBR } from "date-fns/locale";
+import type { BlogPost } from "@shared/schema";
 
 export default function Blog() {
+  const { data: posts, isLoading } = useQuery<BlogPost[]>({
+    queryKey: ["/api/blog/posts"],
+  });
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
@@ -24,98 +31,92 @@ export default function Blog() {
       <main className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          {/* Featured Article */}
-          <article className="bg-gray-light rounded-2xl p-8 md:p-12 mb-12">
-            <div className="flex items-center text-gray-medium text-sm mb-4">
-              <Calendar className="w-4 h-4 mr-2" />
-              <span>Em breve</span>
-              <User className="w-4 h-4 ml-6 mr-2" />
-              <span>Dra. Ana Carolina Salles</span>
-              <Clock className="w-4 h-4 ml-6 mr-2" />
-              <span>Leitura de 5 min</span>
-            </div>
-            <h2 className="font-playfair text-3xl md:text-4xl font-bold text-primary-green mb-6">
-              Informações Importantes a Todo Paciente Oncológico
-            </h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-8">
-              Este espaço será dedicado a fornecer informações essenciais que todo paciente oncológico deve conhecer sobre seus direitos, opções de tratamento, cuidados durante a terapia e recursos disponíveis. O conteúdo será desenvolvido com base na experiência clínica da Dra. Ana Carolina Salles e nas mais recentes evidências científicas.
-            </p>
-            <div className="bg-white p-6 rounded-xl border-l-4 border-gold-primary">
-              <p className="text-gray-600 italic">
+          {/* Welcome Quote */}
+          <div className="bg-gold-light p-8 rounded-2xl mb-12">
+            <div className="max-w-3xl mx-auto text-center">
+              <p className="text-xl text-gray-700 leading-relaxed italic mb-4">
                 "Nosso objetivo é empoderar cada paciente com conhecimento, garantindo que eles se sintam seguros e informados em cada etapa de sua jornada oncológica."
               </p>
-              <p className="text-primary-green font-semibold mt-2">- Dra. Ana Carolina Salles</p>
+              <p className="text-primary-green font-playfair font-semibold text-lg">- Dra. Ana Carolina Salles</p>
             </div>
-          </article>
+          </div>
 
-          {/* Secondary Article */}
-          <article className="bg-white rounded-2xl shadow-lg p-8 md:p-12 mb-12 hover-lift">
-            <div className="flex items-center text-gray-medium text-sm mb-4">
-              <Calendar className="w-4 h-4 mr-2" />
-              <span>Em breve</span>
-              <User className="w-4 h-4 ml-6 mr-2" />
-              <span>Dra. Ana Carolina Salles</span>
-              <Clock className="w-4 h-4 ml-6 mr-2" />
-              <span>Leitura de 8 min</span>
+          {/* Loading State */}
+          {isLoading && (
+            <div className="text-center py-16">
+              <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-primary-green mx-auto mb-4"></div>
+              <p className="text-gray-600">Carregando artigos...</p>
             </div>
-            <h2 className="font-playfair text-3xl md:text-4xl font-bold text-primary-green mb-6">
-              Direitos dos Pacientes Oncológicos
-            </h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-8">
-              Um guia completo sobre os direitos legais e sociais dos pacientes oncológicos no Brasil. Este artigo abordará desde os direitos básicos de atendimento até benefícios especiais, auxílios governamentais, direitos trabalhistas e como acessar tratamentos no SUS e na rede privada.
-            </p>
-            
-            <div className="grid md:grid-cols-2 gap-6 mb-8">
-              <div className="bg-gray-light p-6 rounded-xl">
-                <h3 className="font-montserrat font-semibold text-primary-green mb-3 flex items-center">
-                  <div className="w-8 h-8 bg-gold-primary rounded-full flex items-center justify-center mr-3">
-                    <span className="text-white font-bold text-sm">1</span>
+          )}
+
+          {/* Blog Posts Grid */}
+          {posts && posts.length > 0 && (
+            <div className="grid gap-8 mb-12">
+              {posts.map((post, index) => (
+                <article 
+                  key={post.id} 
+                  className={`${index === 0 ? 'bg-gray-light' : 'bg-white shadow-lg'} rounded-2xl p-8 md:p-12 hover-lift transition-all duration-300`}
+                >
+                  <div className="flex items-center text-gray-medium text-sm mb-4">
+                    <Calendar className="w-4 h-4 mr-2" />
+                    <span>{format(new Date(post.publishedAt), "dd 'de' MMMM 'de' yyyy", { locale: ptBR })}</span>
+                    <User className="w-4 h-4 ml-6 mr-2" />
+                    <span>{post.author}</span>
+                    <Clock className="w-4 h-4 ml-6 mr-2" />
+                    <span>{post.readingTime} min de leitura</span>
                   </div>
-                  Direitos no SUS
-                </h3>
-                <p className="text-gray-600">Acesso garantido a tratamentos, exames e cirurgias oncológicas</p>
-              </div>
-              <div className="bg-gray-light p-6 rounded-xl">
-                <h3 className="font-montserrat font-semibold text-primary-green mb-3 flex items-center">
-                  <div className="w-8 h-8 bg-gold-primary rounded-full flex items-center justify-center mr-3">
-                    <span className="text-white font-bold text-sm">2</span>
+                  
+                  <h2 className="font-playfair text-2xl md:text-3xl font-bold text-primary-green mb-4">
+                    {post.title}
+                  </h2>
+                  
+                  <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                    {post.excerpt}
+                  </p>
+
+                  {/* Image placeholder */}
+                  <div className="w-full h-48 md:h-64 bg-gradient-to-r from-gray-200 to-gray-300 rounded-xl mb-6 flex items-center justify-center">
+                    <div className="text-center text-gray-500">
+                      <div className="text-4xl mb-2">📄</div>
+                      <p className="text-sm">Imagem será adicionada em breve</p>
+                    </div>
                   </div>
-                  Direitos Trabalhistas
-                </h3>
-                <p className="text-gray-600">Licenças, auxílios e estabilidade no emprego</p>
-              </div>
-              <div className="bg-gray-light p-6 rounded-xl">
-                <h3 className="font-montserrat font-semibold text-primary-green mb-3 flex items-center">
-                  <div className="w-8 h-8 bg-gold-primary rounded-full flex items-center justify-center mr-3">
-                    <span className="text-white font-bold text-sm">3</span>
-                  </div>
-                  Benefícios Sociais
-                </h3>
-                <p className="text-gray-600">INSS, BPC e outros auxílios disponíveis</p>
-              </div>
-              <div className="bg-gray-light p-6 rounded-xl">
-                <h3 className="font-montserrat font-semibold text-primary-green mb-3 flex items-center">
-                  <div className="w-8 h-8 bg-gold-primary rounded-full flex items-center justify-center mr-3">
-                    <span className="text-white font-bold text-sm">4</span>
-                  </div>
-                  Segunda Opinião
-                </h3>
-                <p className="text-gray-600">Como e quando buscar uma segunda opinião médica</p>
-              </div>
+                  
+                  <Link 
+                    href={`/blog/${post.slug}`}
+                    className="inline-flex items-center bg-primary-green text-white px-6 py-3 rounded-xl font-montserrat font-semibold hover:bg-secondary-green transition-colors"
+                  >
+                    Ler artigo completo
+                    <ArrowLeft className="w-5 h-5 ml-2 rotate-180" />
+                  </Link>
+                </article>
+              ))}
             </div>
-          </article>
+          )}
+
+          {/* No posts state */}
+          {posts && posts.length === 0 && (
+            <div className="text-center py-16">
+              <h2 className="font-playfair text-3xl font-bold text-primary-green mb-6">
+                Em breve, novos artigos
+              </h2>
+              <p className="text-lg text-gray-700">
+                A Dra. Ana Carolina Salles está preparando conteúdo valioso para você.
+              </p>
+            </div>
+          )}
 
           {/* Coming Soon Section */}
           <section className="text-center py-16">
             <div className="max-w-2xl mx-auto">
               <h2 className="font-playfair text-3xl font-bold text-primary-green mb-6">
-                Mais Conteúdo em Breve
+                Próximos Tópicos
               </h2>
               <p className="text-lg text-gray-700 mb-8">
                 A Dra. Ana Carolina Salles está preparando mais artigos valiosos sobre prevenção, tratamentos inovadores, cuidados paliativos e muito mais.
               </p>
-              <div className="bg-gold-light p-8 rounded-2xl">
-                <h3 className="font-montserrat font-semibold text-primary-green mb-4">Próximos Tópicos:</h3>
+              <div className="bg-white shadow-lg p-8 rounded-2xl">
+                <h3 className="font-montserrat font-semibold text-primary-green mb-4">Em desenvolvimento:</h3>
                 <ul className="text-left max-w-md mx-auto space-y-2 text-gray-700">
                   <li>• Imunoterapia: O futuro do tratamento oncológico</li>
                   <li>• Cuidados nutricionais durante a quimioterapia</li>
