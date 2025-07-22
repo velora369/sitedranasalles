@@ -92,12 +92,7 @@ export default function BlogPreviewSection() {
             {/* Placeholder articles if we have less than 3 posts */}
             {displayPosts.length < 3 && placeholderArticles.slice(0, 3 - displayPosts.length).map((article, index) => (
               <article key={`placeholder-${index}`} className="bg-white rounded-2xl shadow-lg overflow-hidden section-fade opacity-75">
-                <div className="w-full h-48 bg-gradient-to-r from-gray-100 to-gray-200 flex items-center justify-center">
-                  <div className="text-center text-gray-400">
-                    <div className="text-3xl mb-2">📝</div>
-                    <p className="text-sm">Em breve</p>
-                  </div>
-                </div>
+                <div className="w-full h-48 bg-gradient-to-r from-gray-100 to-gray-200"></div>
                 
                 <div className="p-6">
                   <h3 className="font-montserrat font-bold text-xl text-primary-green mb-3">
