@@ -30,14 +30,14 @@ export default function BlogPreviewSection() {
     },
     {
       id: 3,
-      title: "Nutrição Durante o Tratamento Oncológico",
-      slug: "nutricao-tratamento-oncologico",
-      excerpt: "A alimentação adequada durante o tratamento oncológico é fundamental para manter a força, reduzir efeitos colaterais e acelerar a recuperação.",
+      title: "Prevenção e Detecção Precoce",
+      slug: "prevencao-deteccao-precoce",
+      excerpt: "Dicas importantes sobre prevenção, detecção precoce e cuidados durante o tratamento.",
       author: "Dra. Ana Carolina Salles",
-      readingTime: 5,
+      readingTime: 0,
       publishedAt: new Date("2025-07-18T09:15:00Z"),
-      imageUrl: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=400&h=300&fit=crop&crop=center",
-      isPublished: true,
+      imageUrl: null,
+      isPublished: false,
     }
   ];
 
@@ -60,6 +60,7 @@ export default function BlogPreviewSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {/* Posts do blog */}
           {displayPosts.map((post) => (
+            post.isPublished ? (
               <Link key={post.id} href={`/blog/${post.slug}`}>
                 <article className="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift section-fade transition-all duration-300 h-full">
                   {/* Post Cover Image */}
@@ -104,7 +105,22 @@ export default function BlogPreviewSection() {
                   </div>
                 </article>
               </Link>
-            ))}
+            ) : (
+              <article key={post.id} className="bg-white rounded-2xl shadow-lg overflow-hidden section-fade opacity-75">
+                <div className="w-full h-48 bg-gradient-to-r from-gray-100 to-gray-200"></div>
+                
+                <div className="p-6">
+                  <h3 className="font-montserrat font-bold text-xl text-primary-green mb-3">
+                    {post.title}
+                  </h3>
+                  <p className="text-gray-700 mb-4">
+                    {post.excerpt}
+                  </p>
+                  <span className="text-gold-primary font-montserrat font-semibold text-sm">Em desenvolvimento</span>
+                </div>
+              </article>
+            )
+          ))}
         </div>
         
         <div className="text-center section-fade">
