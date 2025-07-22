@@ -1,25 +1,23 @@
 import { Link } from "wouter";
-import { ArrowRight } from "lucide-react";
+import { useQuery } from "@tanstack/react-query";
+import { ArrowRight, Calendar, Clock } from "lucide-react";
+import { format } from "date-fns";
+import { ptBR } from "date-fns/locale";
+import type { BlogPost } from "@shared/schema";
 
 export default function BlogPreviewSection() {
-  const articles = [
+  const { data: posts, isLoading } = useQuery<BlogPost[]>({
+    queryKey: ["/api/blog/posts"],
+  });
+
+  // Show first 3 posts or fallback to placeholders if no posts
+  const displayPosts = posts?.slice(0, 3) || [];
+  
+  const placeholderArticles = [
     {
-      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
-      title: "Informações Importantes a Todo Paciente Oncológico",
-      description: "Conteúdo essencial sobre cuidados, direitos e orientações fundamentais para pacientes em tratamento oncológico.",
-      status: "Em breve"
-    },
-    {
-      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
-      title: "Direitos dos Pacientes Oncológicos",
-      description: "Guia completo sobre os direitos legais e sociais dos pacientes oncológicos no Brasil.",
-      status: "Em breve"
-    },
-    {
-      image: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
-      title: "Prevenção e Cuidados",
+      title: "Prevenção e Detecção Precoce",
       description: "Dicas importantes sobre prevenção, detecção precoce e cuidados durante o tratamento.",
-      status: "Em breve"
+      isPlaceholder: true
     }
   ];
 
@@ -36,26 +34,74 @@ export default function BlogPreviewSection() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {articles.map((article, index) => (
-            <article key={index} className="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift section-fade">
-              <img 
-                src={article.image} 
-                alt={article.title} 
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-6">
-                <h3 className="font-montserrat font-bold text-xl text-primary-green mb-3">
-                  {article.title}
-                </h3>
-                <p className="text-gray-700 mb-4">
-                  {article.description}
-                </p>
-                <span className="text-gold-primary font-montserrat font-semibold text-sm">{article.status}</span>
-              </div>
-            </article>
-          ))}
-        </div>
+        {isLoading ? (
+          <div className="text-center py-16">
+            <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-primary-green mx-auto mb-4"></div>
+            <p className="text-gray-600">Carregando artigos...</p>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            {/* Real blog posts */}
+            {displayPosts.map((post) => (
+              <Link key={post.id} href={`/blog/${post.slug}`}>
+                <article className="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift section-fade transition-all duration-300 h-full">
+                  {/* Image placeholder */}
+                  <div className="w-full h-48 bg-gradient-to-r from-gray-200 to-gray-300 flex items-center justify-center">
+                    <div className="text-center text-gray-500">
+                      <div className="text-3xl mb-2">📄</div>
+                      <p className="text-sm">Imagem em breve</p>
+                    </div>
+                  </div>
+                  
+                  <div className="p-6 flex flex-col h-full">
+                    <div className="flex items-center text-gray-500 text-sm mb-3">
+                      <Calendar className="w-4 h-4 mr-2" />
+                      <span>{format(new Date(post.publishedAt), "dd 'de' MMM", { locale: ptBR })}</span>
+                      <Clock className="w-4 h-4 ml-4 mr-2" />
+                      <span>{post.readingTime} min</span>
+                    </div>
+                    
+                    <h3 className="font-montserrat font-bold text-xl text-primary-green mb-3 line-clamp-2">
+                      {post.title}
+                    </h3>
+                    
+                    <p className="text-gray-700 mb-4 flex-grow line-clamp-3">
+                      {post.excerpt}
+                    </p>
+                    
+                    <div className="mt-auto">
+                      <span className="text-primary-green font-montserrat font-semibold text-sm hover:text-secondary-green transition-colors">
+                        Ler artigo completo →
+                      </span>
+                    </div>
+                  </div>
+                </article>
+              </Link>
+            ))}
+            
+            {/* Placeholder articles if we have less than 3 posts */}
+            {displayPosts.length < 3 && placeholderArticles.slice(0, 3 - displayPosts.length).map((article, index) => (
+              <article key={`placeholder-${index}`} className="bg-white rounded-2xl shadow-lg overflow-hidden section-fade opacity-75">
+                <div className="w-full h-48 bg-gradient-to-r from-gray-100 to-gray-200 flex items-center justify-center">
+                  <div className="text-center text-gray-400">
+                    <div className="text-3xl mb-2">📝</div>
+                    <p className="text-sm">Em breve</p>
+                  </div>
+                </div>
+                
+                <div className="p-6">
+                  <h3 className="font-montserrat font-bold text-xl text-primary-green mb-3">
+                    {article.title}
+                  </h3>
+                  <p className="text-gray-700 mb-4">
+                    {article.description}
+                  </p>
+                  <span className="text-gold-primary font-montserrat font-semibold text-sm">Em desenvolvimento</span>
+                </div>
+              </article>
+            ))}
+          </div>
+        )}
         
         <div className="text-center section-fade">
           <Link 
@@ -63,7 +109,7 @@ export default function BlogPreviewSection() {
             className="inline-flex items-center justify-center px-8 py-4 bg-primary-green text-white font-montserrat font-semibold rounded-xl hover:bg-secondary-green transform hover:scale-105 transition-all duration-300 shadow-lg"
           >
             <ArrowRight className="w-5 h-5 mr-3" />
-            Ver Mais Artigos
+            {posts && posts.length > 3 ? 'Ver Todos os Artigos' : 'Visitar o Blog'}
           </Link>
         </div>
       </div>
