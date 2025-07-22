@@ -7,19 +7,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.get("/api/blog/posts", async (req, res) => {
     try {
       const posts = await storage.getAllBlogPosts();
-      // Return only necessary fields for preview to reduce payload size
-      const previewPosts = posts.map(post => ({
-        id: post.id,
-        title: post.title,
-        slug: post.slug,
-        excerpt: post.excerpt,
-        author: post.author,
-        readingTime: post.readingTime,
-        publishedAt: post.publishedAt,
-        imageUrl: post.imageUrl,
-        isPublished: post.isPublished
-      }));
-      res.json(previewPosts);
+      res.json(posts);
     } catch (error) {
       res.status(500).json({ error: "Failed to fetch blog posts" });
     }

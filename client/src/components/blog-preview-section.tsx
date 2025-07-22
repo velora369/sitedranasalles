@@ -6,20 +6,12 @@ import { ptBR } from "date-fns/locale";
 import type { BlogPost } from "@shared/schema";
 
 export default function BlogPreviewSection() {
-  const { data: posts, isLoading, error } = useQuery<BlogPost[]>({
+  const { data: posts, isLoading } = useQuery<BlogPost[]>({
     queryKey: ["/api/blog/posts"],
   });
 
   // Show first 3 posts or fallback to placeholders if no posts
   const displayPosts = posts?.slice(0, 3) || [];
-  
-  console.log('Blog Preview Debug:', {
-    posts,
-    isLoading,
-    error,
-    displayPosts,
-    displayPostsLength: displayPosts.length
-  });
   
   const placeholderArticles = [
     {
@@ -49,45 +41,22 @@ export default function BlogPreviewSection() {
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            {/* Debug info */}
-            <div className="col-span-full text-center p-4 bg-yellow-100 border border-yellow-300 rounded">
-              <p>Debug: Posts count: {displayPosts.length}</p>
-              <p>Posts: {displayPosts.map(p => p.title).join(', ')}</p>
-            </div>
-            
             {/* Real blog posts */}
             {displayPosts.map((post) => (
               <Link key={post.id} href={`/blog/${post.slug}`}>
                 <article className="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift section-fade transition-all duration-300 h-full">
-                  {/* Image */}
-                  {post.imageUrl ? (
-                    <img 
-                      src={post.imageUrl} 
-                      alt={post.title} 
-                      className="w-full h-48 object-cover"
-                    />
-                  ) : (
-                    <div className="w-full h-48 bg-gradient-to-r from-gray-200 to-gray-300 flex items-center justify-center">
-                      <div className="text-center text-gray-500">
-                        <div className="text-3xl mb-2">📄</div>
-                        <p className="text-sm">Imagem em breve</p>
-                      </div>
+                  {/* Image placeholder */}
+                  <div className="w-full h-48 bg-gradient-to-r from-gray-200 to-gray-300 flex items-center justify-center">
+                    <div className="text-center text-gray-500">
+                      <div className="text-3xl mb-2">📄</div>
+                      <p className="text-sm">Imagem em breve</p>
                     </div>
-                  )}
+                  </div>
                   
                   <div className="p-6 flex flex-col h-full">
                     <div className="flex items-center text-gray-500 text-sm mb-3">
                       <Calendar className="w-4 h-4 mr-2" />
-                      <span>
-                        {(() => {
-                          try {
-                            return format(new Date(post.publishedAt), "dd 'de' MMM", { locale: ptBR });
-                          } catch (error) {
-                            console.error('Date formatting error:', error, 'for date:', post.publishedAt);
-                            return new Date(post.publishedAt).toLocaleDateString('pt-BR');
-                          }
-                        })()}
-                      </span>
+                      <span>{format(new Date(post.publishedAt), "dd 'de' MMM", { locale: ptBR })}</span>
                       <Clock className="w-4 h-4 ml-4 mr-2" />
                       <span>{post.readingTime} min</span>
                     </div>
