@@ -106,27 +106,7 @@ export default function Blog() {
             </div>
           )}
 
-          {/* Coming Soon Section */}
-          <section className="text-center py-16">
-            <div className="max-w-2xl mx-auto">
-              <h2 className="font-playfair text-3xl font-bold text-primary-green mb-6">
-                Próximos Tópicos
-              </h2>
-              <p className="text-lg text-gray-700 mb-8">
-                A Dra. Ana Carolina Salles está preparando mais artigos valiosos sobre prevenção, tratamentos inovadores, cuidados paliativos e muito mais.
-              </p>
-              <div className="bg-white shadow-lg p-8 rounded-2xl">
-                <h3 className="font-montserrat font-semibold text-primary-green mb-4">Em desenvolvimento:</h3>
-                <ul className="text-left max-w-md mx-auto space-y-2 text-gray-700">
-                  <li>• Imunoterapia: O futuro do tratamento oncológico</li>
-                  <li>• Cuidados nutricionais durante a quimioterapia</li>
-                  <li>• Importância do suporte psicológico</li>
-                  <li>• Tratamentos personalizados e medicina de precisão</li>
-                  <li>• Prevenção e detecção precoce do câncer</li>
-                </ul>
-              </div>
-            </div>
-          </section>
+
 
         </div>
       </main>
