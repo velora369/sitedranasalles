@@ -26,11 +26,11 @@ export default function BlogPreviewSection() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 section-fade">
           <h2 className="font-playfair text-3xl md:text-4xl font-bold text-primary-green mb-6">
-            Blog: Informações Importantes para Todo Paciente Oncológico
+            Blog da Dra. Ana Carolina Salles
           </h2>
           <div className="w-24 h-1 bg-gold-primary mx-auto rounded-full mb-6"></div>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            Um espaço dedicado a artigos, notícias e informações relevantes sobre oncologia, tratamento, prevenção e bem-estar para pacientes e seus familiares.
+            Um portal dedicado a artigos, notícias e informações relevantes sobre oncologia, tratamento, prevenção e bem-estar para pacientes e seus familiares.
           </p>
         </div>
         
