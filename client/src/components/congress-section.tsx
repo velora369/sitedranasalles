@@ -25,11 +25,7 @@ export default function CongressSection() {
       title: "ASCO 2025 - Congresso Americano de Oncologia",
       description: "Presença no mais prestigioso congresso mundial de oncologia, realizado anualmente nos Estados Unidos. O ASCO reúne mais de 40.000 especialistas globalmente e apresenta os avanços mais revolucionários em tratamentos oncológicos. A participação da Dra. Ana Carolina garante acesso às terapias mais inovadoras para seus pacientes."
     },
-    {
-      url: "https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/07/whatsapp-image-2025-07-20-at-18.50.38.webp",
-      title: "Palestra Educativa para Pacientes - Mastologia",
-      description: "Atividade de educação médica voltada para pacientes e familiares durante o Congresso Brasileiro de Mastologia. A Dra. Ana Carolina participou ativamente na conscientização sobre prevenção, diagnóstico precoce e opções de tratamento, demonstrando seu compromisso com o cuidado humanizado e educativo."
-    },
+
     {
       url: "https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/07/whatsapp-image-2025-07-20-at-18.51.46.webp",
       title: "Equipe Rede D'Or no ASCO 2025",
