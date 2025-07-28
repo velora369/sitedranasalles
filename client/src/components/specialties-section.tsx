@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Microscope, Shield, User, Hand, UserCheck, Search, HeartPulse, X, ChevronRight } from "lucide-react";
+import { Microscope, Ribbon, User, Hand, UserCheck, Search, HeartPulse, X, ChevronRight } from "lucide-react";
 
 export default function SpecialtiesSection() {
   const [selectedExpertise, setSelectedExpertise] = useState<number | null>(null);
@@ -15,7 +15,7 @@ export default function SpecialtiesSection() {
       }
     },
     {
-      icon: Shield,
+      icon: Ribbon,
       title: "Tumores Femininos",
       description: "Câncer de mama e cânceres ginecológicos",
       detailedInfo: {
