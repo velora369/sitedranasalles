@@ -100,9 +100,9 @@ export default function CongressSection() {
             </p>
           </div>
           
-          {/* Grid principal responsivo e moderno */}
+          {/* Grid único responsivo e uniforme */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8 mb-12">
-            {congressImages.slice(0, 8).map((image, index) => (
+            {congressImages.map((image, index) => (
               <div 
                 key={index} 
                 className="bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:border-gold-primary/20 section-fade cursor-pointer overflow-hidden group transition-all duration-500"
@@ -146,40 +146,6 @@ export default function CongressSection() {
               </div>
             ))}
           </div>
-
-          {/* Grid secundário moderno para as demais imagens */}
-          {congressImages.length > 8 && (
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6 mb-12">
-              {congressImages.slice(8).map((image, index) => (
-                <div 
-                  key={index + 8} 
-                  className="bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-lg hover:border-gold-primary/20 section-fade cursor-pointer overflow-hidden group transition-all duration-400"
-                  onClick={() => openModal(image, index + 8)}
-                >
-                  {/* Imagem com melhor proporção */}
-                  <div className="relative aspect-[3/2] overflow-hidden">
-                    <img 
-                      src={image.url} 
-                      alt={image.title}
-                      className="w-full h-full object-contain bg-gray-50 group-hover:scale-[1.02] transition-transform duration-500"
-                      loading="lazy"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  </div>
-                  
-                  {/* Conteúdo compacto mas legível */}
-                  <div className="p-4">
-                    <h3 className="font-montserrat font-semibold text-primary-green mb-2 text-xs md:text-sm line-clamp-2 group-hover:text-gold-primary transition-colors duration-300">
-                      {image.title}
-                    </h3>
-                    <p className="text-gray-600 text-xs leading-relaxed line-clamp-3">
-                      {image.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          )}
 
           {/* Seção da Equipe */}
           <div className="mt-20 text-center section-fade">
