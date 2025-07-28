@@ -60,7 +60,6 @@ export default function HeroSection() {
         transition={{ duration: 1 }}
         className="absolute inset-0 bg-gradient-to-br from-primary-green/5 via-transparent to-gold-primary/5"
       />
-      
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.div 
           variants={containerVariants}
@@ -81,9 +80,7 @@ export default function HeroSection() {
             <motion.h2 
               variants={fadeInUpVariants}
               className="font-montserrat text-lg sm:text-xl md:text-2xl text-gold-primary font-semibold mb-6 sm:mb-8 leading-relaxed"
-            >
-              Oncologista Clínica | Cuidado Incansável, Respeito e Paixão pela Vida
-            </motion.h2>
+            >Oncologista Clínica</motion.h2>
 
             {/* Animated Description */}
             <motion.p 
