@@ -101,8 +101,8 @@ export default function CongressSection() {
           </div>
           
           {/* Grid principal responsivo e moderno */}
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8 mb-12">
-            {congressImages.slice(0, 6).map((image, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8 mb-12">
+            {congressImages.slice(0, 8).map((image, index) => (
               <div 
                 key={index} 
                 className="bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:border-gold-primary/20 section-fade cursor-pointer overflow-hidden group transition-all duration-500"
@@ -148,13 +148,13 @@ export default function CongressSection() {
           </div>
 
           {/* Grid secundário moderno para as demais imagens */}
-          {congressImages.length > 6 && (
+          {congressImages.length > 8 && (
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6 mb-12">
-              {congressImages.slice(6).map((image, index) => (
+              {congressImages.slice(8).map((image, index) => (
                 <div 
-                  key={index + 6} 
+                  key={index + 8} 
                   className="bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-lg hover:border-gold-primary/20 section-fade cursor-pointer overflow-hidden group transition-all duration-400"
-                  onClick={() => openModal(image, index + 6)}
+                  onClick={() => openModal(image, index + 8)}
                 >
                   {/* Imagem com melhor proporção */}
                   <div className="relative aspect-[3/2] overflow-hidden">
