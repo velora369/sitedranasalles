@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { MapPin, Mail, Clock, Send, ExternalLink, Building2 } from "lucide-react";
+import { MapPin, Clock, Send, ExternalLink, Building2, Instagram } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { useToast } from "@/hooks/use-toast";
 
@@ -119,7 +119,7 @@ Mensagem: ${formData.message}`;
                   className="flex items-center group hover:translate-x-1 transition-transform duration-300 cursor-pointer"
                 >
                   <div className="bg-gold-primary/10 p-3 rounded-xl mr-4 group-hover:bg-gold-primary/20 transition-colors duration-300">
-                    <Mail className="w-5 h-5 text-gold-primary" />
+                    <Instagram className="w-5 h-5 text-gold-primary" />
                   </div>
                   <div>
                     <p className="font-montserrat font-semibold text-primary-green group-hover:text-gold-primary transition-colors duration-300">Instagram</p>
