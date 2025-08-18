@@ -52,7 +52,7 @@ export default function SpecialtiesSection() {
     {
       icon: Search,
       title: "Orientação desde o Diagnóstico",
-      description: "Diante de uma suspeita de tumor maligno, orientação completa sobre exames de imagem, biópsia, patologia e PET-CT. Se confirmado o diagnóstico, indicação do tratamento adequado baseado nas melhores práticas."
+      description: "Diante de uma suspeita de tumor maligno, orientação completa sobre exames de imagem, biópsia e patologia. Se confirmado o diagnóstico, indicação do tratamento adequado baseado nas melhores práticas."
     },
     {
       icon: HeartPulse,
