@@ -210,7 +210,57 @@ Conheça as principais leis que protegem os direitos dos pacientes oncológicos:
 
 Conhecer e exercer seus direitos é parte fundamental do tratamento oncológico. Não hesite em buscar informações e exigir que seus direitos sejam respeitados. Lembre-se de que você tem o direito a um tratamento digno, completo e humanizado.
 
-Se você está enfrentando dificuldades para acessar seus direitos, procure ajuda junto aos órgãos competentes. Sua saúde e bem-estar são prioridades que devem ser garantidas por lei.`,
+Se você está enfrentando dificuldades para acessar seus direitos, procure ajuda junto aos órgãos competentes. Sua saúde e bem-estar são prioridades que devem ser garantidas por lei.
+
+## Referências bibliográficas
+
+### Direitos e princípios gerais
+
+1. BRASIL. Lei nº 14.238, de 19 de novembro de 2021. Institui o Estatuto da Pessoa com Câncer.
+
+2. BRASIL. Lei nº 12.732, de 22 de novembro de 2012. Garante o início do primeiro tratamento no SUS em até 60 dias após o diagnóstico de neoplasia maligna.
+
+3. BRASIL. Lei nº 13.896, de 30 de outubro de 2019. Estabelece prazo de até 30 dias para a realização de exames diagnósticos de neoplasia maligna no SUS.
+
+### Planos de saúde e medicamentos
+
+4. BRASIL. Lei nº 9.656, de 3 de junho de 1998. Dispõe sobre os planos e seguros privados de assistência à saúde.
+
+5. BRASIL. Lei nº 12.880, de 13 de novembro de 2013. Torna obrigatória a cobertura de antineoplásicos orais de uso domiciliar e medicamentos de suporte pelos planos de saúde.
+
+6. BRASIL. Lei nº 14.454, de 21 de setembro de 2022. Altera a Lei nº 9.656/1998 e estabelece que o rol de procedimentos da ANS tem caráter exemplificativo, coibindo negativas abusivas.
+
+### Benefícios previdenciários e assistenciais
+
+7. BRASIL. Lei nº 8.213, de 24 de julho de 1991. Planos de Benefícios da Previdência Social — auxílio por incapacidade temporária e aposentadoria por incapacidade permanente.
+
+8. BRASIL. Lei nº 8.742, de 7 de dezembro de 1993. Lei Orgânica da Assistência Social (BPC/LOAS).
+
+### FGTS, PIS/PASEP e tributação
+
+9. BRASIL. Lei nº 8.036, de 11 de maio de 1990. Dispõe sobre o FGTS; autoriza saque em casos de neoplasia maligna do trabalhador ou dependente.
+
+10. BRASIL. Decreto nº 99.684, de 8 de novembro de 1990. Regulamento do FGTS (detalha as hipóteses de saque por doença grave).
+
+11. BRASIL. Lei nº 7.713, de 22 de dezembro de 1988. Isenção de Imposto de Renda sobre proventos de aposentadoria/pensão para portadores de neoplasia maligna (art. 6º, XIV).
+
+12. BRASIL. Lei nº 8.989, de 24 de fevereiro de 1995. Isenção de IPI na aquisição de automóveis por pessoas com deficiência — aplicável quando o câncer gera deficiência comprovada por laudo (regras da RFB).
+
+13. Leis estaduais e municipais de IPVA e transporte público. A gratuidade e a isenção de IPVA variam por unidade federativa e município; verificar normas locais vigentes.
+
+### Tratamento Fora de Domicílio, atenção domiciliar e educação
+
+14. MINISTÉRIO DA SAÚDE. Portaria SAS/MS nº 55, de 24 de fevereiro de 1999. Institui o Tratamento Fora de Domicílio (TFD) no âmbito do SUS.
+
+15. MINISTÉRIO DA SAÚDE. Portaria GM/MS nº 825, de 25 de abril de 2016. Redefine a Atenção Domiciliar no SUS (Programa Melhor em Casa).
+
+16. BRASIL. Lei nº 13.716, de 24 de setembro de 2018. Altera a LDB para assegurar atendimento educacional hospitalar e domiciliar ao estudante em tratamento de saúde.
+
+### Direitos específicos da mulher com câncer de mama
+
+17. BRASIL. Lei nº 9.797, de 6 de maio de 1999. Garante cirurgia plástica reconstrutiva da mama após mastectomia no SUS.
+
+18. BRASIL. Lei nº 12.802, de 24 de abril de 2013. Assegura reconstrução mamária imediata quando houver condições técnicas e clínicas.`,
     author: "Dra. Ana Carolina Salles",
     readingTime: 6,
     publishedAt: new Date("2025-07-20T14:30:00Z"),
