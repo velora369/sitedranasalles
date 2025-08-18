@@ -121,23 +121,23 @@ Ligibel JA, et al. Exercise, Diet, and Weight Management During Cancer Treatment
     excerpt: "Para pacientes oncológicos, conhecer seus direitos é tão fundamental quanto o tratamento médico. A informação confiável é uma ferramenta poderosa para garantir acesso a todos os benefícios que a lei oferece.",
     content: `# Conhecer Seus Direitos é Fundamental
 
-Para pacientes oncológicos, conhecer seus direitos é tão fundamental quanto o tratamento médico em si. A informação confiável é uma ferramenta poderosa para garantir que você tenha acesso a todos os benefícios e proteções que a lei oferece.
+Para **pacientes oncológicos**, conhecer seus direitos é tão fundamental quanto o tratamento médico em si. A **informação confiável** é uma ferramenta poderosa para garantir que você tenha acesso a todos os benefícios e proteções que a lei oferece.
 
 ## Direitos Básicos no SUS
 
-O Sistema Único de Saúde (SUS) garante uma série de direitos importantes para pacientes oncológicos:
+O **Sistema Único de Saúde (SUS)** garante uma série de direitos importantes para pacientes oncológicos:
 
 ### Atendimento Prioritário
 
-Pacientes com câncer têm direito ao atendimento prioritário em todas as unidades de saúde do SUS. Isso inclui consultas, exames e tratamentos.
+Pacientes com câncer têm direito ao **atendimento prioritário** em todas as unidades de saúde do SUS. Isso inclui consultas, exames e tratamentos.
 
 ### Prazo para Início do Tratamento
 
-A Lei 12.732/2012 estabelece que o paciente tem direito de iniciar o tratamento oncológico no SUS em até 60 dias após o diagnóstico confirmado em laudo patológico.
+A **Lei 12.732/2012** estabelece que o paciente tem direito de iniciar o **tratamento oncológico** no SUS em até **60 dias** após o diagnóstico confirmado em **laudo patológico**.
 
 ### Direito à Segunda Opinião
 
-O paciente tem o direito de buscar uma segunda opinião médica, seja dentro do próprio SUS ou na rede privada, para confirmar o diagnóstico e as opções de tratamento.
+O paciente tem o direito de buscar uma **segunda opinião médica**, seja dentro do próprio SUS ou na rede privada, para confirmar o diagnóstico e as opções de tratamento.
 
 ## Direitos Trabalhistas
 
@@ -145,72 +145,72 @@ O diagnóstico de câncer também gera direitos importantes na esfera trabalhist
 
 ### Auxílio-Doença
 
-O trabalhador com câncer pode ter direito ao auxílio-doença do INSS, desde que comprove a incapacidade temporária para o trabalho.
+O trabalhador com câncer pode ter direito ao **auxílio-doença do INSS**, desde que comprove a **incapacidade temporária** para o trabalho.
 
 ### Estabilidade no Emprego
 
-Em muitos casos, o trabalhador com câncer tem direito à estabilidade provisória no emprego por 12 meses após o retorno ao trabalho.
+Em muitos casos, o trabalhador com câncer tem direito à **estabilidade provisória no emprego** por **12 meses** após o retorno ao trabalho.
 
 ### FGTS
 
-O portador de neoplasia maligna pode sacar o FGTS, mesmo estando empregado, apresentando a documentação médica adequada.
+O portador de **neoplasia maligna** pode sacar o **FGTS**, mesmo estando empregado, apresentando a documentação médica adequada.
 
 ## Direitos Relacionados ao Tratamento
 
 ### Medicamentos de Alto Custo
 
-O SUS deve fornecer gratuitamente todos os medicamentos necessários para o tratamento oncológico, incluindo medicamentos de alto custo.
+O SUS deve fornecer gratuitamente todos os **medicamentos necessários** para o tratamento oncológico, incluindo **medicamentos de alto custo**.
 
 ### Transporte
 
-Muitos municípios oferecem transporte gratuito para pacientes oncológicos que precisam se deslocar para tratamento fora de sua cidade.
+Muitos municípios oferecem **transporte gratuito** para pacientes oncológicos que precisam se deslocar para tratamento fora de sua cidade.
 
 ### Acompanhante
 
-O paciente tem direito a acompanhante durante internações, especialmente em casos de tratamento oncológico.
+O paciente tem direito a **acompanhante** durante internações, especialmente em casos de tratamento oncológico.
 
 ## Direitos Previdenciários
 
 ### Aposentadoria por Invalidez
 
-Em casos de incapacidade permanente, o paciente pode ter direito à aposentadoria por invalidez.
+Em casos de **incapacidade permanente**, o paciente pode ter direito à **aposentadoria por invalidez**.
 
 ### Isenção de Imposto de Renda
 
-Aposentados e pensionistas portadores de neoplasia maligna têm direito à isenção do Imposto de Renda sobre seus proventos.
+Aposentados e pensionistas portadores de **neoplasia maligna** têm direito à **isenção do Imposto de Renda** sobre seus proventos.
 
 ## Como Garantir Seus Direitos
 
 ### Documentação Necessária
 
 Mantenha sempre em mãos:
-- Laudo médico com CID da doença
-- Exames que comprovem o diagnóstico
-- Relatórios médicos atualizados
-- Documentos pessoais
+- **Laudo médico com CID** da doença
+- **Exames que comprovem o diagnóstico**
+- **Relatórios médicos** atualizados
+- **Documentos pessoais**
 
 ### Onde Buscar Ajuda
 
-- Defensoria Pública
-- Ministério Público
-- Associações de pacientes
-- Assistência social dos hospitais
-- Advogados especializados
+- **Defensoria Pública**
+- **Ministério Público**
+- **Associações de pacientes**
+- **Assistência social** dos hospitais
+- **Advogados especializados**
 
 ## Legislação de Apoio
 
 Conheça as principais leis que protegem os direitos dos pacientes oncológicos:
 
-- Lei 12.732/2012 (prazo para início do tratamento)
-- Lei 8.080/1990 (Lei do SUS)
-- Lei 8.213/1991 (benefícios previdenciários)
-- Estatuto da Pessoa com Deficiência
+- **Lei 12.732/2012** (prazo para início do tratamento)
+- **Lei 8.080/1990** (Lei do SUS)
+- **Lei 8.213/1991** (benefícios previdenciários)
+- **Estatuto da Pessoa com Deficiência**
 
 ## Conclusão
 
-Conhecer e exercer seus direitos é parte fundamental do tratamento oncológico. Não hesite em buscar informações e exigir que seus direitos sejam respeitados. Lembre-se de que você tem o direito a um tratamento digno, completo e humanizado.
+Conhecer e exercer seus direitos é parte fundamental do **tratamento oncológico**. Não hesite em buscar informações e exigir que seus direitos sejam respeitados. Lembre-se de que você tem o direito a um **tratamento digno, completo e humanizado**.
 
-Se você está enfrentando dificuldades para acessar seus direitos, procure ajuda junto aos órgãos competentes. Sua saúde e bem-estar são prioridades que devem ser garantidas por lei.
+Se você está enfrentando dificuldades para acessar seus direitos, procure ajuda junto aos **órgãos competentes**. Sua saúde e bem-estar são prioridades que devem ser **garantidas por lei**.
 
 ## Referências bibliográficas
 
