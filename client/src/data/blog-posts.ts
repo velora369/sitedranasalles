@@ -17,58 +17,97 @@ export const blogPosts: StaticBlogPost[] = [
     id: 1,
     title: "Informações Importantes para Todo Paciente Oncológico",
     slug: "informacoes-importantes-paciente-oncologico",
-    excerpt: "O diagnóstico de câncer gera muitas dúvidas e incertezas. Conhecer a doença, suas implicações e opções de tratamento oferece as ferramentas necessárias para que o paciente assuma um papel ativo em sua jornada.",
-    content: `# O Diagnóstico e o Início da Jornada
+    excerpt: "Receber um diagnóstico de câncer traz muitas dúvidas. Este guia apresenta, de forma clara e baseada em evidências, os tratamentos validados, o papel dos cuidados paliativos integrados e um glossário com termos que você vai ouvir nas consultas.",
+    content: `# Guia essencial para pacientes oncológicos
 
-Receber o diagnóstico de câncer é um momento que gera muitas dúvidas e incertezas. Além das preocupações com o tratamento e seus efeitos colaterais, o paciente também lida com uma carga emocional significativa que afeta a família, o trabalho e as relações sociais. É fundamental entender que essa é uma fase de adaptação e que o bem-estar pode ser mantido.
+## Introdução
 
-## A Importância da Informação
+Receber um diagnóstico de câncer traz muitas dúvidas. Este guia apresenta, de forma clara e baseada em evidências, os tratamentos validados, o papel dos **cuidados paliativos** integrados e um glossário com termos que você vai ouvir nas consultas.
+Importante: toda decisão terapêutica é individual e deve ser conduzida pela sua equipe.
 
-A informação é a maior aliada do paciente oncológico. Conhecer a doença, suas implicações e as opções de tratamento disponíveis oferece as ferramentas necessárias para que o paciente assuma um papel ativo e tenha maior controle sobre sua jornada. Buscar informações confiáveis e de qualidade é crucial para tomar decisões informadas e enfrentar o câncer da melhor maneira possível.
+## Primeiros passos após o diagnóstico
 
-## Lidando com as Mudanças no Estilo de Vida
+**Entenda o estadiamento**: mostra a extensão da doença e direciona o plano terapêutico.
 
-O tratamento oncológico pode exigir algumas mudanças no estilo de vida. No entanto, é possível se adaptar a essas mudanças e manter o bem estar. Esteja aberto a novas rotinas e busque apoio para lidar com as dificuldades que surgem. O Instituto Oncoguia oferece diversas dicas e orientações para ajudar os pacientes a enfrentar esses desafios.
+**Defina objetivos do cuidado**: intenção curativa, controle da doença e/ou alívio de sintomas.
 
-## Dicas e Orientações Gerais
+**Acompanhe de perto**: consultas regulares, exames e registro de sintomas/efeitos colaterais.
 
-Neste espaço, você encontrará uma série de dicas e orientações que podem auxiliar a lidar com as dificuldades decorrentes do diagnóstico. É importante lembrar que você não está sozinho nessa jornada e que há recursos e apoio disponíveis para te guiar e fortalecer.
+**Apoio emocional e social**: psicologia, família, amigos e grupos de apoio melhoram qualidade de vida e adesão ao tratamento.
 
-## Tipos de Tratamento
+## Tratamentos com eficácia comprovada
 
-Existem diversos tipos de tratamento disponíveis para pacientes oncológicos, cada um com suas particularidades e indicações específicas. É fundamental conhecer as opções disponíveis para tomar decisões informadas sobre o seu cuidado.
+A indicação depende do tipo de câncer, estágio e condições clínicas. Modalidades validadas incluem:
 
-### Quimioterapia
+**Cirurgia**: tratamento local para remoção do tumor quando viável.
 
-A quimioterapia é um tratamento sistêmico que utiliza medicamentos para destruir células cancerosas. Pode ser administrada por via oral ou intravenosa, dependendo do tipo de medicamento e da condição do paciente.
+**Radioterapia**: radiação para controle local/locorregional ou alívio de sintomas.
 
-### Radioterapia
+**Quimioterapia**: medicamentos sistêmicos que destroem ou inibem a proliferação tumoral.
 
-A radioterapia utiliza radiação de alta energia para destruir células cancerosas. É um tratamento localizado que pode ser usado isoladamente ou em combinação com outros tratamentos.
+**Hormonioterapia**: para tumores hormônio-sensíveis (ex.: alguns cânceres de mama e próstata).
 
-### Cirurgia Oncológica
+**Terapias-alvo**: atuam em alvos moleculares específicos; exigem **biomarcadores**.
 
-A cirurgia pode ser curativa ou paliativa, dependendo do estágio da doença. É importante discutir com seu médico todas as opções cirúrgicas disponíveis.
+**Imunoterapia**: estimula o sistema imune a reconhecer e combater o tumor, conforme indicações.
 
-## Cuidados Durante o Tratamento
+**Transplante de células-tronco hematopoéticas (medula óssea)**: em neoplasias hematológicas selecionadas.
 
-Durante o tratamento oncológico, é essencial manter cuidados especiais para preservar a qualidade de vida e minimizar os efeitos colaterais.
+**Neoadjuvante** = antes do tratamento local para reduzir o tumor.
+**Adjuvante** = após o tratamento local para diminuir risco de **recidiva**.
 
-### Alimentação
+## Cuidados paliativos: o que são (e o que não são)
 
-Uma alimentação adequada é fundamental durante o tratamento. Procure orientação nutricional especializada para manter uma dieta equilibrada e adequada às suas necessidades.
+**Cuidados paliativos** são um conjunto de intervenções para controle de sintomas, suporte emocional e tomada de decisões, podendo e devendo ser integrados precocemente em casos de doença avançada — sem substituir o tratamento oncológico específico.
+Exemplo: uma pessoa com câncer de mama **metastático** pode receber quimioterapia, hormonioterapia ou terapias-alvo junto de cuidados paliativos para manejar dor, fadiga, ansiedade e outros sintomas. Evidências mostram melhora consistente de qualidade de vida e, em alguns cenários, aumento de sobrevida com a integração precoce.
 
-### Atividade Física
+## Vida durante o tratamento
 
-Quando possível e com orientação médica, manter atividades físicas leves pode contribuir para o bem-estar e recuperação.
+**Sintomas e efeitos colaterais**: relate cedo; há protocolos eficazes para náusea, dor, mucosite, fadiga, entre outros.
 
-### Apoio Emocional
+**Atividade física**: quando liberada pela equipe, exercícios aeróbicos e de resistência ajudam na capacidade funcional e no bem-estar.
 
-O apoio psicológico é uma parte importante do tratamento. Não hesite em buscar ajuda profissional quando necessário.
+**Nutrição**: personalize com nutricionista; não existe "dieta que cure câncer".
 
-## Conclusão
+**Sexualidade e fertilidade**: converse sobre preservação de fertilidade antes de terapias que possam afetá-la.
 
-Lembre-se de que cada jornada oncológica é única, e o mais importante é manter um diálogo aberto com sua equipe médica. Não hesite em fazer perguntas e buscar esclarecimentos sempre que necessário. Sua participação ativa no tratamento é fundamental para os melhores resultados possíveis.`,
+## Glossário rápido de Oncologia
+
+**Remissão**: desaparecimento de todos os sinais de câncer (**remissão completa**) ou redução importante (parcial) após o tratamento. Remissão não é sinônimo obrigatório de cura definitiva.
+
+**Recidiva / Recorrência**: retorno do câncer depois de um período sem sinais, podendo ser local, regional (linfonodos próximos) ou à distância.
+
+**Metástase**: disseminação de células do tumor primário para outros órgãos (como ossos, pulmões ou fígado). O tumor metastático mantém as características do câncer de origem.
+
+**Estadiamento**: sistema que classifica a extensão da doença (ex.: TNM).
+
+**Terapia sistêmica**: tratamento que atua no corpo todo (quimio, hormonioterapia, terapias-alvo, imunoterapia).
+
+**Adjuvante / Neoadjuvante**: ver definições na seção de Tratamentos.
+
+## Perguntas úteis para levar à consulta
+
+• Qual é o meu tipo e estágio do câncer?
+
+• Qual o objetivo do tratamento proposto?
+
+• Existem alternativas com benefícios e riscos diferentes?
+
+• O meu caso exige **biomarcadores**/ testes moleculares?
+
+• Como integrar **cuidados paliativos** desde já para controle de sintomas?
+
+• O que devo observar em casa e quando devo procurar o hospital?
+
+## Referências bibliográficas essenciais
+
+National Cancer Institute. About Cancer Treatment; Types of Cancer Treatment; Dictionary of Cancer Terms. Bethesda, MD: NCI.
+
+Temel JS, et al. Early Palliative Care for Patients with Metastatic Non–Small-Cell Lung Cancer. New England Journal of Medicine. 2010;363(8):733–742.
+
+Ferrell BR, Temel JS, Temin S, et al. Integration of Palliative Care Into Standard Oncology Care: American Society of Clinical Oncology Clinical Practice Guideline Update. Journal of Clinical Oncology. 2017.
+
+Ligibel JA, et al. Exercise, Diet, and Weight Management During Cancer Treatment: American Society of Clinical Oncology Guideline. Journal of Clinical Oncology. 2022.`,
     author: "Dra. Ana Carolina Salles",
     readingTime: 8,
     publishedAt: new Date("2025-07-22T10:00:00Z"),

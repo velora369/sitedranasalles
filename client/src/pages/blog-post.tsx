@@ -25,25 +25,39 @@ export default function BlogPost() {
 
   // Function to render markdown-style content as HTML
   const renderMarkdownContent = (content: string) => {
+    // Helper function to parse bold text within a line
+    const parseBoldText = (text: string) => {
+      const parts = text.split(/(\*\*[^*]+\*\*)/g);
+      return parts.map((part, partIndex) => {
+        if (part.startsWith('**') && part.endsWith('**')) {
+          return <strong key={partIndex} className="font-semibold">{part.slice(2, -2)}</strong>;
+        }
+        return part;
+      });
+    };
+
     return content
       .split('\n')
       .map((line, index) => {
         if (line.startsWith('# ')) {
-          return <h1 key={index} className="text-3xl font-playfair font-bold text-primary-green mb-6 mt-8">{line.substring(2)}</h1>;
+          return <h1 key={index} className="text-3xl font-playfair font-bold text-primary-green mb-6 mt-8">{parseBoldText(line.substring(2))}</h1>;
         }
         if (line.startsWith('## ')) {
-          return <h2 key={index} className="text-2xl font-playfair font-bold text-primary-green mb-4 mt-6">{line.substring(3)}</h2>;
+          return <h2 key={index} className="text-2xl font-playfair font-bold text-primary-green mb-4 mt-6">{parseBoldText(line.substring(3))}</h2>;
         }
         if (line.startsWith('### ')) {
-          return <h3 key={index} className="text-xl font-montserrat font-semibold text-primary-green mb-3 mt-5">{line.substring(4)}</h3>;
+          return <h3 key={index} className="text-xl font-montserrat font-semibold text-primary-green mb-3 mt-5">{parseBoldText(line.substring(4))}</h3>;
+        }
+        if (line.startsWith('• ')) {
+          return <p key={index} className="text-gray-700 mb-2 ml-4">{parseBoldText(line)}</p>;
         }
         if (line.startsWith('* ')) {
-          return <p key={index} className="text-gray-700 mb-2 ml-4">{line}</p>;
+          return <p key={index} className="text-gray-700 mb-2 ml-4">{parseBoldText(line)}</p>;
         }
         if (line.trim() === '') {
           return <div key={index} className="mb-4"></div>;
         }
-        return <p key={index} className="text-gray-700 mb-4 leading-relaxed">{line}</p>;
+        return <p key={index} className="text-gray-700 mb-4 leading-relaxed">{parseBoldText(line)}</p>;
       });
   };
 

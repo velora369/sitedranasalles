@@ -1,0 +1,90 @@
+Guia essencial para pacientes oncológicos
+
+Introdução
+
+Receber um diagnóstico de câncer traz muitas dúvidas. Este guia apresenta, de forma clara e baseada em evidências, os tratamentos validados, o papel dos cuidados paliativos integrados e um glossário com termos que você vai ouvir nas consultas.
+Importante: toda decisão terapêutica é individual e deve ser conduzida pela sua equipe.
+
+Primeiros passos após o diagnóstico
+
+Entenda o estadiamento: mostra a extensão da doença e direciona o plano terapêutico.
+
+Defina objetivos do cuidado: intenção curativa, controle da doença e/ou alívio de sintomas.
+
+Acompanhe de perto: consultas regulares, exames e registro de sintomas/efeitos colaterais.
+
+Apoio emocional e social: psicologia, família, amigos e grupos de apoio melhoram qualidade de vida e adesão ao tratamento.
+
+Tratamentos com eficácia comprovada
+
+A indicação depende do tipo de câncer, estágio e condições clínicas. Modalidades validadas incluem:
+
+Cirurgia: tratamento local para remoção do tumor quando viável.
+
+Radioterapia: radiação para controle local/locorregional ou alívio de sintomas.
+
+Quimioterapia: medicamentos sistêmicos que destroem ou inibem a proliferação tumoral.
+
+Hormonioterapia: para tumores hormônio-sensíveis (ex.: alguns cânceres de mama e próstata).
+
+Terapias-alvo: atuam em alvos moleculares específicos; exigem biomarcadores.
+
+Imunoterapia: estimula o sistema imune a reconhecer e combater o tumor, conforme indicações.
+
+Transplante de células-tronco hematopoéticas (medula óssea): em neoplasias hematológicas selecionadas.
+
+Neoadjuvante = antes do tratamento local para reduzir o tumor.
+Adjuvante = após o tratamento local para diminuir risco de recidiva.
+
+Cuidados paliativos: o que são (e o que não são)
+
+Cuidados paliativos são um conjunto de intervenções para controle de sintomas, suporte emocional e tomada de decisões, podendo e devendo ser integrados precocemente em casos de doença avançada — sem substituir o tratamento oncológico específico.
+Exemplo: uma pessoa com câncer de mama metastático pode receber quimioterapia, hormonioterapia ou terapias-alvo junto de cuidados paliativos para manejar dor, fadiga, ansiedade e outros sintomas. Evidências mostram melhora consistente de qualidade de vida e, em alguns cenários, aumento de sobrevida com a integração precoce.
+
+Vida durante o tratamento
+
+Sintomas e efeitos colaterais: relate cedo; há protocolos eficazes para náusea, dor, mucosite, fadiga, entre outros.
+
+Atividade física: quando liberada pela equipe, exercícios aeróbicos e de resistência ajudam na capacidade funcional e no bem-estar.
+
+Nutrição: personalize com nutricionista; não existe “dieta que cure câncer”.
+
+Sexualidade e fertilidade: converse sobre preservação de fertilidade antes de terapias que possam afetá-la.
+
+Glossário rápido de Oncologia
+
+Remissão: desaparecimento de todos os sinais de câncer (remissão completa) ou redução importante (parcial) após o tratamento. Remissão não é sinônimo obrigatório de cura definitiva.
+
+Recidiva / Recorrência: retorno do câncer depois de um período sem sinais, podendo ser local, regional (linfonodos próximos) ou à distância.
+
+Metástase: disseminação de células do tumor primário para outros órgãos (como ossos, pulmões ou fígado). O tumor metastático mantém as características do câncer de origem.
+
+Estadiamento: sistema que classifica a extensão da doença (ex.: TNM).
+
+Terapia sistêmica: tratamento que atua no corpo todo (quimio, hormonioterapia, terapias-alvo, imunoterapia).
+
+Adjuvante / Neoadjuvante: ver definições na seção de Tratamentos.
+
+Perguntas úteis para levar à consulta
+
+Qual é o meu tipo e estágio do câncer?
+
+Qual o objetivo do tratamento proposto?
+
+Existem alternativas com benefícios e riscos diferentes?
+
+O meu caso exige biomarcadores/ testes moleculares?
+
+Como integrar cuidados paliativos desde já para controle de sintomas?
+
+O que devo observar em casa e quando devo procurar o hospital?
+
+Referências bibliográficas essenciais
+
+National Cancer Institute. About Cancer Treatment; Types of Cancer Treatment; Dictionary of Cancer Terms. Bethesda, MD: NCI.
+
+Temel JS, et al. Early Palliative Care for Patients with Metastatic Non–Small-Cell Lung Cancer. New England Journal of Medicine. 2010;363(8):733–742.
+
+Ferrell BR, Temel JS, Temin S, et al. Integration of Palliative Care Into Standard Oncology Care: American Society of Clinical Oncology Clinical Practice Guideline Update. Journal of Clinical Oncology. 2017.
+
+Ligibel JA, et al. Exercise, Diet, and Weight Management During Cancer Treatment: American Society of Clinical Oncology Guideline. Journal of Clinical Oncology. 2022.
