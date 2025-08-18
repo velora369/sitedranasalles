@@ -30,7 +30,7 @@ export default function BlogPost() {
       const parts = text.split(/(\*\*[^*]+\*\*)/g);
       return parts.map((part, partIndex) => {
         if (part.startsWith('**') && part.endsWith('**')) {
-          return <strong key={partIndex} className="font-semibold">{part.slice(2, -2)}</strong>;
+          return <strong key={partIndex} className="font-semibold text-gold-primary">{part.slice(2, -2)}</strong>;
         }
         return part;
       });
