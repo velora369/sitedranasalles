@@ -122,18 +122,18 @@ export default function TestimonialsSection() {
             
 
             {/* Main Carousel */}
-            <div className="relative overflow-hidden rounded-2xl shadow-lg bg-gray-50">
+            <div className="relative overflow-hidden flex justify-center items-center">
               <div 
                 className="flex transition-transform duration-500 ease-in-out"
                 style={{ transform: `translateX(-${currentIndex * 100}%)` }}
               >
                 {testimonialImages.map((imageUrl, index) => (
-                  <div key={index} className="w-full flex-shrink-0">
-                    <div className="relative aspect-[3/4] sm:aspect-[4/5] md:aspect-[3/2] bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden cursor-pointer group">
+                  <div key={index} className="w-full flex-shrink-0 flex justify-center">
+                    <div className="relative overflow-hidden cursor-pointer group max-w-fit">
                       <img
                         src={imageUrl}
                         alt={`Depoimento ${index + 1}`}
-                        className="w-full h-full object-contain hover:scale-105 transition-all duration-300 group-hover:opacity-95"
+                        className="w-auto h-auto object-contain hover:scale-105 transition-all duration-300 group-hover:opacity-95 block rounded-lg shadow-lg"
                         loading="lazy"
                         onClick={() => openPopup(imageUrl)}
                         onError={(e) => {
@@ -141,7 +141,7 @@ export default function TestimonialsSection() {
                         }}
                       />
                       {/* Overlay sutil para melhor interação */}
-                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-all duration-300 flex items-center justify-center">
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-all duration-300 flex items-center justify-center rounded-lg">
                         <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 bg-white/90 backdrop-blur-sm rounded-full p-3 shadow-lg">
                           <svg className="w-6 h-6 text-primary-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
