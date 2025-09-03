@@ -8,7 +8,6 @@ export default function TestimonialsSection() {
     "https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/09/whatsapp-image-2025-09-02-at-15.50.14-_2_.webp",
     "https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/09/whatsapp-image-2025-09-02-at-15.50.14.webp",
     "https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/09/whatsapp-image-2025-09-02-at-15.50.14-3.webp",
-    "https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/09/whatsapp-image-2025-09-02-at-15.50.14-1.webp",
     "https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/09/whatsapp-image-2025-09-02-at-15.50.14-2.webp",
     "https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/09/4.webp",
     "https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/09/3.webp",
@@ -98,7 +97,7 @@ export default function TestimonialsSection() {
 
         {/* Carousel Container */}
         <div className="section-fade">
-          <div className="relative max-w-2xl mx-auto">
+          <div className="relative max-w-lg mx-auto">
             
             {/* Navigation Buttons - Outside the carousel */}
             <button
@@ -125,12 +124,12 @@ export default function TestimonialsSection() {
               >
                 {testimonialImages.map((imageUrl, index) => (
                   <div key={index} className="w-full flex-shrink-0">
-                    <div className="bg-white flex items-center justify-center p-2">
+                    <div className="bg-white flex items-center justify-center p-1">
                       <img
                         src={imageUrl}
                         alt={`Depoimento ${index + 1}`}
                         className="max-w-full h-auto object-contain rounded-lg cursor-pointer hover:opacity-90 transition-opacity duration-200"
-                        style={{ maxHeight: '400px' }}
+                        style={{ maxHeight: '300px' }}
                         loading="lazy"
                         onClick={() => openPopup(imageUrl)}
                         onError={(e) => {
