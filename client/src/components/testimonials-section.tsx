@@ -141,7 +141,9 @@ export default function TestimonialsSection() {
                         }}
                       />
                       {/* Overlay sutil para melhor interação */}
-                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-all duration-300 flex items-center justify-center rounded-lg">
+                      <div 
+                        className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-all duration-300 flex items-center justify-center rounded-lg pointer-events-none"
+                      >
                         <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 bg-white/90 backdrop-blur-sm rounded-full p-3 shadow-lg">
                           <svg className="w-6 h-6 text-primary-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
@@ -184,9 +186,16 @@ export default function TestimonialsSection() {
         </div>
 
         {/* Popup Modal */}
-        {showPopup && (
-          <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4">
-            <div className="relative max-w-4xl max-h-[90vh] bg-white rounded-2xl overflow-hidden">
+        {showPopup && popupImage && (
+          <div 
+            className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4"
+            style={{ zIndex: 9999 }}
+            onClick={closePopup}
+          >
+            <div 
+              className="relative max-w-4xl max-h-[90vh] bg-white rounded-2xl overflow-hidden"
+              onClick={(e) => e.stopPropagation()}
+            >
               <button
                 onClick={closePopup}
                 className="absolute top-4 right-4 z-10 bg-white hover:bg-gray-100 rounded-full p-2 shadow-lg transition-all duration-200"
@@ -214,12 +223,6 @@ export default function TestimonialsSection() {
                 </div>
               </div>
             </div>
-            
-            {/* Click outside to close */}
-            <div 
-              className="absolute inset-0 -z-10"
-              onClick={closePopup}
-            ></div>
           </div>
         )}
       </div>
