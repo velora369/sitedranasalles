@@ -70,7 +70,7 @@ export default function SpecialtiesSection() {
           </h2>
           <div className="w-24 h-1 bg-gold-primary mx-auto rounded-full mb-6"></div>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            A Dra. Ana Carolina Salles é especializada no tratamento de diversos tipos de câncer, oferecendo um cuidado integrado e humanizado.
+            A Dra Ana Carolina Salles é oncologista clínica, com dedicação aos tumores femininos, câncer de mama e cânceres ginecológicos, além de outros tumores, como os de cabeça e pescoço e pele.
           </p>
         </div>
         
