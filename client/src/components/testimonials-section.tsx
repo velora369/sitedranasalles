@@ -61,8 +61,25 @@ export default function TestimonialsSection() {
 
         {/* Carousel Container */}
         <div className="section-fade">
-          <div className="relative max-w-4xl mx-auto">
+          <div className="relative max-w-2xl mx-auto">
             
+            {/* Navigation Buttons - Outside the carousel */}
+            <button
+              onClick={goToPrevious}
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-14 z-10 bg-white hover:bg-gray-50 rounded-full p-3 shadow-lg transition-all duration-200 hover:scale-110 border border-gray-200"
+              data-testid="button-prev-testimonial"
+            >
+              <ChevronLeft className="w-6 h-6 text-primary-green" />
+            </button>
+            
+            <button
+              onClick={goToNext}
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-14 z-10 bg-white hover:bg-gray-50 rounded-full p-3 shadow-lg transition-all duration-200 hover:scale-110 border border-gray-200"
+              data-testid="button-next-testimonial"
+            >
+              <ChevronRight className="w-6 h-6 text-primary-green" />
+            </button>
+
             {/* Main Carousel */}
             <div className="relative overflow-hidden rounded-2xl shadow-lg bg-white">
               <div 
@@ -71,11 +88,12 @@ export default function TestimonialsSection() {
               >
                 {testimonialImages.map((imageUrl, index) => (
                   <div key={index} className="w-full flex-shrink-0">
-                    <div className="bg-gray-50 flex items-center justify-center min-h-[300px] max-h-[600px] p-4">
+                    <div className="bg-white flex items-center justify-center p-2">
                       <img
                         src={imageUrl}
                         alt={`Depoimento ${index + 1}`}
-                        className="max-w-full max-h-full object-contain rounded-lg shadow-sm"
+                        className="max-w-full h-auto object-contain rounded-lg"
+                        style={{ maxHeight: '400px' }}
                         loading="lazy"
                         onError={(e) => {
                           e.currentTarget.style.display = 'none';
@@ -85,23 +103,6 @@ export default function TestimonialsSection() {
                   </div>
                 ))}
               </div>
-
-              {/* Navigation Buttons */}
-              <button
-                onClick={goToPrevious}
-                className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110"
-                data-testid="button-prev-testimonial"
-              >
-                <ChevronLeft className="w-6 h-6 text-primary-green" />
-              </button>
-              
-              <button
-                onClick={goToNext}
-                className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110"
-                data-testid="button-next-testimonial"
-              >
-                <ChevronRight className="w-6 h-6 text-primary-green" />
-              </button>
 
               {/* Progress Indicators */}
               <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
