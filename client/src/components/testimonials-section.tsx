@@ -71,11 +71,11 @@ export default function TestimonialsSection() {
               >
                 {testimonialImages.map((imageUrl, index) => (
                   <div key={index} className="w-full flex-shrink-0">
-                    <div className="aspect-square md:aspect-[4/3] lg:aspect-[3/2] bg-gray-100 flex items-center justify-center">
+                    <div className="bg-gray-50 flex items-center justify-center min-h-[300px] max-h-[600px] p-4">
                       <img
                         src={imageUrl}
                         alt={`Depoimento ${index + 1}`}
-                        className="w-full h-full object-contain"
+                        className="max-w-full max-h-full object-contain rounded-lg shadow-sm"
                         loading="lazy"
                         onError={(e) => {
                           e.currentTarget.style.display = 'none';
