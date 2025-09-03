@@ -96,7 +96,7 @@ export default function CongressSection() {
             </h2>
             <div className="w-24 h-1 bg-gold-primary mx-auto rounded-full mb-6"></div>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-              A Dra. Ana Carolina mantém-se sempre atualizada através da participação ativa em eventos científicos e congressos internacionais de oncologia.
+              A Dra. Ana Carolina mantém-se sempre atualizada através da participação ativa em eventos científicos e congressos nacionais e internacionais de oncologia.
             </p>
           </div>
           
