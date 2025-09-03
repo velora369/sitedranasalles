@@ -117,14 +117,7 @@ export default function TestimonialsSection() {
         <div className="section-fade">
           <div className="relative max-w-lg mx-auto">
             
-            {/* Navigation Buttons - Outside the carousel */}
-            <button
-              onClick={goToNext}
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-14 z-10 bg-white hover:bg-gray-50 rounded-full p-3 shadow-lg transition-all duration-200 hover:scale-110 border border-gray-200"
-              data-testid="button-next-testimonial"
-            >
-              <ChevronRight className="w-6 h-6 text-primary-green" />
-            </button>
+            
 
             {/* Main Carousel */}
             <div className="relative overflow-hidden rounded-2xl shadow-lg bg-white">
