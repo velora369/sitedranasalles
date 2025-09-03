@@ -31,9 +31,20 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4">
               <a 
-                href="https://www.instagram.com/anacarolinasallesoncologia?igsh=MTk3NWJ5bjY3MGRnOQ==" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+                href="instagram://user?username=anacarolinasallesoncologia" 
+                onClick={(e) => {
+                  // Para dispositivos móveis, tenta abrir o app primeiro
+                  if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                    // Se o app não abrir em 2.5s, redireciona para o site
+                    setTimeout(() => {
+                      window.location.href = "https://www.instagram.com/anacarolinasallesoncologia?igsh=MTk3NWJ5bjY3MGRnOQ==";
+                    }, 2500);
+                  } else {
+                    // Para desktop, vai direto para o site
+                    e.preventDefault();
+                    window.open("https://www.instagram.com/anacarolinasallesoncologia?igsh=MTk3NWJ5bjY3MGRnOQ==", "_blank");
+                  }
+                }}
                 className="text-gold-primary hover:text-gold-light transition-colors duration-300"
               >
                 <Instagram className="w-6 h-6" />

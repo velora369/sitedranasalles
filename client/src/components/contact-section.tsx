@@ -113,9 +113,20 @@ Mensagem: ${formData.message}`;
                 
                 {/* Instagram */}
                 <a 
-                  href="https://www.instagram.com/anacarolinasallesoncologia?igsh=MTk3NWJ5bjY3MGRnOQ=="
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="instagram://user?username=anacarolinasallesoncologia"
+                  onClick={(e) => {
+                    // Para dispositivos móveis, tenta abrir o app primeiro
+                    if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                      // Se o app não abrir em 2.5s, redireciona para o site
+                      setTimeout(() => {
+                        window.location.href = "https://www.instagram.com/anacarolinasallesoncologia?igsh=MTk3NWJ5bjY3MGRnOQ==";
+                      }, 2500);
+                    } else {
+                      // Para desktop, vai direto para o site
+                      e.preventDefault();
+                      window.open("https://www.instagram.com/anacarolinasallesoncologia?igsh=MTk3NWJ5bjY3MGRnOQ==", "_blank");
+                    }
+                  }}
                   className="flex items-center group hover:translate-x-1 transition-transform duration-300 cursor-pointer"
                 >
                   <div className="bg-gold-primary/10 p-3 rounded-xl mr-4 group-hover:bg-gold-primary/20 transition-colors duration-300">
