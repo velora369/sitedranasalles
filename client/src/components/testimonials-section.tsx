@@ -117,7 +117,7 @@ export default function TestimonialsSection() {
 
         {/* Carousel Container */}
         <div className="section-fade">
-          <div className="relative max-w-lg mx-auto">
+          <div className="relative max-w-2xl mx-auto">
             
             
 
@@ -129,11 +129,11 @@ export default function TestimonialsSection() {
               >
                 {testimonialImages.map((imageUrl, index) => (
                   <div key={index} className="w-full flex-shrink-0">
-                    <div className="relative aspect-[4/3] bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden cursor-pointer group">
+                    <div className="relative aspect-[3/4] sm:aspect-[4/5] md:aspect-[3/2] bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden cursor-pointer group">
                       <img
                         src={imageUrl}
                         alt={`Depoimento ${index + 1}`}
-                        className="w-full h-full object-cover hover:scale-105 transition-all duration-300 group-hover:opacity-95"
+                        className="w-full h-full object-contain hover:scale-105 transition-all duration-300 group-hover:opacity-95"
                         loading="lazy"
                         onClick={() => openPopup(imageUrl)}
                         onError={(e) => {
