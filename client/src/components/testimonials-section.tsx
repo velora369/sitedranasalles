@@ -72,39 +72,41 @@ export default function TestimonialsSection() {
           <div className="w-24 h-1 bg-gold-primary mx-auto rounded-full mb-6"></div>
           
           {/* Navigation arrows below the golden line */}
-          <div className="flex flex-col items-center gap-4 mb-8">
-            <div className="flex items-center justify-center gap-4">
+          <div className="flex flex-col items-center gap-6 mb-8">
+            <div className="flex items-center justify-center gap-8">
               <button
                 onClick={goToPrevious}
-                className="bg-primary-green hover:bg-secondary-green text-white rounded-full p-2 transition-all duration-200 hover:scale-110 shadow-md"
+                className="group bg-white hover:bg-primary-green border-2 border-primary-green text-primary-green hover:text-white rounded-full p-3 transition-all duration-300 hover:scale-105 shadow-md hover:shadow-lg"
                 data-testid="button-prev-top"
               >
-                <ChevronLeft className="w-5 h-5" />
+                <ChevronLeft className="w-6 h-6 transition-transform duration-300 group-hover:-translate-x-0.5" />
               </button>
               
-              <span className="text-sm text-gray-600 mx-4">
-                {currentIndex + 1} de {testimonialImages.length}
-              </span>
+              <div className="bg-gray-50 px-4 py-2 rounded-full border border-gray-200">
+                <span className="text-sm font-medium text-gray-700">
+                  {currentIndex + 1} de {testimonialImages.length}
+                </span>
+              </div>
               
               <button
                 onClick={goToNext}
-                className="bg-primary-green hover:bg-secondary-green text-white rounded-full p-2 transition-all duration-200 hover:scale-110 shadow-md"
+                className="group bg-white hover:bg-primary-green border-2 border-primary-green text-primary-green hover:text-white rounded-full p-3 transition-all duration-300 hover:scale-105 shadow-md hover:shadow-lg"
                 data-testid="button-next-top"
               >
-                <ChevronRight className="w-5 h-5" />
+                <ChevronRight className="w-6 h-6 transition-transform duration-300 group-hover:translate-x-0.5" />
               </button>
             </div>
             
-            {/* Progress Indicators - moved here from carousel */}
-            <div className="flex gap-2">
+            {/* Progress Indicators - modernized */}
+            <div className="flex gap-3">
               {testimonialImages.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => goToSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-200 border-2 ${
+                  className={`transition-all duration-300 rounded-full ${
                     index === currentIndex 
-                      ? 'bg-primary-green border-primary-green scale-110' 
-                      : 'bg-gray-200 border-gray-300 hover:bg-gray-300 hover:border-gray-400'
+                      ? 'w-8 h-3 bg-primary-green' 
+                      : 'w-3 h-3 bg-gray-300 hover:bg-gray-400 hover:scale-110'
                   }`}
                   data-testid={`button-slide-${index}`}
                 />
