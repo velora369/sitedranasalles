@@ -7,7 +7,6 @@ export default function TestimonialsSection() {
     "https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/09/whatsapp-image-2025-09-02-at-15.50.15.webp",
     "https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/09/whatsapp-image-2025-09-02-at-15.50.14-_2_.webp",
     "https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/09/whatsapp-image-2025-09-02-at-15.50.14.webp",
-    "https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/09/whatsapp-image-2025-09-02-at-15.50.15-1.webp",
     "https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/09/whatsapp-image-2025-09-02-at-15.50.14-3.webp",
     "https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/09/whatsapp-image-2025-09-02-at-15.50.14-1.webp",
     "https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/09/whatsapp-image-2025-09-02-at-15.50.14-2.webp",
