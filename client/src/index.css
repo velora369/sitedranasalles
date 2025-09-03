@@ -2,6 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Força tema claro em todos os dispositivos, ignorando preferências do sistema */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: light !important;
+  }
+  
+  html, body {
+    background-color: white !important;
+    color: hsl(21, 89%, 4%) !important;
+  }
+}
+
+/* Força tema claro e desabilita qualquer classe dark */
+html.dark,
+:root.dark,
+body.dark {
+  /* Sobrescreve todas as variáveis dark com valores light */
+  --background: hsl(0, 0%, 100%) !important;
+  --foreground: hsl(21, 89%, 4%) !important;
+  --muted: hsl(60, 4.8%, 95.9%) !important;
+  --muted-foreground: hsl(25, 5.3%, 44.7%) !important;
+  --popover: hsl(0, 0%, 100%) !important;
+  --popover-foreground: hsl(21, 89%, 4%) !important;
+  --card: hsl(0, 0%, 100%) !important;
+  --card-foreground: hsl(21, 89%, 4%) !important;
+  --border: hsl(20, 5.9%, 90%) !important;
+  --input: hsl(20, 5.9%, 90%) !important;
+  --primary: hsl(164, 46%, 18%) !important;
+  --primary-foreground: hsl(0, 0%, 100%) !important;
+  --secondary: hsl(60, 4.8%, 95.9%) !important;
+  --secondary-foreground: hsl(24, 9.8%, 10%) !important;
+  --accent: hsl(60, 4.8%, 95.9%) !important;
+  --accent-foreground: hsl(24, 9.8%, 10%) !important;
+  --destructive: hsl(0, 84.2%, 60.2%) !important;
+  --destructive-foreground: hsl(60, 9.1%, 97.8%) !important;
+  --ring: hsl(21, 89%, 4%) !important;
+}
+
+/* Garante que nenhum elemento tenha fundo escuro */
+html.dark *, 
+:root.dark *, 
+body.dark * {
+  background-color: inherit !important;
+  color: inherit !important;
+}
+
 :root {
   --background: hsl(0, 0%, 100%);
   --foreground: hsl(21, 89%, 4%);
