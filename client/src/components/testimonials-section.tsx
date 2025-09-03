@@ -119,14 +119,6 @@ export default function TestimonialsSection() {
             
             {/* Navigation Buttons - Outside the carousel */}
             <button
-              onClick={goToPrevious}
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-14 z-10 bg-white hover:bg-gray-50 rounded-full p-3 shadow-lg transition-all duration-200 hover:scale-110 border border-gray-200"
-              data-testid="button-prev-testimonial"
-            >
-              <ChevronLeft className="w-6 h-6 text-primary-green" />
-            </button>
-            
-            <button
               onClick={goToNext}
               className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-14 z-10 bg-white hover:bg-gray-50 rounded-full p-3 shadow-lg transition-all duration-200 hover:scale-110 border border-gray-200"
               data-testid="button-next-testimonial"
