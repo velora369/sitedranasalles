@@ -1,4 +1,4 @@
-import { Star, ChevronLeft, ChevronRight } from "lucide-react";
+import { Star, ChevronLeft, ChevronRight, X } from "lucide-react";
 import { useState, useEffect } from "react";
 
 export default function TestimonialsSection() {
@@ -18,6 +18,8 @@ export default function TestimonialsSection() {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [showPopup, setShowPopup] = useState(false);
+  const [popupImage, setPopupImage] = useState("");
 
   // Rolagem automática de 3 em 3 segundos
   useEffect(() => {
@@ -49,6 +51,18 @@ export default function TestimonialsSection() {
     goToSlide(newIndex);
   };
 
+  const openPopup = (imageUrl: string) => {
+    setPopupImage(imageUrl);
+    setShowPopup(true);
+    setIsAutoPlaying(false);
+  };
+
+  const closePopup = () => {
+    setShowPopup(false);
+    setPopupImage("");
+    setIsAutoPlaying(true);
+  };
+
   return (
     <section id="testimonials" className="py-20 px-4 bg-white">
       <div className="max-w-7xl mx-auto">
@@ -57,6 +71,29 @@ export default function TestimonialsSection() {
             O Que Nossos Pacientes Dizem
           </h2>
           <div className="w-24 h-1 bg-gold-primary mx-auto rounded-full mb-6"></div>
+          
+          {/* Navigation arrows below the golden line */}
+          <div className="flex items-center justify-center gap-4 mb-8">
+            <button
+              onClick={goToPrevious}
+              className="bg-primary-green hover:bg-secondary-green text-white rounded-full p-2 transition-all duration-200 hover:scale-110 shadow-md"
+              data-testid="button-prev-top"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+            
+            <span className="text-sm text-gray-600 mx-4">
+              {currentIndex + 1} de {testimonialImages.length}
+            </span>
+            
+            <button
+              onClick={goToNext}
+              className="bg-primary-green hover:bg-secondary-green text-white rounded-full p-2 transition-all duration-200 hover:scale-110 shadow-md"
+              data-testid="button-next-top"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
+          </div>
         </div>
 
         {/* Carousel Container */}
@@ -92,9 +129,10 @@ export default function TestimonialsSection() {
                       <img
                         src={imageUrl}
                         alt={`Depoimento ${index + 1}`}
-                        className="max-w-full h-auto object-contain rounded-lg"
+                        className="max-w-full h-auto object-contain rounded-lg cursor-pointer hover:opacity-90 transition-opacity duration-200"
                         style={{ maxHeight: '400px' }}
                         loading="lazy"
+                        onClick={() => openPopup(imageUrl)}
                         onError={(e) => {
                           e.currentTarget.style.display = 'none';
                         }}
@@ -148,6 +186,46 @@ export default function TestimonialsSection() {
             </div>
           </div>
         </div>
+
+        {/* Popup Modal */}
+        {showPopup && (
+          <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4">
+            <div className="relative max-w-4xl max-h-[90vh] bg-white rounded-2xl overflow-hidden">
+              <button
+                onClick={closePopup}
+                className="absolute top-4 right-4 z-10 bg-white hover:bg-gray-100 rounded-full p-2 shadow-lg transition-all duration-200"
+                data-testid="button-close-popup"
+              >
+                <X className="w-6 h-6 text-gray-600" />
+              </button>
+              
+              <div className="p-4">
+                <img
+                  src={popupImage}
+                  alt="Depoimento expandido"
+                  className="w-full h-auto object-contain rounded-lg"
+                  style={{ maxHeight: '80vh' }}
+                />
+              </div>
+              
+              <div className="p-4 bg-gray-50 text-center">
+                <p className="text-sm text-gray-600 mb-2">Clique fora da imagem ou no X para fechar</p>
+                <div className="flex items-center justify-center gap-2 text-blue-600 bg-blue-50 px-4 py-2 rounded-full inline-flex">
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-sm font-medium">Depoimento real verificado</span>
+                </div>
+              </div>
+            </div>
+            
+            {/* Click outside to close */}
+            <div 
+              className="absolute inset-0 -z-10"
+              onClick={closePopup}
+            ></div>
+          </div>
+        )}
       </div>
     </section>
   );
