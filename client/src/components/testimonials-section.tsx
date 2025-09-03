@@ -72,26 +72,44 @@ export default function TestimonialsSection() {
           <div className="w-24 h-1 bg-gold-primary mx-auto rounded-full mb-6"></div>
           
           {/* Navigation arrows below the golden line */}
-          <div className="flex items-center justify-center gap-4 mb-8">
-            <button
-              onClick={goToPrevious}
-              className="bg-primary-green hover:bg-secondary-green text-white rounded-full p-2 transition-all duration-200 hover:scale-110 shadow-md"
-              data-testid="button-prev-top"
-            >
-              <ChevronLeft className="w-5 h-5" />
-            </button>
+          <div className="flex flex-col items-center gap-4 mb-8">
+            <div className="flex items-center justify-center gap-4">
+              <button
+                onClick={goToPrevious}
+                className="bg-primary-green hover:bg-secondary-green text-white rounded-full p-2 transition-all duration-200 hover:scale-110 shadow-md"
+                data-testid="button-prev-top"
+              >
+                <ChevronLeft className="w-5 h-5" />
+              </button>
+              
+              <span className="text-sm text-gray-600 mx-4">
+                {currentIndex + 1} de {testimonialImages.length}
+              </span>
+              
+              <button
+                onClick={goToNext}
+                className="bg-primary-green hover:bg-secondary-green text-white rounded-full p-2 transition-all duration-200 hover:scale-110 shadow-md"
+                data-testid="button-next-top"
+              >
+                <ChevronRight className="w-5 h-5" />
+              </button>
+            </div>
             
-            <span className="text-sm text-gray-600 mx-4">
-              {currentIndex + 1} de {testimonialImages.length}
-            </span>
-            
-            <button
-              onClick={goToNext}
-              className="bg-primary-green hover:bg-secondary-green text-white rounded-full p-2 transition-all duration-200 hover:scale-110 shadow-md"
-              data-testid="button-next-top"
-            >
-              <ChevronRight className="w-5 h-5" />
-            </button>
+            {/* Progress Indicators - moved here from carousel */}
+            <div className="flex gap-2">
+              {testimonialImages.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => goToSlide(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-200 border-2 ${
+                    index === currentIndex 
+                      ? 'bg-primary-green border-primary-green scale-110' 
+                      : 'bg-gray-200 border-gray-300 hover:bg-gray-300 hover:border-gray-400'
+                  }`}
+                  data-testid={`button-slide-${index}`}
+                />
+              ))}
+            </div>
           </div>
         </div>
 
@@ -141,21 +159,6 @@ export default function TestimonialsSection() {
                 ))}
               </div>
 
-              {/* Progress Indicators */}
-              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-                {testimonialImages.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => goToSlide(index)}
-                    className={`w-3 h-3 rounded-full transition-all duration-200 ${
-                      index === currentIndex 
-                        ? 'bg-primary-green scale-110' 
-                        : 'bg-white/60 hover:bg-white/80'
-                    }`}
-                    data-testid={`button-slide-${index}`}
-                  />
-                ))}
-              </div>
 
               {/* Auto-play Indicator */}
               <div className="absolute top-4 right-4">
