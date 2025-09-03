@@ -133,7 +133,7 @@ export default function TestimonialsSection() {
                       <img
                         src={imageUrl}
                         alt={`Depoimento ${index + 1}`}
-                        className="w-auto h-auto object-contain hover:scale-105 transition-all duration-300 group-hover:opacity-95 block rounded-lg shadow-lg"
+                        className="w-auto h-auto object-contain hover:scale-105 transition-all duration-300 group-hover:opacity-95 block rounded-lg"
                         loading="lazy"
                         onClick={() => openPopup(imageUrl)}
                         onError={(e) => {
