@@ -125,6 +125,16 @@ export default function Footer() {
         
         <div className="border-t border-secondary-green mt-8 pt-8 text-center">
           <p className="text-gray-300">&copy; 2024 Dra. Ana Carolina Salles. Todos os direitos reservados.</p>
+          <p className="text-gray-400 opacity-60 mt-2">
+            <a 
+              href="https://medgrowthmkt.com/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-gold-primary transition-colors duration-300"
+            >
+              Desenvolvido por MedGrowth
+            </a>
+          </p>
         </div>
       </div>
     </footer>
