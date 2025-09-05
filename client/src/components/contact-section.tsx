@@ -7,7 +7,6 @@ export default function ContactSection() {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: '',
-    phone: '',
     email: '',
     subject: '',
     message: '',
@@ -26,7 +25,7 @@ export default function ContactSection() {
     e.preventDefault();
     
     // Validation
-    if (!formData.name || !formData.phone || !formData.email || !formData.message || !formData.privacy) {
+    if (!formData.name || !formData.email || !formData.message || !formData.privacy) {
       toast({
         title: "Campos obrigatórios",
         description: "Por favor, preencha todos os campos obrigatórios e aceite a política de privacidade.",
@@ -65,7 +64,6 @@ Mensagem: ${formData.message}`;
     // Reset form
     setFormData({
       name: '',
-      phone: '',
       email: '',
       subject: '',
       message: '',
@@ -184,36 +182,21 @@ Mensagem: ${formData.message}`;
           {/* Contact Form */}
           <div className="lg:col-span-3 section-fade">
             <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
-              <h3 className="font-montserrat font-bold text-xl text-primary-green mb-6">Envie uma Mensagem</h3>
+              <h3 className="font-montserrat font-bold text-xl text-primary-green mb-6">Envie uma mensagem em nosso WhatsApp</h3>
               
               <form onSubmit={handleSubmit} className="space-y-5">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label htmlFor="name" className="block font-montserrat font-medium text-gray-700 mb-2">Nome Completo *</label>
-                    <input 
-                      type="text" 
-                      id="name" 
-                      name="name" 
-                      required 
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-gold-primary/20 focus:border-gold-primary transition-all duration-300 bg-gray-50 hover:bg-white"
-                      placeholder="Seu nome completo"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="phone" className="block font-montserrat font-medium text-gray-700 mb-2">Telefone *</label>
-                    <input 
-                      type="tel" 
-                      id="phone" 
-                      name="phone" 
-                      required 
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-gold-primary/20 focus:border-gold-primary transition-all duration-300 bg-gray-50 hover:bg-white"
-                      placeholder="(00) 00000-0000"
-                    />
-                  </div>
+                <div>
+                  <label htmlFor="name" className="block font-montserrat font-medium text-gray-700 mb-2">Nome Completo *</label>
+                  <input 
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    required 
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-gold-primary/20 focus:border-gold-primary transition-all duration-300 bg-gray-50 hover:bg-white"
+                    placeholder="Seu nome completo"
+                  />
                 </div>
                 
                 <div>
